@@ -1,0 +1,121 @@
+/* Global style */
+.hidden-heading {
+  display: none;
+}
+
+/* Formatting entire page contents */
+body {
+  width: 90%;
+  margin: auto;
+}
+
+/* Header and logo */
+header {
+  size: 3rem;
+  display: flex;
+}
+
+/* Hotel name */
+h1 {
+  color: cadetblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+}
+
+/* Hotel logo */
+.logo img {
+  width: 100%;
+  max-width: 75px;
+  height: auto;
+  position: relative;
+  right: 20px;
+}
+
+/* add alt-page links in header */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 0;
+  margin-left: auto;
+}
+
+/* remove list components, only text */
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 14px 30px;
+}
+
+/* remove underline keep text color same for entire header */
+nav ul li a {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+/* main */
+/* adjust images on the left and description on the right */
+.entry {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+/* polaroid img padding, space between form and suite name*/
+.room, .suite-text {
+    flex: 1; /* Both children will take up an equal amount of space */
+    padding: 2vb; /* Adds some space inside each flex item. Adjust as needed. */
+}
+
+.suite-text > p {
+  color: cadetblue;
+}
+
+/* poloraoid effect around img */
+.room {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+/* responsive img */
+.room img {
+  width: 100%; 
+  height: auto; 
+}
+
+/* text below img */
+.room p {
+  text-align: center;
+  padding: 10px 20px;
+  color: cadetblue;
+}
+
+/* formatting between suite title and booking form */
+.suite-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* suite description name */
+.suite-header p {
+  font-size: 2rem;
+  color: rgb(80, 137, 138);
+}
+
+/* style booking form */
+.booking-form {
+  text-decoration: none;
+  color: cadetblue;
+  /* border: 1px solid black; */
+  border: 1px solid rgba(95, 158, 160, 0.584);
+  padding: 1rem;
+}
+
+/* change button colors when hovering */
+.booking-form:hover {
+  /* background-color: rgba(95, 158, 160, 0.363); */
+  border: 2px solid rgba(95, 158, 160, 0.584);
+}
+

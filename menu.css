@@ -1,0 +1,140 @@
+/* Global style */
+.hidden-heading {
+    display: none;
+  }
+  
+  /* Formatting entire page contents */
+  body {
+    width: 90%;
+    margin: auto;
+  }
+  
+  /* Header and logo */
+  header {
+    size: 3rem;
+    display: flex;
+  }
+  
+  /* Hotel name */
+  h1 {
+    color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+  }
+  
+  /* Hotel logo */
+  .logo img {
+    width: 100%;
+    max-width: 75px;
+    height: auto;
+    position: relative;
+    right: 20px;
+  }
+  
+  /* add alt-page links in header */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+    margin-left: auto;
+  }
+  
+  /* remove list components, only text */
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+  }
+  
+  /* remove underline keep text color same for entire header */
+  nav ul li a {
+    text-decoration: none;
+    color: cadetblue;
+  }
+
+  .ajax-tavern-menu {
+    border: solid cadetblue 2px;
+    margin: 2em;
+  }
+
+  /* menu layout */
+
+  .ajax-tavern-menu, .food-contents {
+    display: flex;
+  }
+
+  /* menu item group */
+  .course-type {
+    font-size: 1.6em;
+  }
+
+  /* menu consists of two columns */
+  .menu-column {
+    width: 100%;
+    border: 2px solid palevioletred;
+    margin: 2em;
+    padding: 2em;
+    background-color: white;
+    color: rgb(58, 58, 58);
+    font-family: Optima,Didot, serif, "Gill Sans";
+    /* add for the bottom content */
+    position: relative;
+  }
+
+  /* enlarge fod/beverage category */
+  .course-type b {
+    font-size: 22px;
+  }
+
+  /* item name */
+  .menu-column p {
+    font-size: 18px;
+  }
+
+  /* adjust item description */
+  .menu-column p span {
+    font-size: 16px;
+  }
+
+  /* section for diatary/allergies */
+  .menu-column > section {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding-right: 2em;
+  }
+
+  /* both restrictions */
+  .allergies, .dietary-restrictions {
+    /* width: 34%; */
+    width: 100%;
+    /* border: 2px solid pink; */
+    /* border-top: 2px solid palevioletred; */
+    padding: 1em;
+    list-style: none;
+    font-size: 1em;
+    overflow: scroll;
+  }
+
+  /* adjust right div */
+  .dietary-restrictions {
+    border-left: 3px solid palevioletred;
+  }
+
+  /* individual diatery restriction */
+  li {
+    display: inline-block;
+  }
+
+  /* denote dietary restrictions from allergens */
+  /* .dietary-restrictions {
+    color: rgb(95, 158, 160);
+  } */
+
+  /* connect description to allergy/diatery restriction */
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
