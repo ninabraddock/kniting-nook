@@ -2,110 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- adding icons to nav bar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <main>
-        <!-- hotel website header  -->
-        <header>
-            <h1>Matilda Inn</h1>
-            <figure class="logo">
-                <img src="snowflake-logo.png" alt="snowflake logo, light blue line drawing" width="550" height="552">
-            </figure>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="suite-types.html">Suite-Types</a></li>
-                    <li><a href="dine-in.html">Dine-In</a></li>
-                </ul>
-            </nav>
-        </header>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="company logo" width="332" height="284"></a>
+        <!-- alt page options -->
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a></li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- hero -->
-        <h2 class="hidden-heading">Side Hero</h2>
-        <section class="container">
-            <figure class="image">
-                <img src="hotel-img.png" alt="vail mountain hotel"> 
-            </figure>
-            <aside class="text">
-                <p class="title">About the Matilda Inn: </p>
-                <p>724 Mulbury Lane </br> Vail, CO 81657</p>
-                <p>
-                    Located in the heart of downtown Vail, the Matilda Inn possesses all 
-                    the charms of a vintage European ski lodge, while offering all of the modern 
-                    conveniences one would expect with a stay in Vail. Enjoy all mountain views 
-                    from one of the many pools/hot tubs, a glass of wine by the fire, or get to the 
-                    slope early for the first track runs!! FREE: WiFi. Smiles too. *NO RESORT FEES!* Ranked #1 
-                    Lodge in Vail on tripadvisor.com
-                </p>
-            </aside>
-        </section>
-
-        <aside class="leave-review">
-            <a href="review-form.html" class="new-review">Leave a Review Here</a>
-        </aside>
-
-        <!-- about hotel -->
-        <!-- <h2 class="hidden-heading">Main Content</h2>
-        <article class="about-section">
-            
-        </article> -->
-
-        <!-- reviews, separate div along a horizontal line -->
-        <h2 class="hidden-heading">User Reviews</h2>
-        <article class="user-reviews">
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Had a wonderful time here over the holiday weekend. Can't wait to come back again! </p>
-                <p class="reviewer-name"> - Charlie Alexander</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>This hotel is amazing!! I've been staying here for the past four years and will continue to come back for the great service and incredible atmosphere.</p>
-                <p class="reviewer-name"> - Linda Breckett</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Awesome location! Great staff!</p>
-                <p class="reviewer-name"> - Mason Ramirez</p>
-            </section>
-            <section>
-                <img src="3-stars.png" alt="three golden stars">
-                <p>Not worth the price :( </p>
-                <p class="reviewer-name"> - Ian Morrison</p>
-            </section>
-            <section>
-                <img src="4-stars.png" alt="four golden stars">
-                <p>Great service but a bit pricy for a weekend getaway.</p>
-                <p class="reviewer-name"> - Brett Travis</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Super accomodating for those with a big family and staying for multiple days!</p>
-                <p class="reviewer-name"> - Amy Carson</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Had an amazing time with the family and made so many memories all thanks to the Matilda Inn</p>
-                <p class="reviewer-name"> - Linda Phillips</p>
-            </section>
-            <section>
-                <img src="2-stars.png" alt="two golden stars">
-                <p>Not my favorite place. Will not be coming back.</p>
-                <p class="reviewer-name"> - Scott Optin</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Super accomodating for those with a big family and staying for multiple days!</p>
-                <p class="reviewer-name"> - Franky Walter</p>
-            </section>
-            <section>
-                <img src="5-stars.png" alt="five golden stars">
-                <p>Super accomodating for those with a big family and staying for multiple days!</p>
-                <p class="reviewer-name"> - Quinn Stevenson</p>
-            </section>
-        </article>
-    </main>
+    <script src="home.js"></script>
 </body>
 </html>

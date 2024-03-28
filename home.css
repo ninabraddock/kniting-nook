@@ -1,170 +1,66 @@
-/* Global style */
-.hidden-heading {
-    display: none;
+@import url('https://forms.gle/x7KKeg2Bsw1TFbUbA');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
-/* Formatting entire page contents */
-body {
-    width: 90%;
-    margin: auto;
-}
-
-/* Header and logo */
-header {
-    size: 3rem;
-    display: flex;
-}
-
-/* Hotel name */
-h1 {
-    color: cadetblue;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 3rem;
-}
-
-/* Hotel logo */
-.logo img {
-    width: 100%;
-    max-width: 75px;
+.logo {
+    width: 50%;
     height: auto;
-    position: relative;
-    right: 20px;
 }
 
-/* add alt-page links in header */
-nav {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 0;
-    margin-left: auto;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
 }
 
-/* remove list components, only text */
-nav ul li{
-    display: inline-block;
+/* alt oages on same row */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove bullets and space each page link */
+#navbar li {
     list-style: none;
-    margin: 10px 30px;
+    padding: 0 20px;
+    position: relative;
 }
 
-/* remove underline keep text color same for entire header */
-nav ul li a {
+/* remove underline, change individual text */
+#navbar li a {
     text-decoration: none;
-    color: cadetblue;
-}
-
-/* hero main img */
-/* .side-hero {
-    margin: 0;
-    padding: 0;
-
-}
-
-.side-hero img {
-    width: 60%;
-}
-
-.about {
-    color: rgb(124, 72, 3);
-    font-size: 18px;
-     float: left;
-    width: 60%;
-    padding: 5px;
-    text-align: right;
-} */
-
-
-.container {
-    display: flex;
-    width: 100%;
-    /* background-color: rgba(245, 222, 179, 0.552); */
-    background-color: rgba(226, 221, 141, 0.196);
-    border: 2px solid rgba(95, 158, 160, 0.584);
-    padding: 2em 0 2em 0;
-}
-
-.image {
-    width: 65%;
-    box-sizing: border-box;
-    padding: 20px; 
-}
-
-.text {
-    width: 35%;
-    box-sizing: border-box;
-    padding: 2em 2em 0 0; 
-    text-align: left;
-    color: rgba(95, 158, 160);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.leave-review {
-    text-align: center;
-    font-size: 1.3rem;
-    width: 30%;
-    margin: 3em auto 3em;
-}
-
-.new-review {
-    text-align: center;
-    font-size: 1.3rem;
-    width: 30%;
-    margin: 3em auto;
-
-    color: cadetblue;
-    text-decoration: none;
-    background-color: rgba(226, 221, 141, 0.196);
-    border: 2px solid rgba(95, 158, 160, 0.584);
-    padding: 1rem;
-}
-
-.new-review:hover {
-    border: 3px solid rgba(95, 158, 160, 0.584);
-}
-
-.title {
-    font-size: 1.7em;
-}
-
-/* flexbox reviews */
-.user-reviews {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4ems;
-    background-color: rgba(226, 221, 141, 0.196);
-    border: 2px solid rgba(95, 158, 160, 0.584);
-}
-
-.description {
     font-size: 1em;
+    font-weight: 600;
+    transition: 0.3 ease;
 }
 
-/* format individual review box */
-article > section {
-    font-size: 16px;
-    color: rgba(0, 139, 139, 0.9);
-    margin: 20px;
-    padding: 20px;
-    width: 200px;
-    /* add features for scrollability */
-    height: 125px;
-    overflow: auto; /* only if the content is overflowing will the scroll bar be shown */
-    border: 3px solid rgba(0, 139, 139, 0.612);
-    background-color: white;
+/* color text */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #CC5500;
 }
 
-/* format the stars at the top to fill width of div */
-article > section > img {
-    margin-top: 0%;
-    height: 50px;
-    width: auto;
+/* add bar below upon hovering over individual page*/
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #CC5500;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
 
-/* have each name be in smaller font */
-.reviewer-name {
-    font-size: 14px;
-}
+
+
