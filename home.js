@@ -15,3 +15,31 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+// add item to favorites 
+const heart = document.getElementById('heart-icon')
+const btn = document.getElementById('heart-btn')
+btn.addEventListener('click', toggleLike)
+
+function toggleLike() {
+    // console.log("hello")
+    if(heart.textContent === "favorite_border") {
+        heart.textContent = "favorite"
+        heart.style.color = "#98002e"
+        btn.ariaChecked = "true"
+    }
+    else {
+        heart.textContent = "favorite_border"
+        heart.style.color = "rgb(87, 87, 87)"
+        btn.ariaChecked = "false"
+    }
+}
+
+
+// function fillIcon() {
+//     // get the icon container element
+//     var iconContainer = document.getElementById('product-image');
+
+//     // set container to display the filled icon
+//     iconContainer.innerHTML = '<i class="material-icons">favorite</i>';
+// }

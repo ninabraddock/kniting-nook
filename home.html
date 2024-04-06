@@ -25,11 +25,13 @@
     </section>
 
     <section id="hero">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>save more with coupons & up to 70% off</p>
-        <button class="button" style="vertical-align:middle"><span>Shop Now</span></button>
+        <div id="sales-text">
+            <h4>Trade-in-offer</h4>
+            <h2>Super value deals</h2>
+            <h1>On all products</h1>
+            <p>save more with coupons & up to 70% off</p>
+            <button class="button" style="vertical-align:middle"><span>Shop Now</span></button>
+        </div>
     </section>
 
     <!-- product scroll bar -->
@@ -40,13 +42,17 @@
         <div class="product-container">
             <div class="product-card">
                 <div class="product-image">
-                    <span class="discount-tag"><span class="material-symbols-outlined" id="favorite-symbol">favorite</span></span>
+                    <span class="discount-tag">
+                        <!-- add button tag for screen reader -->
+                        <button id="btn" type="button" aria-label="like-icon" role="switch" aria-checked="false">
+                            <span class="material-symbols-outlined" id="heart-icon">favorite</span>
+                        </button>
+                    </span>
                     <img src="img/sweater1.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
                 </div>
                 <div class="product-info">
                     <h2 class="product-brand">brand</h2>
-                    <p class="product-short-description">a short line about the cloth..</p>
+                    <class="product-short-description">a short line about the cloth..</p>
                     <span class="price">$20</span><span class="actual-price">$40</span>
                 </div>
             </div>
