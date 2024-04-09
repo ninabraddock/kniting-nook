@@ -30,7 +30,7 @@ function toggleLike() {
     }
     else {
         heart.textContent = "favorite_border"
-        heart.style.color = "rgb(87, 87, 87)"
+        heart.style.color = "rgb(40,40,40)"
         btn.ariaChecked = "false"
     }
 }
