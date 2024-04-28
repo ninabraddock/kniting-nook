@@ -9,7 +9,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /* sub default to match theme */
 h1 {
     font-size: 50px;
@@ -64,20 +63,8 @@ body {
 }
 
 
-/* header start */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
 
-/* fill to left side */
-.logo {
-    width: 50%;
-    height: auto;
-}
+/* header */
 
 /* nav links */
 #header {
@@ -86,11 +73,19 @@ body {
     justify-content: space-between;
     padding: 20px 80px;
     background-color: #ebf0f8;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); /* transition */ 
-    z-index: 1; /* insure it's always in front but reserve higher numbers for later */
+    /* transition */ 
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
+    /* insure it's always in front, higher number for other elements */
+    z-index: 10; 
     position: sticky;
     top: 0;
     left: 0;
+}
+
+/* fill to left side */
+.logo {
+    width: 50%;
+    height: auto;
 }
 
 /* alt pages on same row */
@@ -122,7 +117,7 @@ body {
     color: #007355;
 }
 
-/* add underline uon nav link */
+/* add underline on nav link */
 #navbar li a.active::after,
 #navbar li a:hover::after {
     content: "";
@@ -134,6 +129,8 @@ body {
     bottom: -4px;
     left: 20px;
 }
+
+
 
 /* hero section */
 #hero {
@@ -149,19 +146,37 @@ body {
     justify-content: center;
 }
 
-/* #sales-text {
-    background-color: #ebf0f860;
-    padding: 1em;
-} */
+/* outline text to standout from background img */
+#sales-text {
+    -webkit-text-stroke-width: 0.5px;
+    /* -webkit-text-stroke-color: #015f46; */
+    -webkit-text-stroke-color: black;
+    position: relative;
+}
 
-/* space text */
+/* space before button */
 #hero h4 {
     padding-bottom: 15px;
 }
 
-/* #hero h1 {
+/* side promo */
+#promo-text {
+    /* contrast */
     color: #007355;
-} */
+    -webkit-text-stroke-width: 0.5px;
+    /* -webkit-text-stroke-color: #007354c5; */
+    /* -webkit-text-stroke-color: black; */
+    background-color: #ffffffc4;
+    padding: 5px;
+    border-radius: 7px;
+
+    /* position separate form other text */
+    position: absolute;
+    margin-bottom: 280px;
+    margin-right: 90px;
+    right: 0;
+    bottom: 0;
+}
 
 /* shop now button */
 #hero button {
@@ -182,14 +197,17 @@ body {
   
 
 
-/*  */
-/* #hero button span {
+/* interactive shop button  */
+
+/* indicate button */
+#hero button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
+/* add arrow */
 #hero button span:after {
     content: '\00bb';
     position: absolute;
@@ -199,14 +217,16 @@ body {
     transition: 0.5s;
 }
 
+/* align w/ text */
 #hero button:hover span {
     padding-right: 25px;
 }
 
+/* color btn */
 #hero button:hover span:after {
     opacity: 1;
     right: 0;
-} */
+}
 
 
 
@@ -261,7 +281,7 @@ body {
 
 .navbar ul li:hover::after {
     width: 100%;    
-} */
+} 
 
 
 
@@ -490,18 +510,71 @@ button {
 /* keep right side */
 .nxt-btn {
     right: 0;
-    /* float: right; */
 }
 
-.pre-btn img,
-.nxt-btn img {
-    /* opacity: 0.2; */
+
+/* footer */
+
+/* block */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    line-height: 1.8; /* spacing btw lines */
+    text-transform: capitalize;
+    background-color: #ebf0f8;
+    /* padding: 3em 20em 3em 30em; */
 }
 
-.pre-btn:hover img,
-.nxt-btn:hover img {
-/* opacity: 1; */
+/* col headers */
+/* .footer-col > h2 {
+    color: #007355;
+    font-size: 24px;
+    margin: 1em;
+} */
+
+.poop {
+    color: #007355;
+    font-size: 24px;
+    margin: 1em;
 }
+
+/* underline headers */
+.footer-col > h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: purple;
+    height: 2px;
+    width: 40px;
+}
+
+.poop::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: purple;
+    height: 2px;
+    width: 40px;
+}
+
+
+
+/* space cols */
+.footer-col {
+    width: 25%;
+}
+
+/* list */
+ul {
+    list-style: none;
+    
+}
+
+
+
 
 .collection-container {
 width: 100%;
