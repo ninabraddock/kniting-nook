@@ -402,14 +402,14 @@ button {
 }
 
 /* remove background on double click */
-#heart-icon, #heart-icon1 {
+.heart-icon, #heart-icon1 {
     user-select: none;
     color: rgb(40, 40, 40);
     font-size: 15px;
 }
 
 /* fill in heart */
-#heart-icon:hover, #heart-icon1:hover {
+.heart-icon:hover, #heart-icon1:hover {
     /* color: #007355; */
     color: #98002e;
     /* screen reader */
@@ -417,7 +417,7 @@ button {
 }
 
 /* bounce when clicked */
-#heart-icon:active, #heart-icon1:active {
+.heart-icon:active, #heart-icon1:active {
     transform: scale(0.96);
 }
 

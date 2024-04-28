@@ -17,22 +17,53 @@ productContainers.forEach((item, i) => {
 })
 
 // toggle heart icon 
-const heartIcon = document.getElementById('heart-icon');
-const heartBtn = document.getElementById('heart-btn');
+// const heartIcon = document.getElementById('heart-icon');
+// const heartBtn = document.getElementById('heart-btn');
 
-heartBtn.addEventListener('click', function() {
+
+document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
+    heartBtn.addEventListener('click', function() {
+        const heartIcon = this.querySelector('.heart-icon');
+        toggleHeart(heartIcon);
+    });
+});
+
+function toggleHeart(heartIcon) {
     if (heartIcon.classList.contains('far')) {
         heartIcon.classList.remove('far');
         heartIcon.classList.add('fas'); // class for solid heart
         heartIcon.style.color = '#98002e'; // fill color to red
-        heartBtn.setAttribute('aria-checked', 'true'); 
+        heartIcon.parentNode.setAttribute('aria-checked', 'true'); 
     } else if (heartIcon.classList.contains('fas')) {
         heartIcon.classList.remove('fas');
         heartIcon.classList.add('far'); // class for outline heart
         heartIcon.style.color = 'rgb(40, 40, 40)'; // change fill color to default
-        heartBtn.setAttribute('aria-checked', 'false');
+        heartIcon.parentNode.setAttribute('aria-checked', 'false');
     }
-});
+}
+
+
+
+// document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
+//     heartBtn.addEventListener('click', function() {
+//         const heartIcon = this.querySelector('.heart-icon');
+//         toggleHeart(heartIcon);
+//     });
+// });
+
+// heartBtn.addEventListener('click', function() {
+//     if (heartIcon.classList.contains('far')) {
+//         heartIcon.classList.remove('far');
+//         heartIcon.classList.add('fas'); // class for solid heart
+//         heartIcon.style.color = '#98002e'; // fill color to red
+//         heartBtn.setAttribute('aria-checked', 'true'); 
+//     } else if (heartIcon.classList.contains('fas')) {
+//         heartIcon.classList.remove('fas');
+//         heartIcon.classList.add('far'); // class for outline heart
+//         heartIcon.style.color = 'rgb(40, 40, 40)'; // change fill color to default
+//         heartBtn.setAttribute('aria-checked', 'false');
+//     }
+// });
 
 // const heartIcon1 = document.getElementById('heart-icon1');
 // const heartBtn1 = document.getElementById('heart-btn1');
