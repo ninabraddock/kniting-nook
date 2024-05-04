@@ -501,7 +501,7 @@ button {
     z-index: 8;
 }
 
-/* change oriaentation */
+/* change orientation */
 .pre-btn {
     left: 0;
     transform: rotate(180deg);
@@ -526,45 +526,45 @@ footer {
     /* padding: 3em 20em 3em 30em; */
 }
 
-/* col headers */
-/* .footer-col > h2 {
-    color: #007355;
-    font-size: 24px;
-    margin: 1em;
-} */
-
-.poop {
-    color: #007355;
-    font-size: 24px;
-    margin: 1em;
-}
-
-/* underline headers */
-.footer-col > h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    background-color: purple;
-    height: 2px;
-    width: 40px;
-}
-
-.poop::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    background-color: purple;
-    height: 2px;
-    width: 40px;
-}
-
-
-
 /* space cols */
 .footer-col {
     width: 25%;
+    color: palevioletred;
+    padding: 3rem;
+}
+
+/* titles */
+.title {
+    /* text-align: left; */
+    color: #007355;
+    font-size: 24px;
+}
+
+#socials {
+    /* color: #98002e; */
+    display: flex;
+    justify-content: left;
+}
+
+#socials li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.featured {
+    color: pink;
+}
+
+/* underline headers */
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: purple;
+    height: 2px;
+    width: 40px;
 }
 
 /* list */
@@ -572,9 +572,6 @@ ul {
     list-style: none;
     
 }
-
-
-
 
 .collection-container {
 width: 100%;
