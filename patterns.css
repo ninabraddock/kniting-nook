@@ -111,3 +111,17 @@ div.container {
   text-align: center;
   padding: 10px 20px;
 }
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container > img {
+    background-color: springgreen;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
