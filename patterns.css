@@ -102,7 +102,7 @@ p {
 /* place heart on top of img */
 .heart-tag, .heart-tag1 {
     position: absolute;
-    padding: 5px;
+    padding: 15px;
     border-radius: 50px;
     color: rgb(40, 40, 40);
     right: 10px;
@@ -121,12 +121,11 @@ button {
 .heart-icon, #heart-icon1 {
     user-select: none;
     color: rgb(40, 40, 40);
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /* fill in heart */
 .heart-icon:hover, #heart-icon1:hover {
-    /* color: #007355; */
     color: #98002e;
     /* screen reader */
     text-decoration: underline;
@@ -136,6 +135,7 @@ button {
 .heart-icon:active, #heart-icon1:active {
     transform: scale(0.96);
 }
+
 
 
 /* justify to page */
@@ -153,9 +153,9 @@ button {
 
 /* navigate next, slider */
 .toggle-img button{
-    border: black solid 1px;
+    /* border: black solid 1px; */
     height: 40px;
-    width: 60px;
+    width: 40px;
     position: absolute; 
     display: flex; 
     justify-content: center; 
@@ -174,19 +174,27 @@ button {
     align-items: center;
     cursor: pointer;
     z-index: 8;
+    /* easier to read */
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* change orientation */
 .pre-btn {
-    left: 0;
+    left: 10px;
     transform: rotate(180deg);
+    transform: scaleX(-1);
 }
 
 /* keep right side */
 .nxt-btn {
-    right: 0;
+    right: 10px;
 }
 
+/* screen reader */ 
+.pre-btn:hover,
+.nxt-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
 
 
@@ -200,7 +208,7 @@ button {
 #product-photos {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 45px;
+    margin: 0px 45px 50px 45px;
     /* border: #98002e 2px solid; */
     width: 600px;
 }
@@ -233,6 +241,61 @@ button {
 }
 
 
+/* product text */
+#product-description {
+    /* border: #007355 solid 2px; */
+    top: 150px;
+    right: 120px;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+h6 {
+    color: rgba(128, 128, 128, 0.815);
+    margin-bottom: 20px;
+}
+
+/* fit color theme */
+.fa-star{
+    color: palevioletred;
+}
+
+/* fill in stars according to ratings */
+.fas:nth-child(1){
+    margin-left: 10px;
+}
+
+
+
+/* align the row */
+#count, .buy-btn {
+    vertical-align: bottom;
+}
+
+/* size to elements in row */
+#count {
+    /* border: #007355 1px solid; */
+    width: 40px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+
+#count:focus {
+    outline: none;
+}
+
+/* link to shopping cart */
+.buy-btn {
+    background-color: #0073543d;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 3px;
+}
 
 /* footer */
 
@@ -244,6 +307,7 @@ footer {
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: #ebf0f8;
+    margin-top: 220px;
 }
 
 /* space cols */
@@ -258,17 +322,6 @@ footer {
     /* text-align: left; */
     color: #007355;
     font-size: 24px;
-}
-
-/* underline headers */
-.title::before {
-    /* content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    background-color: purple;
-    height: 2px;
-    width: 40px; */
 }
 
 #socials {

@@ -490,7 +490,7 @@ button {
     color: #007355;
 }
 
-/* discounted price */
+/* discounted price, if needed */
 .actual-price {
     margin-left: 20px;
     opacity: 0.5;
@@ -500,6 +500,17 @@ button {
 
 
 /* navigate next, slider */
+.toggle-img button{
+    /* border: black solid 1px; */
+    height: 40px;
+    width: 40px;
+    position: absolute; 
+    display: flex; 
+    justify-content: center; 
+    top: 50%;  /* center to img */
+    /* background-color: #007355; */
+}
+
 .pre-btn,
 .nxt-btn {
     border: none;
@@ -512,17 +523,25 @@ button {
     align-items: center;
     cursor: pointer;
     z-index: 8;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* change orientation */
 .pre-btn {
-    left: 0;
+    left: 120px;
     transform: rotate(180deg);
+    transform: scaleX(-1);
 }
 
 /* keep right side */
 .nxt-btn {
-    right: 0;
+    right: 60px;
+}
+
+/* screen reader */ 
+.pre-btn:hover,
+.nxt-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 
