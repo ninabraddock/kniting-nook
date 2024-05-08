@@ -365,11 +365,25 @@ button:hover {
 
 /* category name for scroll bar */
 .product-category {
-    padding: 0 10vw;
+    margin-left: 10vw;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
     text-transform: capitalize;
+    /* for underline */
+    display: inline-block;
+    padding-bottom: 1px;
+    position: relative;
+}
+
+/* underline title */
+.product-category::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 1px;
+    bottom: 5px;
+    border-bottom: 2px solid #007355;
 }
 
 /* adj. products on same line */
@@ -496,7 +510,6 @@ button {
     display: flex;                      
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
     cursor: pointer;
     z-index: 8;
 }
@@ -556,22 +569,13 @@ footer {
     color: pink;
 }
 
-/* underline headers */
-.title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    background-color: purple;
-    height: 2px;
-    width: 40px;
-}
-
 /* list */
 ul {
-    list-style: none;
-    
+    list-style: none; 
 }
+
+
+
 
 .collection-container {
 width: 100%;
