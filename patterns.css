@@ -1,3 +1,77 @@
+/* header */
+
+/* nav links */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #ebf0f8;
+    /* transition */ 
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
+    /* insure it's always in front, higher number for other elements */
+    z-index: 10; 
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* fill to left side */
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+/* alt pages on same row */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove bullets and space each nav link */
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* remove underline, change text color */
+#navbar li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+    transition: 0.3 ease; 
+}
+
+/* color text */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #007355;
+}
+
+/* add underline on nav link */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #007355;
+    position: absolute;
+    /* correct underline position */
+    bottom: -4px;
+    left: 20px;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+
 /* space products */
 .product-card {
     flex: 0 0 auto;
@@ -96,32 +170,53 @@ button {
     text-decoration: line-through;
 }
 
-/* hero polaroid */
-body {margin:50px;}
 
-/*  */
-div.polaroid {
-  width: 30%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+/* justify to page */
+.polaroid {
+    width: 35%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 45px;
 }
 
-div.container {
-  text-align: center;
-  padding: 10px 20px;
+/* attached to main img */
+.product-name {
+    text-align: center;
+    padding: 10px 20px;
 }
 
-
-#container {
+/* alternative photos below main */
+#product-photos {
     display: flex;
     flex-wrap: wrap;
+    margin: 0px 45px;
+    /* border: #98002e 2px solid; */
+    width: 600px;
 }
 
-#container > img {
-    background-color: springgreen;
-    font-size: 20px;
-    margin: 20px;
-    padding: 20px;
-    width: 200px;
+/* adjust individual img dimensions */
+.row > img {
+    /* margin: 10px; */
+    margin: 5px 10px 5px 0;
+    width: 141px;
+    height: 190px;
+    /* border: rgba(0, 0, 0, 0.554) 1px solid; */
+}
+
+.row > img:last-child {
+    margin-right: 0; 
+    margin-bottom: 0;
+}
+
+/* new row */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*  */
+.column {
+    float: left;
+    width: 25%;
 }

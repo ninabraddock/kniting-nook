@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="patterns.css">
     <title>patterns</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- material icons by Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <!-- same header in all webpages -->
+    <!-- header -->
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="brand logo" width="332" height="284"></a>
+        <!-- alt page options -->
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="patterns.html">Patterns</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <!-- material icons -->
+                <li><a href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a></li> 
+            </ul>
+        </div>
+    </section>
+
     <!-- options for type of sweater: v-neck, boatneck, by fabric -->
     <!-- display options in two-by-two with padding on either side of the three across two down alt blank-->
     <!-- flexbox harvard cs class -->
@@ -19,19 +39,25 @@
     <!-- main product img -->
     <div class="polaroid">
         <img src="img/sweater1.png" alt="sweater" width="100%">
-        <div class="container">
+        <div class="product-name">
             <p>Cinque Terre</p>
         </div>
     </div>
 
     <!-- additional product imgs -->
-    <div id="container">
-        <div></div>
-        <img src="img/sweater1.png" alt="sweater" width="10%" height="210px">
-        <img src="img/sweater2.png" alt="sweater" width="10%" height="210px">
-        <img src="img/sweater3.png" alt="sweater" width="10%" height="210px">
-        <img src="img/cardigan1.png" alt="sweater" width="10%" height="210px">
-        <img src="img/cardigan2.png" alt="sweater" width="10%" height="210px">
+    <div id="product-photos">
+        <div class="row">   
+            <img class="column" src="img/sweater1.png" alt="sweater">
+            <img class="column" src="img/sweater2.png" alt="sweater">
+            <img class="column" src="img/sweater3.png" alt="sweater">
+            <img class="column" src="img/accessories3.png" alt="sweater">
+        </div>
+        <div class="row">
+            <img class="column" src="img/cardigan1.png" alt="sweater">
+            <img class="column" src="img/cardigan2.png" alt="sweater">
+            <img class="column" src="img/accessories1.png" alt="sweater">
+            <img class="column" src="img/accessories2.png" alt="sweater">
+        </div>
     </div>
 
 </body>
