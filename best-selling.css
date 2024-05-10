@@ -310,12 +310,11 @@ h6 {
 footer {
     display: flex;
     flex-wrap: wrap;
+    /* margin-top: auto; */
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: #ebf0f8;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 220px;
 }
 
 /* space cols */

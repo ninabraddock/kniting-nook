@@ -1,21 +1,51 @@
+// show all product imgs 
+const mainImg = document.getElementById('main-img');
+const altImg = document.getElementsByClassName('column');
+
+// replace main img with alt by clicking directly
+for(let i = 0; i < altImg.length; ++i){
+    altImg[i].onclick = function(){
+        mainImg.src = altImg[i].src;
+    }
+}
+
 //arrow icons
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-// scroll bar
-productContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
 
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
+// container to hold all product imgs
+const altImgArray = Array.from(altImg);
 
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-    })
-})
+// Event listener for next button
+nxtBtn.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the index of the current image
+        const currentIndex = altImgArray.findIndex(img => img.src === mainImg.src);
+        // Increment the index to move to the next image
+        const nextIndex = (currentIndex + 1) % altImgArray.length;
+        // Update the main image source
+        mainImg.src = altImgArray[nextIndex].src;
+    });
+});
+
+// Event listener for previous button
+preBtn.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the index of the current image
+        const currentIndex = altImgArray.findIndex(img => img.src === mainImg.src);
+        // Decrement the index to move to the previous image
+        const prevIndex = (currentIndex - 1 + altImgArray.length) % altImgArray.length;
+        // Update the main image source
+        mainImg.src = altImgArray[prevIndex].src;
+    });
+});
+
+
+
+
+
 
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
