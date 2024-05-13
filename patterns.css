@@ -243,6 +243,8 @@ button {
 .column {
     float: left;
     width: 25%;
+    /* max-width: 100px;
+    height: auto; */
 }
 
 
@@ -304,6 +306,52 @@ h6 {
     border-radius: 3px;
 }
 
+/* grid layout */
+.featured-products {
+    color: #0073543d;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 1.3rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+/* row */
+.row {
+    position: relative;
+    transition: all 0.3 ease;
+}
+
+/* individual */
+.row img{
+    width: 100%;
+    height: auto;
+}
+
+/* combine */
+.featured-text{
+    position: absolute;
+    top: 40px;
+    left: 50px
+}
+
+/* name */
+.featured-text h5{
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+/* discription */
+.featured-text p{
+    color: #007355;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400px;
+    /* outline: black solid 1px; */
+}
+
+
 /* footer */
 
 /* block */
@@ -313,7 +361,6 @@ footer {
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: #ebf0f8;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }

@@ -1,6 +1,6 @@
 // show all product imgs 
 const mainImg = document.getElementById('main-img');
-const altImg = document.getElementsByClassName('column');
+const altImg = document.getElementsByClassName('smallImg');
 
 // replace main img with alt by clicking directly
 for(let i = 0; i < altImg.length; ++i){
