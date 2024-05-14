@@ -327,7 +327,7 @@ footer {
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: #ebf0f8;
-    margin-top: 1vw;
+    margin-top: 10vw;
 }
 
 /* space cols */
@@ -381,7 +381,7 @@ ul {
     .product-imgs {
         max-width: 100%;
         width: 100%;
-        margin-bottom: 50vw; 
+        margin-bottom: 30vw; 
     }
 
     /* span one column */
