@@ -10,20 +10,16 @@
 h2 {
     font-size:46px;
     line-height: 54px;
-    color: #007355;
 }
 
 h4 {
     font-weight: bold;
-    color:#007355
 }
 
 /* sub default to match theme */
 p {
     font-size: 16px;
     margin: 15px 0 20px 0;
-    /* color: #fff; */
-    color: #007355;
 }
 
 
@@ -141,7 +137,20 @@ button {
     transform: scale(0.96);
 }
 
+/* cohesive reponsive design */
+.img-description-join {
+    display: flex;
+    justify-content: space-between;
+}
 
+.product-imgs {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Add some spacing between columns */
+}
+
+#product-description {
+    flex: 1; /* Take up remaining space */
+}
 
 /* justify to page */
 .polaroid {
@@ -217,7 +226,7 @@ button {
 
 
 /* small alternative imgs */
-#container {
+.container {
     display: flex;
     flex-wrap: wrap;
     width: 35vw;
@@ -232,22 +241,6 @@ button {
     height: auto;
 }
 
-#product-descriptions {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#product-descriptions > div {
-    border: #007355 1px solid;
-    width: 100%;
-    height: auto;
-    /* change to viewport */
-    max-height: 150vw;
-    padding: 15px;
-}
-
-
-
 /* product text */
 #product-description {
     border: #007355 solid 2px;
@@ -255,15 +248,27 @@ button {
     right: 120px;
     width: 50%;
     /* height: 1280px; */
-    height: 140%;
+    /* height: 140%; */
     position: absolute;
     display: flex;
     flex-direction: column;
     padding: 0 30px;
+
+    max-height: 1200px;
+    overflow: auto;
+}
+
+#product-details {
+    border: #007355 1px solid;
+    width: 100%;
+    height: auto;
+    /* change to viewport */
+    max-height: 150vw;
+    margin: 15px 0;
 }
 
 h6 {
-    color: rgba(128, 128, 128, 0.815);
+    color: rgba(128, 128, 128, 0.915);
     margin-bottom: 20px;
 }
 
@@ -333,25 +338,50 @@ footer {
     font-size: 24px;
 }
 
+/* keep text color theme */
+.footer-col  > p {
+    color: #007355;
+}
+
+/* align to column */
 #socials {
     /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
 
+/* organize like header */
 #socials li {
     list-style: none;
     padding: 0 20px;
     position: relative;
 }
 
-.featured {
-    color: pink;
-}
-
 /* list */
 ul {
     list-style: none; 
 }
+
+@media screen and (max-width: 768px) {
+    /* vertial, more legible */
+    .img-description-join {
+        flex-direction: column; 
+    }
+
+    /* stack on top */
+    .product-imgs {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* space for footer */
+    #product-description {
+        width: 100%;
+        max-height: calc(100vh - 50px); 
+        overflow-y: auto; 
+    }
+}
+
 
 

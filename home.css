@@ -462,7 +462,6 @@ button {
 
 /* fill in heart */
 .heart-icon:hover, #heart-icon1:hover {
-    /* color: #007355; */
     color: #98002e;
     /* screen reader */
     text-decoration: underline;
@@ -590,20 +589,23 @@ footer {
     font-size: 24px;
 }
 
+/* keep text color theme */
+.footer-col  > p {
+    color: #007355;
+}
+
+/* align to column */
 #socials {
     /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
 
+/* organize like header */
 #socials li {
     list-style: none;
     padding: 0 20px;
     position: relative;
-}
-
-.featured {
-    color: pink;
 }
 
 /* list */
