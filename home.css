@@ -101,13 +101,15 @@ body {
     list-style: none;
     padding: 0 20px;
     position: relative;
+    /* not have best selling wrap */
+    flex: 0 0 auto;
 }
 
 /* remove underline, change text color */
 #navbar li a {
     text-decoration: none;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 600px;
     color: black;
     transition: 0.3 ease; 
 }

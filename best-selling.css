@@ -60,13 +60,15 @@ p {
     list-style: none;
     padding: 0 20px;
     position: relative;
+    /* not have best selling wrap */
+    flex: 0 0 auto;
 }
 
 /* remove underline, change text color */
 #navbar li a {
     text-decoration: none;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 600px;
     color: black;
     transition: 0.3 ease; 
 }
@@ -90,11 +92,16 @@ p {
     left: 20px;
 }
 
-#header {
-    position: sticky;
-    top: 0;
-    left: 0;
+/* hide nav when below a width */
+#mobile {
+    display: none;
+    align-items: center;
 }
+
+/* don't display in computer layout */
+#close {
+    display: none;
+}  
 
 
 
@@ -437,6 +444,146 @@ ul {
         margin-top: 1vw;
     }
 }
+
+
+/* header and footer */
+@media (max-width: 799px){
+    /* promo-text */
+    h2 {
+        font-size: 27px;
+        line-height: 32px;
+        color: #007355;
+    }
+
+    /* position right */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #ebf0f8;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.2s;
+    }
+
+    /* activate */
+    #navbar.active {
+        right: 0;
+    }
+
+    /* equal spacing as before */
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    /* keep hamburger icon */
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    /* space between icons */
+    #mobile i {
+        color: black;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    /* position side bar */
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30ppx;
+        color: black;
+        font-size: 24px;
+    }
+
+    /* account for spaccing below */
+    #sales-text > h4 {
+        padding-bottom: 10px;
+    }
+
+    /* side promo */
+    #promo-text {
+        color: #007355;
+        -webkit-text-stroke-width: 0.5px;
+        background-color: #ffffffc4;
+        padding: 5px;
+        border-radius: 7px;
+        font-size: 13px;
+
+        /* position separate form other text */
+        position: absolute;
+        margin-bottom: 27rem;
+        margin-right: 3rem;
+        right: 0;
+        bottom: 0;
+        
+        /* wrap text */
+        max-width: 170px;
+    }
+
+    /* shop now button */
+    #hero button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: white;
+        border: none;
+        color: #007355;
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    /* don't include in side bar */
+    #lg-bag {
+        display: none;
+    }
+
+    /* hero section */
+    #hero {
+        height: 50vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    /* entire div */
+    #sales-text {
+        /* border: #007355 2px solid; */
+        width: 40%;
+    }
+
+    /* dynamic */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* dynamic */
+    .footer-col h4::before {
+        all: unset;
+    }
+
+    /* legable footer text */
+    .footer-col .title {
+        font-size: 20px;
+    }
+
+    /* text for last col */
+    .footer-col .info li a {
+        font-size: 12px;
+    }
+} 
 
 
 
