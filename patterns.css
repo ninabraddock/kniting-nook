@@ -36,7 +36,8 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    background-color: #ebf0f8;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
     /* transition */ 
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
     /* insure it's always in front, higher number for other elements */
@@ -109,13 +110,49 @@ p {
 
 
 
+/* small alternative imgs */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #00735428; */
+    justify-content: center;
+    margin: 2% 0;
+}
+
+/* keep same number  */
+.product-card {
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
+    /* border: #cfd4da 1px solid; */
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 340px;
+
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* img */
+.product-image {
+    position: relative;
+    width: 100%; 
+    /* height: auto; */
+    height: 350px;
+    overflow: hidden;
+}
+
+/* quick view */
+.product-image:hover {
+    /* content: url(img/accessories4.png); */
+}
+
 /* toggle heart icon, material icons */
 
 /* place heart on top of img */
 .heart-tag, .heart-tag1 {
     position: absolute;
-    padding: 15px;
-    border-radius: 50px;
+    padding: 5px;
+    border-radius: 5px;
     color: rgb(40, 40, 40);
     right: 10px;
     top: 10px;
@@ -133,7 +170,7 @@ button {
 .heart-icon, #heart-icon1 {
     user-select: none;
     color: rgb(40, 40, 40);
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /* fill in heart */
@@ -148,215 +185,50 @@ button {
     transform: scale(0.96);
 }
 
-
-
-/* justify to page */
-.polaroid {
-    width: 35%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 40px 45px;
-    /* for slider */
-    position: relative; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-}
-
-/* navigate next, slider */
-.toggle-img button{
-    /* border: black solid 1px; */
-    height: 40px;
-    width: 40px;
-    position: absolute; 
-    display: flex; 
-    justify-content: center; 
-    top: 50%;  /* center to img */
-}
-
-.pre-btn,
-.nxt-btn {
-    border: none;
-    width: 10vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;                      
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 8;
-    /* easier to read */
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* change orientation */
-.pre-btn {
-    left: 10px;
-    transform: rotate(180deg);
-    transform: scaleX(-1);
-}
-
-/* keep right side */
-.nxt-btn {
-    right: 10px;
-}
-
-/* screen reader */ 
-.pre-btn:hover,
-.nxt-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-
-
-/* attached to main img */
-.product-name {
-    text-align: center;
-    padding: 10px 20px;
-}
-
-/* alternative photos below main */
-#product-photos {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 45px 50px 45px;
-    /* border: #98002e 2px solid; */
-    width: 600px;
-}
-
-/* adjust individual img dimensions */
-.row > img {
-    margin: 5px 10px 5px 0;
-    width: 141px;
-    height: 180px;
-    /* border: rgba(0, 0, 0, 0.554) 1px solid; */
-}
-
-.row > img:last-child {
-    margin-right: 0; 
-    margin-bottom: 0;
-}
-
-/* new row */
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/*  */
-.column {
-    float: left;
-    width: 25%;
-    /* max-width: 100px;
-    height: auto; */
-}
-
-
-/* product text */
-#product-description {
-    border: #007355 solid 2px;
-    top: 150px;
-    right: 120px;
-    width: 50%;
-    /* height: 1280px; */
-    height: 140%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px;
-}
-
-h6 {
-    color: rgba(128, 128, 128, 0.815);
-    margin-bottom: 20px;
-}
-
-/* fit color theme */
-.fa-star{
-    color: palevioletred;
-}
-
-/* fill in stars according to ratings */
-.fas:nth-child(1){
-    margin-left: 10px;
-}
-
-
-
-/* align the row */
-#count, .buy-btn {
-    vertical-align: bottom;
-}
-
-/* size to elements in row */
-#count {
-    /* border: #007355 1px solid; */
-    width: 40px;
-    height: 35px;
-    display: inline-block;
-    margin-right: 10px;
-    padding-left: 5px;
-}
-
-#count:focus {
-    outline: none;
-}
-
-/* link to shopping cart */
-.buy-btn {
-    background-color: #0073543d;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 3px;
-}
-
-/* grid layout */
-.featured-products {
-    color: #0073543d;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 1.3rem;
-    align-items: center;
-    margin-top: 4rem;
-}
-
-/* row */
-.row {
-    position: relative;
-    transition: all 0.3 ease;
-}
-
-/* individual */
-.row img{
+/* center img */
+.hover-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* combine */
-.featured-text{
-    position: absolute;
-    top: 40px;
-    left: 50px
+/* space for description */
+.product-info {
+    width: 100%;
+    height: 120px;
+    padding-top: 30px;
+    line-height: 1.5;
 }
 
-/* name */
-.featured-text h5{
-    font-size: 19px;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+/* pattern owner */
+.product-brand {
+    text-transform: capitalize;
+    /* margin: 2px; */
+    /* text-transform: uppercase; */
 }
 
-/* discription */
-.featured-text p{
+/* pattern name */
+.product-short-description {
+    text-transform: capitalize;
+    overflow: hidden;
+    float: left;
     color: #007355;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 400px;
-    /* outline: black solid 1px; */
 }
 
+/* pattern price */
+.price {
+    font-weight: 700;
+    font-size: 17px;
+    float: right;
+    color: #007355;
+}
+
+/* discounted price, if needed */
+.actual-price {
+    margin-left: 1rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
 
 /* footer */
 
@@ -366,7 +238,8 @@ footer {
     flex-wrap: wrap;
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
-    background-color: #ebf0f8;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
     bottom: 0;
     width: 100%;
 }

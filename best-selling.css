@@ -32,7 +32,8 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    background-color: #ebf0f8;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
     /* transition */ 
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
     /* insure it's always in front, higher number for other elements */
@@ -326,7 +327,8 @@ footer {
     /* margin-top: auto; */
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
-    background-color: #ebf0f8;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
     margin-top: 10vw;
 }
 
