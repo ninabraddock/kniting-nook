@@ -141,11 +141,6 @@ p {
     overflow: hidden;
 }
 
-/* quick view */
-.product-image:hover {
-    /* content: url(img/accessories4.png); */
-}
-
 /* toggle heart icon, material icons */
 
 /* place heart on top of img */
@@ -213,6 +208,11 @@ button {
     overflow: hidden;
     float: left;
     color: #007355;
+}
+
+/* screen reader */
+.product-short-description:hover {
+    text-decoration: underline;
 }
 
 /* pattern price */

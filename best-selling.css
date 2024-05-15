@@ -172,6 +172,7 @@ button {
     padding: 2em;
 }
 
+/* comment */
 #product-details {
     /* border: #007355 1px solid; */
     width: 100%;
@@ -206,6 +207,7 @@ button {
     top: 50%;  /* center to img */
 }
 
+/* comment */
 .pre-btn,
 .nxt-btn {
     border: none;
