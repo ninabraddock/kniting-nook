@@ -278,6 +278,7 @@ button {
 h6 {
     color: rgba(128, 128, 128, 0.915);
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 /* fit color theme */
@@ -394,6 +395,7 @@ ul {
         height: 930px;
         /* border: 2px solid palevioletred; */
         padding-left: 3.5em;
+        text-transform: capitalize;
     }
 
     #product-description h6 {

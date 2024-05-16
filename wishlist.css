@@ -120,13 +120,13 @@ p {
     width: 100%;
     display: flex;
     padding: 2% 5%;
+    border: #007355 1px solid;
+    margin-bottom: 5%;
 }
 
 /* side bar */
 .find-pattern-text {
     text-align: left;
-    border: palevioletred 3px solid;
-    border-right: none;
     width: 40%;
     padding: 4rem 0 0 5rem;
     text-transform: capitalize;
@@ -177,7 +177,6 @@ p {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
-    border: palevioletred 3px solid;
     justify-content: space-evenly; 
     padding: 30px 0;
 }
@@ -188,6 +187,7 @@ p {
     width: 200px;
 }
 
+/* visual quick shop */
 .grid-container {
     display: grid;
     /* fr = fraction */
@@ -206,34 +206,43 @@ p {
     background-color: whitesmoke;
     border: rgb(235, 233, 233) 1px solid;
     color: #007355;
-    text-transform: capixtalize; 
+    text-transform: capitalize; 
 }
 
 
-/* small alternative imgs */
-.search {
+
+/* first question */
+.categories {
+    /* border: red 1px solid; */
+    margin: 10% 0 10% 0;
+}
+
+/* next steps */
+.instructions {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* category options */
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2% 0;
-    /* width: 100%; */
-}
-
-#products {
-    /* width: 60%; */
-    border: purple 1px solid;
+    width: 100%;
+    /* border: purple 1px solid; */
 }
 
 /* keep same number  */
 .product-card {
+    margin-top: 20px;
     background-color: whitesmoke;
-    /* background-color: #ebf0f8; */
     border: #cfd4da 1px solid;
     font-size: 20px;
     margin: 20px;
     padding-bottom: 20px;
     width: 340px;
-
     transition: transform 0.3s ease-in-out; 
 }
 

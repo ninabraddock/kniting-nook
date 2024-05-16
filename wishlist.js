@@ -1,3 +1,15 @@
+// function adjustHyperlink() {
+//     var targetSection = document.getElementById('step1');
+//     // var targetSection = document.getElementsByClassName('step');
+//     var targetOffset = targetSection.offsetTop - 450; 
+//     window.scrollTo(0, targetOffset);
+// }
+function adjustScroll() {
+    var targetSection = document.getElementById('step1');
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+
 // show all product imgs 
 const mainImg = document.getElementById('main-img');
 const altImg = document.getElementsByClassName('smallImg');
