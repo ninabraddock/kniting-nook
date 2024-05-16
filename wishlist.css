@@ -225,6 +225,12 @@ p {
     margin-bottom: 25px;
 }
 
+/* reposition hyperlink */
+#step1 {
+    position:relative;
+    top:-150px
+}
+
 /* category options */
 .products {
     display: flex;
