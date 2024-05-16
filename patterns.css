@@ -210,9 +210,9 @@ button {
     color: #007355;
 }
 
-/* screen reader */
 .product-short-description:hover {
     text-decoration: underline;
+    /* font-weight: bold; */
 }
 
 /* pattern price */
