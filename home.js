@@ -51,12 +51,12 @@ const nav = document.getElementById('navbar');
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
-    })
+    });
 }
 
 // close out of side bar
 if(close){
     close.addEventListener('click', () => {
         nav.classList.remove('active');
-    })
+    });
 }

@@ -9,16 +9,15 @@ for(let i = 0; i < altImg.length; ++i){
     }
 }
 
-//arrow icons
+// arrow icons
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-
 // container to hold all product imgs
 const altImgArray = Array.from(altImg);
 
-// Event listener for next button
+// event listener click for next button
 nxtBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -30,7 +29,7 @@ nxtBtn.forEach(button => {
     });
 });
 
-// Event listener for previous button
+// event listener click for previous button
 preBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -41,11 +40,6 @@ preBtn.forEach(button => {
         mainImg.src = altImgArray[prevIndex].src;
     });
 });
-
-
-
-
-
 
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
@@ -70,8 +64,6 @@ function toggleHeart(heartIcon) {
     }
 }
 
-
-
 // responsive side navbar
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
@@ -81,12 +73,12 @@ const nav = document.getElementById('navbar');
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
-    })
+    });
 }
 
 // close out of side bar
 if(close){
     close.addEventListener('click', () => {
         nav.classList.remove('active');
-    })
+    });
 }

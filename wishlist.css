@@ -6,6 +6,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ensure smooth transition */
+html {
+    scroll-behavior: smooth;
+}
+
 /* sub default to match theme */
 h2 {
     font-size:46px;
@@ -120,7 +125,7 @@ p {
     width: 100%;
     display: flex;
     padding: 2% 5%;
-    border: #007355 1px solid;
+    /* border: #007355 1px solid; */
     margin-bottom: 5%;
 }
 
@@ -170,7 +175,6 @@ p {
     cursor: pointer;
     border: palevioletred 2px solid;
 }
-
 
 /* side advertising */
 .product-advertising {
@@ -226,9 +230,10 @@ p {
 }
 
 /* reposition hyperlink */
-#step1 {
-    position:relative;
-    top:-150px
+#step1,
+#step2{
+    position: relative;
+    top: -150px;
 }
 
 /* category options */
@@ -247,10 +252,25 @@ p {
     border: #cfd4da 1px solid;
     font-size: 20px;
     margin: 20px;
+    margin-bottom: 100px;
     padding-bottom: 20px;
     width: 340px;
     transition: transform 0.3s ease-in-out; 
 }
+
+/* foreshadow */
+.product-card:hover {
+    border: whitesmoke 3px solid;
+    /* border: palevioletred 3px solid; */
+}
+
+/* show when clicked on */
+.selected,
+.featured {
+    border: palevioletred 2px solid;
+}
+
+
 
 /* img */
 .product-image {
@@ -274,6 +294,39 @@ p {
     font-size: 18px;
 }
 
+/* position below option */
+.next-question {
+    display: flex;
+    align-items: center; 
+    /* border: #007355 1px solid; */
+    margin: 0 auto;
+    width: 15%;
+    justify-content: space-between;
+}
+
+/* format as other btns */
+.toggle {
+    display: inline-flex;
+    border-radius: 4px;
+    background-color: white;
+    color: #007355;
+    font-size: 1rem;
+    /* padding: 1rem; */
+    padding: 20px;
+    cursor: pointer;
+    border: palevioletred 1px solid;
+}
+
+/* space arrow and text */
+.toggle p {
+    /* padding: 3px; */
+    font-size: 20px;
+}
+
+.toggle p,
+.toggle span {
+    margin: 0; /* Remove default margins */
+}
 
 
 /* footer */
@@ -329,6 +382,21 @@ ul {
     list-style: none; 
 }
 
+/* buttons */
+@media (max-width: 1400px){
+    /* keep gap in-between */
+    .next-question {
+        width: 25%;
+    }
+}
+
+/* buttons */
+@media (max-width: 1000px){
+    /* keep gap in-between */
+    .next-question {
+        width: 40%;
+    }
+}
 
 
 /* header and footer */
@@ -415,18 +483,9 @@ ul {
         max-width: 170px;
     }
 
-    /* shop now button */
-    #hero button {
-        display: inline-block;
-        border-radius: 4px;
-        background-color: white;
-        border: none;
-        color: #007355;
-        text-align: center;
-        font-size: 1rem;
-        padding: 1rem;
-        transition: all 0.5s;
-        cursor: pointer;
+    /* keep gap in-between */
+    .next-question {
+        width: 50%;
     }
 
     /* don't include in side bar */

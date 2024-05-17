@@ -1,14 +1,47 @@
-// function adjustHyperlink() {
-//     var targetSection = document.getElementById('step1');
-//     // var targetSection = document.getElementsByClassName('step');
-//     var targetOffset = targetSection.offsetTop - 450; 
-//     window.scrollTo(0, targetOffset);
-// }
-function adjustScroll() {
-    var targetSection = document.getElementById('step1');
-    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//toggle selected pattern option
+function toggleSelected(element) {
+    // unselect all cards
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => { 
+        card.classList.remove('selected');
+    });
+
+    //select only one clicked
+    element.classList.toggle("selected");
 }
 
+//toggle selected pattern option
+function toggleFeature(element) {
+    // unselect all cards
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => { 
+        card.classList.remove('selected');
+    });
+
+    //select only one clicked
+    element.classList.toggle("selected");
+}
+
+
+
+
+
+// select img choice
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all product cards
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Add click event listener to each product card
+    productCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove the highlighted class from all product cards
+            productCards.forEach(card => card.classList.remove('highlighted'));
+            
+            // Add the highlighted class to the clicked product card
+            card.classList.add('highlighted');
+        });
+    });
+});
 
 // show all product imgs 
 const mainImg = document.getElementById('main-img');
@@ -26,11 +59,10 @@ const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-
 // container to hold all product imgs
 const altImgArray = Array.from(altImg);
 
-// Event listener for next button
+// event listener click for next button
 nxtBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -42,7 +74,7 @@ nxtBtn.forEach(button => {
     });
 });
 
-// Event listener for previous button
+// event listener click for previous button
 preBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -53,8 +85,6 @@ preBtn.forEach(button => {
         mainImg.src = altImgArray[prevIndex].src;
     });
 });
-
-
 
 // find what img to pass in 
 function setImg(imgId, newSrc) {
@@ -70,8 +100,6 @@ function setNewImg(imgId, newSrc) {
 function setOldImg(imgId, oldSrc) {
     setImg(imgId, oldSrc);
 }
-
-
 
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
@@ -102,8 +130,6 @@ function toggleHeart(heartIcon) {
     }
 }
 
-
-
 // responsive side navbar
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
@@ -113,12 +139,12 @@ const nav = document.getElementById('navbar');
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
-    })
+    });
 }
 
 // close out of side bar
 if(close){
     close.addEventListener('click', () => {
         nav.classList.remove('active');
-    })
+    });
 }

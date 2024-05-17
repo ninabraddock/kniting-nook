@@ -8,7 +8,7 @@
 
 /* sub default to match theme */
 h2 {
-    font-size:46px;
+    font-size: 30px;
     line-height: 54px;
     color: #007355;
 }
@@ -117,6 +117,13 @@ p {
     /* background-color: #00735428; */
     justify-content: center;
     margin: 2% 0;
+}
+
+/* title */
+.product-header {
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 20px;
 }
 
 /* keep same number  */

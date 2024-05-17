@@ -18,7 +18,7 @@ const preBtn = [...document.querySelectorAll('.pre-btn')];
 // container to hold all product imgs
 const altImgArray = Array.from(altImg);
 
-// Event listener for next button
+// event listener click for next button
 nxtBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -30,7 +30,7 @@ nxtBtn.forEach(button => {
     });
 });
 
-// Event listener for previous button
+// event listener click for previous button
 preBtn.forEach(button => {
     button.addEventListener('click', function() {
         // Find the index of the current image
@@ -42,56 +42,20 @@ preBtn.forEach(button => {
     });
 });
 
-
-
-// const hoverImg = document.getElementsByClassName('hover-img');
-// const hoverImg = document.querySelectorAll('.hover-img');
-
-// hoverImg.forEach(img => {
-//     // position of mouse not click
-//     img.addEventListener('mouseover', function() {
-//         const replacementSrc = this.getAttribute('data-hover');
-//         this.src = replacementSrc;
-//     });
-
-//     img.addEventListener('mouseout', function() {
-//         const originalSrc = this.getAttribute('src');
-//         this.src = originalSrc;
-//     });
-// });
-
-// find what img to pass in 
-
+// change img 
 function setImg(imgId, newSrc) {
     document.getElementById(imgId).src = newSrc;
 }
 
-// Call this function to set the new image
+// call this fnc to set the new image
 function setNewImg(imgId, newSrc) {
     setImg(imgId, newSrc);
 }
 
-// Call this function to set the old image
+// call this fnc to set the old image
 function setOldImg(imgId, oldSrc) {
     setImg(imgId, oldSrc);
 }
-
-
-// function setImg(imgId, diffSrc) {
-//     document.getElementById(imgId).src = diffSrc;
-// }
-
-// function setNewImg() {
-//     setImg('imgs', 'img/cardigan2.png');
-// }
- 
-// function setOldImg() {
-//     setImg('imgs', 'img/cardigan1.png');
-// }
-
-
-
-
 
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
@@ -116,8 +80,6 @@ function toggleHeart(heartIcon) {
     }
 }
 
-
-
 // responsive side navbar
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
@@ -127,12 +89,12 @@ const nav = document.getElementById('navbar');
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
-    })
+    });
 }
 
 // close out of side bar
 if(close){
     close.addEventListener('click', () => {
         nav.classList.remove('active');
-    })
+    });
 }
