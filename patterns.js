@@ -72,7 +72,8 @@ function toggleHeart(heartIcon) {
         heartIcon.classList.add('fas'); // class for solid heart
         heartIcon.style.color = '#98002e'; // fill color to red
         heartIcon.parentNode.setAttribute('aria-checked', 'true'); 
-    } else if (heartIcon.classList.contains('fas')) {
+    } 
+    else if (heartIcon.classList.contains('fas')) {
         heartIcon.classList.remove('fas');
         heartIcon.classList.add('far'); // class for outline heart
         heartIcon.style.color = 'rgb(40, 40, 40)'; // change fill color to default

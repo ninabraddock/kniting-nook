@@ -166,14 +166,21 @@ p {
     border-radius: 4px;
     background-color: white;
     border: none;
-    color: #007355;
+    /* color: palevioletred; */
+    /* color: #007355; */
     text-align: center;
     font-size: 20px;
     margin-top: 20px;
     padding: 10px;
     transition: all 0.5s;
     cursor: pointer;
+    /* border: #007355 2px solid; */
     border: palevioletred 2px solid;
+}
+
+/* match text with border */
+.start span {
+    color: palevioletred;
 }
 
 /* side advertising */
@@ -231,7 +238,9 @@ p {
 
 /* reposition hyperlink */
 #step1,
-#step2{
+#step2,
+#step3,
+#step4{
     position: relative;
     top: -150px;
 }
@@ -260,13 +269,14 @@ p {
 
 /* foreshadow */
 .product-card:hover {
-    border: whitesmoke 3px solid;
-    /* border: palevioletred 3px solid; */
+    /* border: whitesmoke 3px solid; */
+    border: palevioletred 3px solid;
 }
 
 /* show when clicked on */
 .selected,
-.featured {
+.design,
+.neckline {
     border: palevioletred 2px solid;
 }
 
@@ -304,12 +314,22 @@ p {
     justify-content: space-between;
 }
 
+/* extra room for longer text */
+.final-question {
+    display: flex;
+    align-items: center; 
+    /* border: #007355 1px solid; */
+    margin: 0 auto;
+    width: 18%;
+    justify-content: space-between;
+}
+
 /* format as other btns */
 .toggle {
     display: inline-flex;
     border-radius: 4px;
     background-color: white;
-    color: #007355;
+    color: palevioletred;
     font-size: 1rem;
     /* padding: 1rem; */
     padding: 20px;
@@ -317,15 +337,58 @@ p {
     border: palevioletred 1px solid;
 }
 
+/* account for size within div */
+#small-button {
+    margin-left: 15px;
+    /* padding-left: 15px; */
+    border: palevioletred 1px solid;
+}
+
 /* space arrow and text */
 .toggle p {
     /* padding: 3px; */
     font-size: 20px;
+    color: palevioletred;
 }
 
+/* remove default margin so same height */
 .toggle p,
 .toggle span {
-    margin: 0; /* Remove default margins */
+    margin: 0; 
+}
+
+/* message user not selected option */
+.not-selected {
+    /* don't display unless needed */
+    /* display: none; */
+    /* visibility: visible; */
+    visibility: hidden;
+
+    display: flex;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: #007355 2px solid;
+    text-align: center;
+    width: 18%;
+    position: fixed;
+    background-color: white;
+    z-index: 100; 
+    padding: 10px 0;
+}
+
+/* format to keep color theme */
+.not-selected span {
+    font-size: 20px;
+    color: #007355;
+    padding-left: 25px;
+}
+
+/* make inline, same as icon */
+.not-selected p {
+    margin: 0;
+    font-size: 18px;
+    padding-left: 10px;
 }
 
 
@@ -361,19 +424,22 @@ footer {
     font-size: 24px;
 }
 
+/* same as header */
 #socials {
     /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
 
+/* same as header */
 #socials li {
     list-style: none;
     padding: 0 20px;
     position: relative;
 }
 
-.featured {
+/* container for support */
+.support {
     color: pink;
 }
 
@@ -388,6 +454,11 @@ ul {
     .next-question {
         width: 25%;
     }
+
+    /* keep gap in-between */
+    .final-question {
+        width: 30%;
+    }
 }
 
 /* buttons */
@@ -395,6 +466,11 @@ ul {
     /* keep gap in-between */
     .next-question {
         width: 40%;
+    }
+
+    /* keep gap in-between */
+    .final-question {
+        width: 45%;
     }
 }
 
@@ -486,6 +562,11 @@ ul {
     /* keep gap in-between */
     .next-question {
         width: 50%;
+    }
+
+    /* keep gap in-between */
+    .final-question {
+        width: 60%;
     }
 
     /* don't include in side bar */

@@ -1,30 +1,81 @@
-//toggle selected pattern option
-function toggleSelected(element) {
-    // unselect all cards
+// step 1
+// allow card/option to be selected
+function toggleSelected(element, question) {
+    // bool if selected
+    const isSelected = element.classList.contains('selected');
     const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => { 
-        card.classList.remove('selected');
+    productCards.forEach(card => {
+        card.classList.remove('selected'); // unselect all 
     });
 
-    //select only one clicked
-    element.classList.toggle("selected");
+    // only select, if not already
+    if(!isSelected) {
+        element.classList.add('selected');
+    }
+
+    // update 
+    mustSelect(question);
 }
 
-//toggle selected pattern option
-function toggleFeature(element) {
-    // unselect all cards
+// step 2
+// allow option to be selected
+function toggleDesign(element, question) {
+    // bool if selected
+    const isSelected = element.classList.contains('selected');
     const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => { 
-        card.classList.remove('selected');
+    productCards.forEach(card => {
+        card.classList.remove('selected'); // unselect all 
     });
 
-    //select only one clicked
-    element.classList.toggle("selected");
+    // only select, if not already
+    if(!isSelected) {
+        element.classList.add('selected');
+    }
+
+    // update 
+    mustSelect(question);
 }
 
+// step 3
+// allow option to be selected
+function toggleNeckline(element, question) {
+    // bool if selected
+    const isSelected = element.classList.contains('selected');
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.classList.remove('selected'); // unselect all 
+    });
 
+    // only select, if not already
+    if(!isSelected) {
+        element.classList.add('selected');
+    }
 
+    // update 
+    mustSelect(question);
+}
 
+// force user to select option
+function mustSelect(question){
+    const nextBtn = document.getElementsByClassName('nextBtn')[question];
+    const notSelected = document.querySelector('.not-selected');
+
+    // make sure to check that option was selected 
+    const anySelected = document.querySelector('.product-card.selected') !== null;
+    // only allow next button if option selected 
+    if(anySelected) {
+        nextBtn.removeAttribute('disabled');
+        notSelected.style.visibility = 'hidden'; 
+        // notSelected.style.visibility = 'visible'; 
+    } else{ //keep disabled
+        nextBtn.setAttribute('disabled', 'true');
+        notSelected.style.visibility = 'visible';
+        // notSelected.style.visibility = 'hidden';
+    }
+}
+
+//call fnc
+mustSelect();
 
 // select img choice
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,7 +173,9 @@ function toggleHeart(heartIcon) {
         heartIcon.classList.add('fas'); // class for solid heart
         heartIcon.style.color = '#98002e'; // fill color to red
         heartIcon.parentNode.setAttribute('aria-checked', 'true'); 
-    } else if (heartIcon.classList.contains('fas')) {
+    } 
+    
+    else if (heartIcon.classList.contains('fas')) {
         heartIcon.classList.remove('fas');
         heartIcon.classList.add('far'); // class for outline heart
         heartIcon.style.color = 'rgb(40, 40, 40)'; // change fill color to default
