@@ -175,7 +175,7 @@ p {
 }
 
 /* change size */
-icon-size {
+.icon-size {
     font-size: 3vw;
 }
 
@@ -479,7 +479,7 @@ ul {
 /* buttons */
 @media (max-width: 1400px){
     /* promo-text */
-    h2 {
+    .start-text h2 {
         font-size: 32px;
         line-height: 33px;
     }
@@ -508,7 +508,7 @@ ul {
 /* buttons */
 @media (max-width: 1100px){
     /* promo-text */
-    h2 {
+    .start-text h2 {
         font-size: 25px;
         line-height: 30px;
     }
@@ -533,13 +533,13 @@ ul {
 /* header and footer */
 @media (max-width: 799px){
     /* promo-text */
-    h2 {
+    .start-text h2 {
         font-size: 19px;
         line-height: 20px;
     }
 
     /* promo-text */
-    h3 {
+    .start-text h3 {
         line-height: 18px;
     }
 
@@ -655,71 +655,38 @@ ul {
 
 /* main text */
 @media (max-width: 500px) {
-    /* promo-text */
-    h2,
-    h3,
-    .btn-start  {
-        margin: 3rem 0 0 2rem;
-        max-width: 800px;
-        border: #007355 3px solid;
-    }
 
     .find-pattern-text {
-        border: #007355 3px solid;
+        /* width: 30%; */
+    }
+
+    .product-advertising {
+        /* width: 70%; */
     }
 
     /* promo-text */
-    h3 {
-        font-size: 9px;
+    .start-text h3 {
+        font-size: 13px;
         line-height: 15px;
     }
 
-    .btn-start {
-        padding-bottom: 2rem;
+    /* keep in container */
+    .grid-item > p {
+        font-size: 10px;
+        max-width: 40px;
+        padding-top: 1rem;
     }
 
-    /* visual quick shop */
-    .grid-container {
-        transform: translate(50%);
-        width: 170px;
+    /* keep in container */
+    .top-text {
+        font-size: 15px;
+        padding-top: 1.5rem;
     }
 
-    .responsive-item:nth-child(1) {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-    .responsive-item:nth-child(2) {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-    .responsive-item:nth-child(5) {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-    .responsive-item:nth-child(6) {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-    }
-    .responsive-item:nth-child(3) {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
-    .responsive-item:nth-child(4) {
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
-    }
-    .responsive-item:nth-child(7) {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-    }
-    .responsive-item:nth-child(8) {
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
-    }
-
-    /* smaller sidebar */
-    .product-advertising .responsive-item {
-        font-size: 1px;
+    /* keep in container */
+    .bottom-text {
+        font-size: 15px;
+        padding-bottom: 1.5rem;
     }
 }
 
