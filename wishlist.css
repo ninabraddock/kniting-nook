@@ -136,7 +136,7 @@ p {
     text-align: left;
     width: 40%;
     height: auto;
-    border: #007355 2px solid;
+    /* border: #007355 2px solid; */
     padding: 2rem;
     text-transform: capitalize;
 
@@ -146,18 +146,18 @@ p {
 /* visual space */
 .find-pattern-text h2 {
     margin-bottom: 2vw;
-    border: #007355 2px solid;
+    /* border: #007355 2px solid; */
 }
 
 /* visual space */
 .find-pattern-text h3 {
     margin-bottom: 2px;
-    border: #007355 2px solid;
+    /* border: #007355 2px solid; */
 }
 
 /* visible for larger responsive screen */
 .btn-start {
-    border: #007355 3px solid;
+    /* border: #007355 3px solid; */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -176,7 +176,7 @@ p {
 
 /* change size */
 icon-size {
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 /* start pattern search */
@@ -186,7 +186,7 @@ icon-size {
     background-color: white;
     border: none;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin-top: 1vw;
     padding: 1vw;
     transition: all 0.5s;
@@ -216,7 +216,7 @@ icon-size {
     padding: 1rem;
     height: auto;
 
-    border: paleturquoise 2px solid;
+    /* border: paleturquoise 2px solid; */
     position: relative;
 }
 
@@ -489,14 +489,9 @@ ul {
         margin-top: 7.5rem;
     }
 
-    /* change size */
-    .icon-size {
-        font-size: 2vw;
-    }
-
     /* start pattern search */
     .start {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
     }
 
     /* keep gap in-between */
@@ -539,8 +534,13 @@ ul {
 @media (max-width: 799px){
     /* promo-text */
     h2 {
-        font-size: 22px;
-        line-height: 27px;
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    /* promo-text */
+    h3 {
+        line-height: 18px;
     }
 
     /* position right */
@@ -595,7 +595,7 @@ ul {
 
     /* side bar */
     .find-pattern-text {
-        padding: 5rem 2rem 0rem 1rem;
+        padding: 2rem 2rem 0rem 1rem;
     }
 
     /* visual space */
@@ -608,16 +608,6 @@ ul {
     /* keep smaller than main */
     .find-pattern-text h3 {
         font-size: 1rem;
-    }
-
-    /* position relative to container */
-    .btn-start {
-        margin: 0 0 3rem 2.5rem;
-    }
-
-    /* change size */
-    .icon-size {
-        font-size: 3vw;
     }
 
     /* start pattern search */
@@ -640,7 +630,54 @@ ul {
         display: none;
     }
 
-        
+    /* dynamic */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* dynamic */
+    .footer-col h4::before {
+        all: unset;
+    }
+
+    /* legable footer text */
+    .footer-col .title {
+        font-size: 20px;
+    }
+
+    /* text for last col */
+    .footer-col .info li a {
+        font-size: 12px;
+    }
+} 
+
+/* main text */
+@media (max-width: 500px) {
+    /* promo-text */
+    h2,
+    h3,
+    .btn-start  {
+        margin: 3rem 0 0 2rem;
+        max-width: 800px;
+        border: #007355 3px solid;
+    }
+
+    .find-pattern-text {
+        border: #007355 3px solid;
+    }
+
+    /* promo-text */
+    h3 {
+        font-size: 9px;
+        line-height: 15px;
+    }
+
+    .btn-start {
+        padding-bottom: 2rem;
+    }
+
     /* visual quick shop */
     .grid-container {
         transform: translate(50%);
@@ -680,38 +717,9 @@ ul {
         grid-row: 4 / 5;
     }
 
-
-
-
-
-    /* dynamic */
-    .footer-col {
-        width: 50%;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-
-    /* dynamic */
-    .footer-col h4::before {
-        all: unset;
-    }
-
-    /* legable footer text */
-    .footer-col .title {
-        font-size: 20px;
-    }
-
-    /* text for last col */
-    .footer-col .info li a {
-        font-size: 12px;
-    }
-} 
-
-/* main text */
-@media (max-width: 500px) {
-    /* side bar */
-    .find-pattern-text {
-        padding: 1rem;
+    /* smaller sidebar */
+    .product-advertising .responsive-item {
+        font-size: 1px;
     }
 }
 
