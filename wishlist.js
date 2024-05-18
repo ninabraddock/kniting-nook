@@ -58,7 +58,8 @@ function toggleNeckline(element, question) {
 // force user to select option
 function mustSelect(question){
     const nextBtn = document.getElementsByClassName('nextBtn')[question];
-    const notSelected = document.querySelector('.not-selected');
+    const notSelected = document.getElementsByClassName('.not-selected');
+    // const notSelected = document.querySelector('.not-selected');
 
     // make sure to check that option was selected 
     const anySelected = document.querySelector('.product-card.selected') !== null;
