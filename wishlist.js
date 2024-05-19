@@ -57,14 +57,32 @@ function toggleNeckline(element, question) {
 
 // force user to select option
 function mustSelect(question){
-    const nextBtn = document.getElementsByClassName('nextBtn')[question];
-    const notSelected = document.getElementsByClassName('.not-selected');
-    // const notSelected = document.querySelector('.not-selected');
+    //btn
+    // const nextBtn = document.getElementsByClassName('nextBtn')[question];
+    let nextButtonClicked = false; // Initialize the variable to false
 
-    // make sure to check that option was selected 
+    // Select the button element based on the question index
+    const nextBtn = document.getElementsByClassName('nextBtn')[question];
+
+    // Add event listener for click event
+    nextBtn.addEventListener('click', () => {
+        // Set the variable to true when the button is clicked
+        nextButtonClicked = true;
+    });
+
+
+    // const notSelected = document.getElementsByClassName('.not-selected');
+
+    //div -> need to set to visible later if true
+    const notSelected = document.querySelector('.not-selected');
+
+    // store if an option was selected 
     const anySelected = document.querySelector('.product-card.selected') !== null;
-    // only allow next button if option selected 
-    if(anySelected) {
+
+    // const alreadyHighlighted = document.querySelector('.product-card.highlighted') !== null;
+
+    // allow next button if option selected 
+    if(anySelected && nextButtonClicked) {
         nextBtn.removeAttribute('disabled');
         notSelected.style.visibility = 'hidden'; 
         // notSelected.style.visibility = 'visible'; 

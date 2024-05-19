@@ -1,0 +1,321 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ensure smooth transition */
+html {
+    scroll-behavior: smooth;
+}
+
+/* sub default to match theme */
+h2 {
+    /* font-size: 46px;
+    line-height: 54px;
+    color: #007355; */
+}
+
+/* color theme */
+h3 {
+    /* font-weight: bold; */
+    color:rgba(29, 126, 100, 0.8)
+}
+
+/* color theme */
+h4 {
+    font-weight: bold;
+    color:#007355
+}
+
+/* sub default to match theme */
+p {
+    /* font-size: 16px;
+    margin: 15px 0 20px 0;
+    color: #007355; */
+    /* color: palevioletred; */
+}
+
+
+
+/* header */
+
+/* nav links */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
+    /* transition */ 
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
+    /* insure it's always in front, higher number for other elements */
+    z-index: 10; 
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* fill to left side */
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+/* alt pages on same row */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove bullets and space each nav link */
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    /* not have best selling wrap */
+    flex: 0 0 auto;
+}
+
+/* remove underline, change text color */
+#navbar li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600px;
+    color: black;
+    transition: 0.3 ease; 
+}
+
+/* color text */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #007355;
+}
+
+/* add underline on nav link */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #007355;
+    position: absolute;
+    /* correct underline position */
+    bottom: -4px;
+    left: 20px;
+}
+
+/* hide nav when below a width */
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+/* don't display in computer layout */
+#close {
+    display: none;
+}
+
+/* -----cart items------ */
+
+table {
+    width: 100%;
+}
+
+/* title */
+#blog-home {
+    padding: 5% 0 3% 5%;
+    /* padding-left: 5%; */
+    /* border: #007355 1px solid; */
+}
+
+/* position underline correctly */
+#blog-home h2 {
+    position: relative; 
+    display: inline-block; 
+    color: #007355; 
+}
+
+/* underline title */
+#blog-home h2::after {
+    content: "";
+    width: 80%; 
+    height: 3px;
+    background: #007355; 
+    position: absolute;
+    bottom: -9px; 
+    left: 0;
+}
+
+
+/* entire container adjustment */
+#cart-container {
+    width: 70%;
+    padding-left: 5%;
+    /* max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#cart-container table thead {
+    font-weight: 700;
+}
+
+#cart-container table thead td {
+    background-color: #007355;
+    color: whitesmoke;
+    border: none;
+    padding: 6px 0;
+}
+
+/* add border to td */
+#cart-container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+/* remove */
+#cart-container table td:nth-child(1){
+    width: 70px;
+}
+
+/* img & product*/
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3){
+    width: 200px;
+}
+
+/* price, quantity, & total */
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+    width: 170px;
+}
+
+/* product img */
+#cart-container table tbody td img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    /* width: 80%;
+    height: auto; */
+}
+
+/* separate */
+#grand-total {
+    border-left: #007355 1px solid;
+    border: #007355 1px solid;
+    margin-left: 15%;
+    padding: 1% 15% 0 5%;
+    /* padding-right: 15%; */
+}
+
+
+/*----- footer----- */
+
+/* block */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.8; /* spacing btw lines */
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
+    bottom: 0;
+    width: 100%;
+
+    /* not overlapping webbpage content */
+    /* position: absolute; */
+    z-index: 1;
+}
+
+/* space cols */
+.footer-col {
+    width: 25%;
+    color: palevioletred;
+    padding: 3rem;
+}
+
+/* titles */
+.title {
+    /* text-align: left; */
+    color: #007355;
+    font-size: 24px;
+}
+
+/* same as header */
+#socials {
+    /* color: #98002e; */
+    display: flex;
+    justify-content: left;
+}
+
+/* same as header */
+#socials li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* container for support */
+.support {
+    color: pink;
+}
+
+/* list */
+ul {
+    list-style: none; 
+}
+
+/* buttons */
+@media (max-width: 1100px){
+    /* don't include in side bar */
+    #lg-bag {
+        display: none;
+    }
+
+    /* remove name */
+    .cart-info p {
+        display: none;
+    }
+
+    /* dynamic */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* dynamic */
+    .footer-col h4::before {
+        all: unset;
+    }
+
+    /* legable footer text */
+    .footer-col .title {
+        font-size: 20px;
+    }
+
+    /* text for last col */
+    .footer-col .info li a {
+        font-size: 12px;
+    }
+} 
+
+
+
+
