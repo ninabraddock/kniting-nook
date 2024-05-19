@@ -122,6 +122,57 @@ p {
 
 /* -----cart items------ */
 
+/* #first {
+    display: inline-block;
+    width: 60%;
+    border: #007355 1px solid;
+}
+
+#second {
+    display: inline-block;
+    width: 40%;
+    border: #007355 1px solid;
+} */
+
+/* Container styles */
+#poop {
+    /* font-size: 0; Remove gaps between inline-block elements */
+}
+
+/* Container styles */
+#table-container {
+    font-size: 0; /* Remove gaps between inline-block elements */
+    width: 80%;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    border: #007355 1px solid;
+}
+
+/* First div */
+#main-table {
+    display: inline-block;
+    width: 55%;
+    background-color: #f0f0f0;
+    /* padding: 20px; */
+    margin-right: 5%;
+    text-align: center;
+    font-size: 16px; /* Reset font-size */
+}
+
+/* Second div */
+#side-table {
+    display: inline-block;
+    width: 40%;
+    background-color: #d0d0d0;
+    padding: 20px;
+    /* margin: 10px; */
+    text-align: center;
+    font-size: 16px; /* Reset font-size */
+}
+
+
+
 
 
 
