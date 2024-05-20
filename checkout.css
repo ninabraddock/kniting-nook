@@ -344,6 +344,11 @@ ul {
     list-style: none; 
 }
 
+/* change case */
+#email{
+    text-transform: lowercase;
+}
+
 @media (max-width: 1350px){
     #cart-container table {
         width: 60%;

@@ -286,7 +286,10 @@ ul {
     list-style: none; 
 }
 
-
+/* change case */
+#email{
+    text-transform: lowercase;
+}
 
 /* header and footer */
 @media (max-width: 799px){

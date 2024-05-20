@@ -21,7 +21,7 @@ h2 {
 /* color theme */
 h3 {
     /* font-weight: bold; */
-    color:rgba(29, 126, 100, 0.8)
+    color:rgba(29, 126, 100, 0.8);
 }
 
 /* color theme */
@@ -292,11 +292,11 @@ p {
     transition: transform 0.3s ease-in-out; 
 }
 
-/* foreshadow */
-.product-card:hover {
-    /* border: whitesmoke 3px solid; */
+/* final results don't have hover */
+.product-card:not(:nth-last-child(-n+3)):hover {
     border: palevioletred 3px solid;
 }
+
 
 /* show when clicked on */
 .selected,
@@ -472,6 +472,11 @@ footer {
 /* list */
 ul {
     list-style: none; 
+}
+
+/* change case */
+#email{
+    text-transform: lowercase;
 }
 
 /* buttons */
@@ -678,6 +683,17 @@ ul {
         padding-bottom: 1.5rem;
     }
 }
+
+/* main text */
+@media (max-width: 390px) {
+    /* promo-text */
+    .start-text h3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+
 
 
 
