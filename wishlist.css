@@ -653,15 +653,6 @@ ul {
 
 /* main text */
 @media (max-width: 500px) {
-
-    .find-pattern-text {
-        /* width: 30%; */
-    }
-
-    .product-advertising {
-        /* width: 70%; */
-    }
-
     /* promo-text */
     .start-text h3 {
         font-size: 13px;
