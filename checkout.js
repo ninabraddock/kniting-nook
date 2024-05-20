@@ -1,3 +1,43 @@
+// click trash, delete row
+const trashBtns = document.querySelectorAll('.trashBtn');
+const footer = document.querySelector('footer');
+const table = document.getElementById('cart-container');
+// event listener click for trash button
+trashBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        // three parents up a, td, then tr
+        const row = button.parentNode.parentNode.parentNode;
+        row.remove();
+        // give time before check again
+        setTimeout(checkCartItems, 100);
+        checkCartItems();
+    });
+});
+// init check
+checkCartItems();
+
+// no items in cart show message
+function checkCartItems() {
+    const rows = document.querySelectorAll('#first tbody tr');
+    const noItems = document.getElementById('no-items');
+    
+    if (rows.length === 0) {
+        noItems.style.display = 'table-cell';
+        table.style.display = 'none';
+    } 
+    else if (rows.length <= 2) { //keep footer in place
+        // Keep footer in place
+        footer.style.position = 'absolute';
+    }
+    else {
+        noItems.style.display = 'none';
+        table.style.display = 'table';
+    }
+}
+
+
+
+
 // show all product imgs 
 const mainImg = document.getElementById('main-img');
 const altImg = document.getElementsByClassName('smallImg');

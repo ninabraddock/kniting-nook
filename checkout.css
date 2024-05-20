@@ -11,13 +11,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* sub default to match theme */
-h2 {
-    /* font-size: 46px;
-    line-height: 54px;
-    color: #007355; */
-}
-
 /* color theme */
 h3 {
     /* font-weight: bold; */
@@ -28,14 +21,6 @@ h3 {
 h4 {
     font-weight: bold;
     color:#007355
-}
-
-/* sub default to match theme */
-p {
-    /* font-size: 16px;
-    margin: 15px 0 20px 0;
-    color: #007355; */
-    /* color: palevioletred; */
 }
 
 
@@ -196,12 +181,13 @@ table {
 
 
 #cart-container table td p {
-    color: palevioletred;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.684);
     visibility: hidden;
+    padding: 7px;
 }
 
 /* change default */
@@ -245,6 +231,7 @@ table {
 
 #cart-container table tbody td  {
     position: relative;
+    display: table-cell;
 }
 
 /* product img */
@@ -257,6 +244,48 @@ table {
 /* icon */
 #cart-container table tbody span {
     color: #8d8c89;
+}
+
+/* ----- no items in cart ----- */
+
+/* display when present */
+#no-items {
+    display: none;
+}
+
+#no-items div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border: #007355 1px solid;
+    /* width: 18%; */
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255);
+    line-break: normal;
+    line-height: 1.8rem;
+}
+
+/* match color theme */
+#no-items h2 {
+    color:rgba(29, 126, 100, 0.8);
+    padding-bottom: 5px;
+}
+
+/* button */
+.start {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: white;
+    border: none;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 1vw;
+    padding: 0.5vw;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: palevioletred 2px solid;
 }
 
 /*----- footer----- */
@@ -274,7 +303,7 @@ footer {
 
     /* not overlapping webbpage content */
     /* position: absolute; */
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 /* space cols */
@@ -320,7 +349,8 @@ ul {
         width: 60%;
     }
 
-    #cart-container table td p {
+    /* only allow text when hover over img */
+    #cart-container table tbody td img:hover + p {
         visibility: visible;
     }
 
@@ -349,12 +379,17 @@ ul {
     }
 
     #cart-container table {
-        width: 80%;
+        width: 95%;
+        margin-top: 2%;
     }
 
     #cart-container table thead td {
         font-size: 12px;
         margin: 2px;
+    }
+
+    #cart-container table td:nth-child(1){
+        width: 3rem;
     }
 
     /* remove name */
