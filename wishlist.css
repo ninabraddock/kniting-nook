@@ -6,6 +6,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Global style */
+.hidden-heading {
+    display: none;
+}
+
 /* ensure smooth transition */
 html {
     scroll-behavior: smooth;
@@ -35,12 +40,11 @@ p {
     font-size: 16px;
     margin: 15px 0 20px 0;
     color: #007355;
-    /* color: palevioletred; */
 }
 
 
 
-/* header */
+/* -----header----- */
 
 /* nav links */
 #header {
@@ -85,7 +89,6 @@ p {
 #navbar li a {
     text-decoration: none;
     font-size: 1em;
-    font-weight: 600px;
     color: black;
     transition: 0.3 ease; 
 }
@@ -122,12 +125,13 @@ p {
 
 
 
+/* -----start quiz----- */
+
 /* start filter */
 #start-search {
     width: 100%;
     display: flex;
     padding: 2% 5%;
-    /* border: #007355 1px solid; */
     margin-bottom: 5%;
 }
 
@@ -136,33 +140,27 @@ p {
     text-align: left;
     width: 40%;
     height: auto;
-    /* border: #007355 2px solid; */
     padding: 2rem;
     text-transform: capitalize;
-
     position: relative;
 }
 
 /* visual space */
 .find-pattern-text h2 {
     margin-bottom: 2vw;
-    /* border: #007355 2px solid; */
 }
 
 /* visual space */
 .find-pattern-text h3 {
     margin-bottom: 2px;
-    /* border: #007355 2px solid; */
 }
 
 /* visible for larger responsive screen */
 .btn-start {
-    /* border: #007355 3px solid; */
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0 0 2rem 2rem;
-    /* margin-top: 8rem; */
     height: auto;
 }
 
@@ -201,6 +199,8 @@ p {
 
 
 
+/* -----side hero----- */
+
 /* side advertising */
 .product-advertising {
     width: 60%;
@@ -215,8 +215,6 @@ p {
     gap: 0.8rem; 
     padding: 1rem;
     height: auto;
-
-    /* border: paleturquoise 2px solid; */
     position: relative;
 }
 
@@ -227,7 +225,6 @@ p {
     align-items: center;
     justify-content: center;
     background-color: whitesmoke;
-    /* border: rgb(235, 233, 233) 1px solid; */
     color: #007355;
     text-transform: capitalize; 
     width: 100%;
@@ -276,7 +273,6 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    /* border: purple 1px solid; */
 }
 
 /* keep same number  */
@@ -297,15 +293,12 @@ p {
     border: palevioletred 3px solid;
 }
 
-
 /* show when clicked on */
 .selected,
 .design,
 .neckline {
     border: palevioletred 2px solid;
 }
-
-
 
 /* img */
 .product-image {
@@ -384,11 +377,7 @@ p {
 
 /* message user not selected option */
 .not-selected {
-    /* don't display unless needed */
-    /* display: none; */
-    /* visibility: visible; */
     visibility: hidden;
-
     display: flex;
     top: 35%;
     left: 50%;
@@ -418,7 +407,7 @@ p {
 
 
 
-/* footer */
+/* -----footer----- */
 
 /* block */
 footer {
@@ -427,12 +416,10 @@ footer {
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: whitesmoke;
-    /* background-color: #ebf0f8; */
     bottom: 0;
     width: 100%;
 
     /* not overlapping webbpage content */
-    /* position: absolute; */
     z-index: 1;
 }
 
@@ -445,14 +432,12 @@ footer {
 
 /* titles */
 .title {
-    /* text-align: left; */
     color: #007355;
     font-size: 24px;
 }
 
 /* same as header */
 #socials {
-    /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
@@ -462,11 +447,6 @@ footer {
     list-style: none;
     padding: 0 20px;
     position: relative;
-}
-
-/* container for support */
-.support {
-    color: pink;
 }
 
 /* list */
@@ -508,7 +488,7 @@ ul {
     }
 }
 
-/* buttons */
+/* medium screen size */
 @media (max-width: 1100px){
     /* promo-text */
     .start-text h2 {

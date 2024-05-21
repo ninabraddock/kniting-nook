@@ -3,7 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/* Global style */
+.hidden-heading {
+    display: none;
 }
 
 /* sub default to match theme */
@@ -17,8 +22,6 @@ h1 {
 h2 {
     font-size: 46px;
     line-height: 54px;
-    /* font-size: 27px;
-    line-height: 32px; */
     color: #007355;
 }
 
@@ -98,7 +101,6 @@ body {
 #navbar li a {
     text-decoration: none;
     font-size: 1em;
-    font-weight: 600;
     color: black;
     transition: 0.3 ease; 
 }
@@ -136,6 +138,7 @@ body {
 
 
 /* ------hero section------ */
+ 
 /* main img */
 #hero {
     background-image: url("img/hero.png");
@@ -143,15 +146,10 @@ body {
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
-
     padding: 0 5rem;
     display: flex; /* by default in row */ 
     flex-direction: column;
     position: relative;
-
-
-    /* align-items: center;
-    justify-content: flex-start; */
     align-items: flex-start;
     justify-content: center;
 }
@@ -170,6 +168,7 @@ body {
     text-transform: capitalize;
 }
 
+/* img text title */
 #sales-text > h2 {
     color: black;
 }
@@ -202,6 +201,8 @@ body {
     cursor: pointer;
     border: gray 1px solid;
 }
+
+
 
 /* ------interactive shop button------  */
 
@@ -293,6 +294,8 @@ body {
     overflow: hidden;
 }
 
+
+
 /* ------toggle heart icon, material icons------ */
 
 /* place heart on top of img */
@@ -376,14 +379,12 @@ button {
 
 /* navigate next, slider */
 .toggle-img button{
-    /* border: black solid 1px; */
     height: 40px;
     width: 40px;
     position: absolute; 
     display: flex; 
     justify-content: center; 
     top: 50%;  /* center to img */
-    /* background-color: #007355; */
 }
 
 /* nxt and pre */
@@ -421,7 +422,8 @@ button {
 }
 
 
-/* -----footer----- */
+
+/* -------footer------- */
 
 /* block */
 footer {
@@ -460,12 +462,13 @@ footer {
 /* align to column */
 #socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 /* organize like header */
 #socials li {
     list-style: none;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -560,6 +563,7 @@ ul {
         width: 80px;
     }
 
+    /* text on top of hero */
     #sales-text > h2 {
         color: black;
         font-size: 20px;
@@ -572,6 +576,7 @@ ul {
         font-size: 13px;
     }
 
+    /* change img orientation */
     #hero {
         padding: 0 1.25rem; 
         height: 50vh;
@@ -593,6 +598,7 @@ ul {
         border: gray 1px solid;
     }
 
+    /* slider title */
     .product-category {
         font-size: 20px;
     }
@@ -627,6 +633,7 @@ ul {
     }
 } 
 
+/* smaller size */
 @media (max-width: 900px){
     /* shop now button */
     #hero button {

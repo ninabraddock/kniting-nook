@@ -3,7 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/* Global style */
+.hidden-heading {
+    display: none;
 }
 
 /* sub default to match theme */
@@ -13,22 +18,16 @@ h2 {
     color: #007355;
 }
 
-h4 {
-    font-weight: bold;
-    color:#007355
-}
-
 /* sub default to match theme */
 p {
     font-size: 16px;
     margin: 15px 0 20px 0;
-    /* color: #fff; */
     color: #007355;
 }
 
 
 
-/* header */
+/* -----header----- */
 
 /* nav links */
 #header {
@@ -73,7 +72,6 @@ p {
 #navbar li a {
     text-decoration: none;
     font-size: 1em;
-    font-weight: 600px;
     color: black;
     transition: 0.3 ease; 
 }
@@ -110,6 +108,8 @@ p {
 
 
 
+/* -----questions section----- */
+
 /* small alternative imgs */
 .product {
     display: flex;
@@ -126,7 +126,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* keep same number  */
+/* keep same number */
 .product-card {
     background-color: whitesmoke;
     /* background-color: #ebf0f8; */
@@ -135,7 +135,6 @@ p {
     margin: 20px;
     padding: 20px;
     width: 340px;
-
     transition: transform 0.3s ease-in-out; 
 }
 
@@ -143,12 +142,13 @@ p {
 .product-image {
     position: relative;
     width: 100%; 
-    /* height: auto; */
     height: 350px;
     overflow: hidden;
 }
 
-/* toggle heart icon, material icons */
+
+
+/* -----toggle heart icon, material icons----- */
 
 /* place heart on top of img */
 .heart-tag, .heart-tag1 {
@@ -205,8 +205,6 @@ button {
 /* pattern owner */
 .product-brand {
     text-transform: capitalize;
-    /* margin: 2px; */
-    /* text-transform: uppercase; */
 }
 
 /* pattern name */
@@ -217,9 +215,9 @@ button {
     color: #007355;
 }
 
+/* product name */
 .product-short-description:hover {
     text-decoration: underline;
-    /* font-weight: bold; */
 }
 
 /* pattern price */
@@ -237,7 +235,9 @@ button {
     text-decoration: line-through;
 }
 
-/* footer */
+
+
+/* -----footer----- */
 
 /* block */
 footer {
@@ -265,20 +265,17 @@ footer {
     font-size: 24px;
 }
 
+/* footer icons */
 #socials {
-    /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
 
+/* space icons */
 #socials li {
     list-style: none;
     padding: 0 20px;
     position: relative;
-}
-
-.featured {
-    color: pink;
 }
 
 /* list */
@@ -289,6 +286,7 @@ ul {
 /* change case */
 #email{
     text-transform: lowercase;
+    font-size: 0.95rem;
 }
 
 /* header and footer */
@@ -403,7 +401,6 @@ ul {
 
     /* entire div */
     #sales-text {
-        /* border: #007355 2px solid; */
         width: 40%;
     }
 
