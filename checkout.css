@@ -34,7 +34,6 @@ h4 {
     justify-content: space-between;
     padding: 20px 80px;
     background-color: whitesmoke;
-    /* background-color: #ebf0f8; */
     /* transition */ 
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
     /* insure it's always in front, higher number for other elements */
@@ -42,6 +41,7 @@ h4 {
     position: sticky;
     top: 0;
     left: 0;
+    width: 100%;
 }
 
 /* fill to left side */
@@ -107,6 +107,7 @@ h4 {
 
 /* -----cart items------ */
 
+/* full scren */
 table {
     width: 100%;
 }
@@ -156,7 +157,6 @@ table {
     table-layout: fixed;
     margin-bottom: 5%;
 }
-
 
 
 #cart-container table thead {
@@ -386,6 +386,7 @@ ul {
     #cart-container table {
         width: 95%;
         margin-top: 2%;
+        font-size: 11px;
     }
 
     #cart-container table thead td {
@@ -395,6 +396,11 @@ ul {
 
     #cart-container table td:nth-child(1){
         width: 3rem;
+    }
+
+    /* show initially, larger screen */
+    #cart-container table td:nth-child(3) {
+        display: none;
     }
 
     /* remove name */
@@ -425,6 +431,26 @@ ul {
     }
 } 
 
+/* table width */
+@media (max-width: 412px) {
+
+    #cart-container table td:nth-child(1){
+        width: 3rem;
+    }
+    
+    /* img & product*/
+    #cart-container table td:nth-child(2){
+        width: 8rem;
+    }
+    
+    /* price, quantity, & total */
+    #cart-container table td:nth-child(4),
+    #cart-container table td:nth-child(5),
+    #cart-container table td:nth-child(6){
+        width: 4rem;
+        font-size: 12px;
+    }
+}
 
 
 
