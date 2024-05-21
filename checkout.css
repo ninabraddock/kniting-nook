@@ -32,7 +32,8 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 1% 5%;
+    /* padding: 20px 80px; */
     background-color: whitesmoke;
     /* transition */ 
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
@@ -300,10 +301,7 @@ footer {
     /* background-color: #ebf0f8; */
     bottom: 0;
     width: 100%;
-
-    /* not overlapping webbpage content */
-    /* position: absolute; */
-    /* z-index: 1; */
+    padding: 1% 5%;
 }
 
 /* space cols */
@@ -313,30 +311,33 @@ footer {
     padding: 3rem;
 }
 
+/* icons: phone and email */
+.footer-col:nth-child(4){
+    font-size: 1rem;
+}
+
 /* titles */
 .title {
-    /* text-align: left; */
     color: #007355;
     font-size: 24px;
+    line-height: 2rem;
+}
+
+/* keep text color theme */
+.footer-col  > p {
+    color: #007355;
 }
 
 /* same as header */
 #socials {
-    /* color: #98002e; */
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 /* same as header */
 #socials li {
     list-style: none;
-    padding: 0 20px;
     position: relative;
-}
-
-/* container for support */
-.support {
-    color: pink;
 }
 
 /* list */
@@ -344,9 +345,11 @@ ul {
     list-style: none; 
 }
 
-/* change case */
+/* last column */
+#phone-number,
 #email{
     text-transform: lowercase;
+    font-size: 0.95rem;
 }
 
 @media (max-width: 1350px){
@@ -378,10 +381,6 @@ ul {
 
 /* buttons */
 @media (max-width: 1100px){
-    /* don't include in side bar */
-    #lg-bag {
-        display: none;
-    }
 
     #cart-container table {
         width: 95%;
@@ -389,9 +388,15 @@ ul {
         font-size: 11px;
     }
 
+    /* table header */
     #cart-container table thead td {
         font-size: 12px;
         margin: 2px;
+    }
+
+    /* table data */
+    #cart-container table tbody td {
+        font-size: 19px;
     }
 
     #cart-container table td:nth-child(1){
@@ -406,6 +411,64 @@ ul {
     /* remove name */
     .cart-info p {
         display: none;
+    }
+} 
+
+/* hamburger and 2x2 footer */
+@media (max-width: 799px){
+    /* position right */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #ebf0f8;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.2s;
+    }
+
+    /* activate */
+    #navbar.active {
+        right: 0;
+    }
+
+    /* equal spacing as before */
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    /* keep hamburger icon */
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    /* space between icons */
+    #mobile i {
+        color: black;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    /* position side bar */
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: black;
+        font-size: 24px;
+    }
+
+    /* table data */
+    #cart-container table tbody td h5 {
+        font-size: 14px;
     }
 
     /* dynamic */
@@ -429,10 +492,19 @@ ul {
     .footer-col .info li a {
         font-size: 12px;
     }
-} 
+}
 
 /* table width */
-@media (max-width: 412px) {
+@media (max-width: 430px) {
+    #header {
+        padding: 1% 2%; 
+        width: 100%; 
+    }
+
+    /* table data */
+    #cart-container table tbody tr td h5 {
+        font-size: 10px;
+    }
 
     #cart-container table td:nth-child(1){
         width: 3rem;
@@ -440,15 +512,41 @@ ul {
     
     /* img & product*/
     #cart-container table td:nth-child(2){
-        width: 8rem;
+        width: 6.5rem;
+        padding-left: 1px;
     }
     
     /* price, quantity, & total */
     #cart-container table td:nth-child(4),
-    #cart-container table td:nth-child(5),
     #cart-container table td:nth-child(6){
-        width: 4rem;
+        width: 3.25rem;
         font-size: 12px;
+        padding-left: 5px;
+    }
+
+    #cart-container table td:nth-child(5) {
+        width: 3rem;
+    }
+
+    /* change default */
+    .w-25 {
+        width: 1.3rem;
+    }
+
+    .footer-col:nth-child(3) {
+        width: 20%;
+    }
+
+
+    .footer-col:nth-child(4) {
+        width: 30%;
+    }
+
+    /* last column */
+    #phone-number,
+    #email{
+        text-transform: lowercase;
+        /* font-size: 0.75rem; */
     }
 }
 

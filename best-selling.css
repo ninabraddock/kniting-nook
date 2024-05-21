@@ -512,7 +512,7 @@ ul {
         display: initial;
         position: absolute;
         top: 30px;
-        left: 30ppx;
+        left: 30px;
         color: black;
         font-size: 24px;
     }
@@ -550,7 +550,6 @@ ul {
 
     /* entire div */
     #sales-text {
-        /* border: #007355 2px solid; */
         width: 40%;
     }
 

@@ -536,9 +536,14 @@ ul {
         display: initial;
         position: absolute;
         top: 30px;
-        left: 30ppx;
+        left: 30px;
         color: black;
         font-size: 24px;
+    }
+    
+    /* don't include in side bar */
+    #lg-bag {
+        display: none;
     }
 
     /* position side of hero img */
@@ -586,11 +591,6 @@ ul {
         cursor: pointer;
         width: 5rem;
         border: gray 1px solid;
-    }
-
-    /* don't include in side bar */
-    #lg-bag {
-        display: none;
     }
 
     .product-category {
