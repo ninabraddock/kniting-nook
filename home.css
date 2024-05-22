@@ -235,6 +235,9 @@ body {
     right: 0;
 }
 
+
+/* -------slider------- */
+
 /* indiv products */
 .product {
     position: relative;
@@ -605,7 +608,6 @@ ul {
 
     /* entire div */
     #sales-text {
-        /* border: #007355 2px solid; */
         width: 40%;
         padding: 1rem 7rem 1rem 1rem;
     }

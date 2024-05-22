@@ -41,6 +41,24 @@ preBtn.forEach(button => {
     });
 });
 
+
+const frontSlider = [...document.querySelectorAll('.front-slider')];
+const backSlider = [...document.querySelectorAll('.back-slider')];
+
+// scroll bar
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    frontSlider[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    backSlider[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
     heartBtn.addEventListener('click', function() {
