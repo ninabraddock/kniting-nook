@@ -213,12 +213,14 @@ button {
 
 /* icons */
 .pre-btn,
-.nxt-btn {
+.nxt-btn,
+#scroll-pre-btn,
+#scroll-nxt-btn {
     border: none;
-    width: 10vw;
-    height: 100%;
+    width: 3vw;
+    height: 7%;
     position: absolute;
-    top: 0;
+    left: 100;
     display: flex;                      
     justify-content: center;
     align-items: center;
@@ -229,21 +231,26 @@ button {
 }
 
 /* change orientation */
-.pre-btn {
-    left: 10px;
+.pre-btn,
+#scroll-pre-btn {
+    left: 4rem;
     transform: rotate(180deg);
     transform: scaleX(-1);
 }
 
 /* keep right side */
-.nxt-btn {
-    right: 10px;
+.nxt-btn,
+#scroll-nxt-btn {
+    right: 4rem;
 }
 
 /* screen reader */ 
 .pre-btn:hover,
-.nxt-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+.nxt-btn:hover,
+#scroll-pre-btn:hover,
+#scroll-nxt-btn:hover {
+    background-color: #007355;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* semi hero */
@@ -483,40 +490,6 @@ button {
     top: 50%;  /* center to img */
 }
 
-/* nxt and pre */
-.front-slider,
-.back-slider {
-    border: none;
-    width: 10vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;                      
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 8;
-    background-color: pink;
-    /* background-color: rgba(255, 255, 255, 0.6); */
-}
-
-/* change orientation */
-.front-slider {
-    left: 4rem;
-    transform: rotate(180deg);
-    transform: scaleX(-1);
-}
-
-/* keep right side */
-.back-slider {
-    right: 60px;
-}
-
-/* screen reader */ 
-.front-slider:hover,
-.back-slider:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
 
 
 
