@@ -96,6 +96,8 @@ function setOldImg(imgId, oldSrc) {
     setImg(imgId, oldSrc);
 }
 
+
+
 // select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
     heartBtn.addEventListener('click', function() {
