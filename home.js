@@ -17,7 +17,7 @@ productContainers.forEach((item, i) => {
     })
 })
 
-// select heart icon on each product card
+// Select heart icon on each product card
 document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
     heartBtn.addEventListener('click', function() {
         const heartIcon = this.querySelector('.heart-icon');
