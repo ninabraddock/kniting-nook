@@ -25,7 +25,7 @@ document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
     });
 });
 
-// toggle heart icon 
+// Toggle heart icon 
 function toggleHeart(heartIcon) {
     if (heartIcon.classList.contains('far')) {
         heartIcon.classList.remove('far');
