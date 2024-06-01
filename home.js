@@ -48,7 +48,7 @@ const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
 
-// allow hamburger to present side bar 
+// Allow hamburger to present side bar 
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
