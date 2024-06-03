@@ -1,4 +1,4 @@
-// click trash, delete row
+// Click trash, delete row
 const trashBtns = document.querySelectorAll('.trashBtn');
 const footer = document.querySelector('footer');
 const table = document.getElementById('cart-container');
