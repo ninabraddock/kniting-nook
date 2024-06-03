@@ -55,7 +55,7 @@ if(bar){
     });
 }
 
-// close out of side bar
+// Close out of side bar
 if(close){
     close.addEventListener('click', () => {
         nav.classList.remove('active');
