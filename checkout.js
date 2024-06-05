@@ -13,7 +13,7 @@ trashBtns.forEach(button => {
         checkCartItems();
     });
 });
-// init check
+// Init check
 checkCartItems();
 
 // no items in cart show message
