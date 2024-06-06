@@ -16,7 +16,7 @@ trashBtns.forEach(button => {
 // Init check
 checkCartItems();
 
-// no items in cart show message
+// No items in cart show message
 function checkCartItems() {
     const rows = document.querySelectorAll('#first tbody tr');
     const noItems = document.getElementById('no-items');
