@@ -38,7 +38,7 @@ function checkCartItems() {
 
 
 
-// show all product imgs 
+// Show all product imgs 
 const mainImg = document.getElementById('main-img');
 const altImg = document.getElementsByClassName('smallImg');
 
