@@ -38,7 +38,7 @@ function checkCartItems() {
 
 
 
-// show all product imgs 
+// Show all product imgs 
 const mainImg = document.getElementById('main-img');
 const altImg = document.getElementsByClassName('smallImg');
 
@@ -49,7 +49,7 @@ for(let i = 0; i < altImg.length; ++i){
     }
 }
 
-//arrow icons
+// Arrow icons
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
