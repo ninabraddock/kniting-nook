@@ -68,8 +68,9 @@
                         <h3>Breeze Bag</h3>
                         <p>By Petit Knit</p>
                     </td>
-                    <td>$4.00</td>
-                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td class="price">$4.00</td>
+                    <td><input class="w-25 pl-1 quantity" value="1" type="number"></td>
+                    <td class="item-total">$4.00</td>
                     <td>
                         <a href="#">
                             <button class="trashBtn remove-border">
@@ -84,7 +85,7 @@
                         <h3>Sophie Scarf</h3>
                         <p>By Petit Knit</p>
                     </td>
-                    <td>$4.00</td>
+                    <td class="price">$4.00</td>
                     <td><input class="w-25 pl-1" value="1" type="number"></td>
                     <td>
                         <a href="#">
@@ -100,7 +101,7 @@
                         <h3>Sunday Socks</h3>
                         <p>By Petit Knit</p>
                     </td>
-                    <td>$4.00</td>
+                    <td class="price">$4.00</td>
                     <td><input class="w-25 pl-1" value="1" type="number"></td>
                     <td>
                         <a href="#">
@@ -116,7 +117,7 @@
                         <h3>Cloud Sweater</h3>
                         <p>By Petit Knit</p>
                     </td>
-                    <td>$4.00</td>
+                    <td class="price">$4.00</td>
                     <td><input class="w-25 pl-1" value="1" type="number"></td>
                     <td>
                         <a href="#">
@@ -130,7 +131,26 @@
         </table>
     </div>
 
-    <p>words</p>
+    <!-- option to proceed to payment -->
+    <h2 class="hidden-heading">Proceed to Payment</h2>
+    <section class="payment">
+        <div class="row">
+            <p class="col-sm-10">Subtotal</p>
+            <p class="col-sm-1" id="subtotal">$12.00</p>
+        </div>
+
+        <div class="row">
+            <p class="col-sm-10">Shipping</p>
+            <p class="col-sm-1">FREE</p>
+        </div>
+        
+        <a href="patterns.html">
+            <button class="button" style="vertical-align:middle">
+                    <span>Continue to payment</span>
+            </button>
+        </a>
+    </section>
+    
     
 
 

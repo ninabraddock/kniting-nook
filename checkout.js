@@ -146,3 +146,38 @@ if(close){
         nav.classList.remove('active');
     });
 }
+
+
+
+
+function updateTotal(element) {
+    // Get the parent row
+    const row = element.closest('tr');
+    
+    // Get the price and quantity
+    const price = parseFloat(row.querySelector('.price').innerText.replace('$', ''));
+    const quantity = parseInt(element.value);
+
+    // Calculate the total for this item
+    const itemTotal = price * quantity;
+
+    // Update the total in the DOM
+    row.querySelector('.item-total').innerText = `$${itemTotal.toFixed(2)}`;
+
+    // Update the subtotal
+    updateSubtotal();
+}
+
+function updateSubtotal() {
+    let subtotal = 0;
+
+    // Get all the item totals
+    const itemTotals = document.querySelectorAll('.item-total');
+    itemTotals.forEach(total => {
+        subtotal += parseFloat(total.innerText.replace('$', ''));
+    });
+
+    // Update the subtotal in the DOM
+    document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
+}
+

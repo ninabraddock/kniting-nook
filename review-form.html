@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <!-- material icons by Google -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="review-form.css">
     </head>
     <body aria-labelledby="body section">
         <!-- header -->
@@ -18,8 +18,8 @@
             <!-- alt page options -->
             <div>
                 <ul id="navbar">
-                    <li><a class="active" href="home.html">Home</a></li>
-                    <li><a href="best-selling.html">Best Selling</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="best-selling.html">Best Selling</a></li>
                     <li><a href="patterns.html">Patterns</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
                     <!-- material icons -->
@@ -35,6 +35,112 @@
                 <span id="bar" class="material-symbols-outlined">menu</span>
             </div>
         </section>
+
+
+        <!-- start of form -->
+        <h2 class="hidden-heading">Form</h2>
+        <section class="form-outline">
+            <h3>Leave a review</h3>
+            <p>words</p>
+
+    <!-- create form for booking a room, elements include text, radio, and checkbox -->
+    <form class="suite-booking-form"> 
+        <!-- type field for first and last name  -->
+        <div class= "form-group">
+            <label for="guest-name">Name: </label>
+            <input type="text" placeholder="Full Name" name="guest_name">
+        </div>
+        
+        <div class= "form-group">
+            <label for="email">Email: </label>
+            <input type="text" placeholder="acb123@gmail.com" name="email">
+        </div>
+
+        <!-- if yes selected, display the following radio button, ensure 10 digit length -->
+        <div class="form-group">
+            <div class="phone-number">
+                <!-- ask for area code and provide filtered down options as user enters input, or scroll through options, make box smaller width -->
+                <label for="area_code">Phone number: </label>
+                <input type="text" id="area_code" placeholder="+44" name="area_code"></label>
+        
+                <label for="phone_number"></label>
+                <input type="text" placeholder="123-456-7890" name="phone_number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="review">Please leave review here: </label>
+            <input type="text" name="review">
+        </div>
+
+        <!-- add checkbox for terms and agreement -->
+
+        <!-- submit form -->
+        <div class="form-group">
+            <input type="submit">
+        </div>
+        <p id="terms"><sum>** </sum>Please know that your review is subject to removal upon offensive language</p>
+    </form>
+        </section>
+
+        <!-- reviews, separate div along a horizontal line -->
+        <h2 class="hidden-heading">User Reviews</h2>
+        <article class="user-reviews">
+            <div>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <p>Had a wonderful time here over the holiday weekend. Can't wait to come back again! </p>
+                <p class="reviewer-name"> - Charlie Alexander</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>This hotel is amazing!! I've been staying here for the past four years and will continue to come back for the great service and incredible atmosphere.</p>
+                <p class="reviewer-name"> - Linda Breckett</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>Awesome location! Great staff!</p>
+                <p class="reviewer-name"> - Mason Ramirez</p>
+            </div>
+            <div>
+                <img src="3-stars.png" alt="three golden stars">
+                <p>Not worth the price :( </p>
+                <p class="reviewer-name"> - Ian Morrison</p>
+            </div>
+            <div>
+                <img src="4-stars.png" alt="four golden stars">
+                <p>Great service but a bit pricy for a weekend getaway.</p>
+                <p class="reviewer-name"> - Brett Travis</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>Super accomodating for those with a big family and staying for multiple days!</p>
+                <p class="reviewer-name"> - Amy Carson</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>Had an amazing time with the family and made so many memories all thanks to the Matilda Inn</p>
+                <p class="reviewer-name"> - Linda Phillips</p>
+            </div>
+            <div>
+                <img src="2-stars.png" alt="two golden stars">
+                <p>Not my favorite place. Will not be coming back.</p>
+                <p class="reviewer-name"> - Scott Optin</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>Super accomodating for those with a big family and staying for multiple days!</p>
+                <p class="reviewer-name"> - Franky Walter</p>
+            </div>
+            <div>
+                <img src="5-stars.png" alt="five golden stars">
+                <p>Super accomodating for those with a big family and staying for multiple days!</p>
+                <p class="reviewer-name"> - Quinn Stevenson</p>
+            </div>
+        </article>
 
         <!-- footer -->
         <footer>

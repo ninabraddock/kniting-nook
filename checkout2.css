@@ -160,6 +160,71 @@ td:nth-child(4){
 }
 
 
+
+/* ---- proceed to payment ---- */
+.payment {
+    margin: 0 3rem 3rem 3rem;
+    padding: 2rem;
+    border: #007355 solid 1px;
+}
+
+.payment p {
+    border: #007355 1px solid;
+}
+
+.payment p:nth-child(1){
+    background-color: rgb(235, 235, 62);
+}
+.payment p:nth-child(2){
+    background-color: blue;
+}
+
+/* shop now button */
+.payment button {
+    display: inline-block;
+    border-radius: 4px;
+    /* background-color: white; */
+    color: white;
+    background-color: rgba(29, 126, 100, 0.8);
+    border: none;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: gray 1px solid;
+}
+
+/* indicate button */
+.payment button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* add arrow */
+.payment button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+/* align w/ text */
+.payment button:hover span {
+    padding-right: 25px;
+}
+
+/* color btn */
+.payment button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
 /* ----- no items in cart ----- */
 
 /* display when present */

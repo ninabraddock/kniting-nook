@@ -1,0 +1,244 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/* Global style */
+.hidden-heading {
+    display: none;
+}
+
+/* ensure smooth transition */
+html {
+    scroll-behavior: smooth;
+}
+
+/* color theme */
+h3 {
+    color:rgba(29, 126, 100, 0.8);
+}
+
+/* color theme */
+h4 {
+    font-weight: bold;
+    color:#007355
+}
+
+
+
+/* -----header----- */
+
+/* nav links */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5%;
+    /* padding: 20px 80px; */
+    background-color: whitesmoke;
+    /* transition */ 
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
+    /* insure it's always in front, higher number for other elements */
+    z-index: 10; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* fill to left side */
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+/* alt pages on same row */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove bullets and space each nav link */
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    /* not have best selling wrap */
+    flex: 0 0 auto;
+}
+
+/* remove underline, change text color */
+#navbar li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    transition: 0.3 ease; 
+}
+
+/* color text */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #007355;
+}
+
+/* add underline on nav link */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #007355;
+    position: absolute;
+    /* correct underline position */
+    bottom: -4px;
+    left: 20px;
+}
+
+/* hide nav when below a width */
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+/* don't display in computer layout */
+#close {
+    display: none;
+}
+
+
+
+/* ----- start form -----*/
+.form-outline {
+    margin: 3rem;
+    padding: 2rem;
+    border: #007355 1px solid;
+}
+
+
+.new-review {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 30%;
+    margin: 3em auto;
+
+    color: cadetblue;
+    text-decoration: none;
+    background-color: rgba(226, 221, 141, 0.196);
+    border: 2px solid rgba(95, 158, 160, 0.584);
+    padding: 1rem;
+}
+
+.new-review:hover {
+    border: 3px solid rgba(95, 158, 160, 0.584);
+}
+
+.title {
+    font-size: 1.7em;
+}
+
+/* flexbox reviews */
+.user-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4ems;
+    background-color: rgba(226, 221, 141, 0.196);
+    border: 2px solid rgba(95, 158, 160, 0.584);
+}
+
+.description {
+    font-size: 1em;
+}
+
+/* format individual review box */
+article > div {
+    font-size: 16px;
+    color: rgba(0, 139, 139, 0.9);
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    /* add features for scrollability */
+    height: 125px;
+    overflow: auto; /* only if the content is overflowing will the scroll bar be shown */
+    border: 3px solid rgba(0, 139, 139, 0.612);
+    background-color: white;
+}
+
+/* format the stars at the top to fill width of div */
+article img {
+    margin-top: 0%;
+    height: 50px;
+    width: auto;
+}
+
+/* have each name be in smaller font */
+.reviewer-name {
+    font-size: 14px;
+}
+
+
+/*----- footer----- */
+
+/* block */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.8; /* spacing btw lines */
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
+    bottom: 0;
+    width: 100%;
+    padding: 1% 5%;
+}
+
+/* space cols */
+.footer-col {
+    width: 25%;
+    color: palevioletred;
+    padding: 3rem;
+}
+
+/* icons: phone and email */
+.footer-col:nth-child(4){
+    font-size: 1rem;
+}
+
+/* titles */
+.title {
+    color: #007355;
+    font-size: 24px;
+    line-height: 2rem;
+}
+
+/* keep text color theme */
+.footer-col  > p {
+    color: #007355;
+}
+
+/* same as header */
+#socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* same as header */
+#socials li {
+    list-style: none;
+    position: relative;
+}
+
+/* list */
+ul {
+    list-style: none; 
+}
+
+/* last column */
+#phone-number,
+#email{
+    text-transform: lowercase;
+    font-size: 0.95rem;
+}
