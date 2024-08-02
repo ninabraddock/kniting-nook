@@ -172,12 +172,14 @@ button {
 #product-description {
     width: 55%;
     padding: 2em;
-    border: pink 2px solid;
+    /* border: pink 2px solid; */
 }
 
 /* link to other page */
-#pattern-review {
-    text-align: right;
+#right {
+    /* text-align: right; */
+    border-left: pink 3px solid;
+    /* border-left: #007355 3px solid; */
 }
 
 /* long description */
@@ -505,12 +507,12 @@ button {
 footer {
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: auto; */
     line-height: 1.8; /* spacing btw lines */
     text-transform: capitalize;
     background-color: whitesmoke;
     /* background-color: #ebf0f8; */
-    margin-top: 10vw;
+    bottom: 0;
+    width: 100%;
 }
 
 /* space cols */
@@ -527,19 +529,13 @@ footer {
     font-size: 24px;
 }
 
-/* keep text color theme */
-.footer-col  > p {
-    color: #007355;
-}
-
-/* align to column */
+/* footer icons */
 #socials {
-    /* color: #98002e; */
     display: flex;
     justify-content: left;
 }
 
-/* organize like header */
+/* space icons */
 #socials li {
     list-style: none;
     padding: 0 20px;
@@ -554,6 +550,7 @@ ul {
 /* change case */
 #email{
     text-transform: lowercase;
+    font-size: 0.95rem;
 }
 
 /* medium */

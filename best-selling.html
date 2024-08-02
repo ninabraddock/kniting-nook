@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>patterns</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- material icons by Google -->
@@ -74,33 +75,42 @@
 
         <!----- product description ------>
         <div id="product-description">
-            <!-- split on left side -->
-            <div id="overview-left">
-                <h6>Patterns / cloud Sweater</h6>
-                <h2>$4.00</h2>
-                <h3>Cloud Sweater</h3>
-                <!-- add in stars -->
-                <p>Petite Knit
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </p>
-                <div class="input-container">
-                    <input type="number" id="count" value="0" min="0" max="10">
-                    <a href="checkout.html">
-                        <button class="buy-btn">Add To Card</button>
-                    </a>
-                </div>
-            </div>       
+            <div class="row">
+                <div id="left" class="col-sm-8">
 
-            <!-- split on right side -->
-            <div id="pattern-review">
-                <p>extra words here</p>
-                <p>extra words here</p>
-                <p>extra words here</p>
-            </div>
+            <h6>Patterns / cloud Sweater</h6>
+            <h2>$4.00</h2>
+            <h3>Cloud Sweater</h3>
+            
+                        <!-- add in stars -->
+                        <p>Petite Knit
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <!-- <a href="review-form.html">leave a review here</a> -->
+                        </p>
+                        <div class="input-container">
+                            <input type="number" id="count" value="0" min="0" max="10">
+                            <a href="checkout.html">
+                                <button class="buy-btn">Add To Card</button>
+                            </a>
+                        </div>
+                    </div>       
+
+                    <!-- split on right side -->
+                    <!-- <div class="col-sm-7" id="right">
+                        <a href="review-form.html">leave a review here</a>
+                    </div> -->
+                    <div id="right" class="col-sm-4">
+                        <p>Finished making your cloud sweater?</p>
+                        <span class="material-symbols-outlined">south</span><br>
+                        <a href="review-form.html">
+                            <button class="buy-btn">Leave a Review Here</button>
+                        </a>
+                    </div>
+                </div>
 
             <div id="product-details">
                 <h4>Product Details</h4>
