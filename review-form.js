@@ -84,25 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.remove('active');
         });
     }
-
-    // only let custom gauge appear if radio btn selected
-    // const sameGauge = document.getElementById('sameGauge');
-    // const diffGauge = document.getElementById('diffGauge');
-    // const noItems = document.getElementById('no-items');
-
-    // sameGauge.addEventListener('change', function(){
-    //     if (sameGauge.checked) {
-    //         noItems.style.display = 'none';
-    //     }
-    // });
-
-    // diffGauge.addEventListener('change', function(){
-    //     if (diffGauge.checked) {
-    //         noItems.style.display = 'block';
-    //     }
-    // });
 });
 
+// only let custom gauge appear if radio btn selected
 document.addEventListener('DOMContentLoaded', function() {
     const sameGauge = document.getElementById('sameGauge');
     const diffGauge = document.getElementById('diffGauge');

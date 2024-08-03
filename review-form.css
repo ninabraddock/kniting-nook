@@ -129,6 +129,10 @@ h4 {
     display: none;
 }
 
+.row {
+    margin-left: 2rem;
+}
+
 
 .new-review {
     text-align: center;
@@ -159,6 +163,7 @@ h4 {
     /* background-color: rgba(226, 221, 141, 0.196);
     border: 2px solid rgba(95, 158, 160, 0.584); */
     border-radius: 4px;
+    /* margin-left: 2rem; */
 }
 
 .description {
