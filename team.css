@@ -111,91 +111,13 @@ h4 {
 
 
 
-/* ----- start form -----*/
-.form-outline {
-    margin: 3rem;
-    padding: 2rem;
-    border: palevioletred 3px solid;
-    border-radius: 5px;
-    line-height: 1.6;
-}
-
-/* tab over */
-#subcategory {
-    margin-left: 1.25rem;
-}
-
-/* display when present */
-#no-items {
-    display: none;
-}
-
-.row {
-    margin-left: 2rem;
-}
-
-
-.new-review {
-    text-align: center;
-    font-size: 1.3rem;
-    width: 30%;
-    margin: 3em auto;
-
-    color: cadetblue;
-    text-decoration: none;
-    background-color: rgba(226, 221, 141, 0.196);
-    border: 2px solid rgba(95, 158, 160, 0.584);
-    padding: 1rem;
-}
-
-.new-review:hover {
-    border: 3px solid rgba(95, 158, 160, 0.584);
-}
-
-.title {
-    font-size: 1.7em;
-}
-
-/* flexbox reviews */
-.user-reviews {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4ems;
-    /* background-color: rgba(226, 221, 141, 0.196);
-    border: 2px solid rgba(95, 158, 160, 0.584); */
-    border-radius: 4px;
-    /* margin-left: 2rem; */
-}
-
-.description {
-    font-size: 1em;
-}
-
-/* format individual review box */
-article > div {
-    font-size: 16px;
-    color: rgba(0, 139, 139, 0.9);
-    margin: 20px;
-    padding: 20px;
+/* ---- profile picture ---- */
+#profile-picture {
     width: 200px;
-    /* add features for scrollability */
-    height: 125px;
-    overflow: auto; /* only if the content is overflowing will the scroll bar be shown */
-    border: 3px solid rgba(0, 139, 139, 0.612);
-    background-color: white;
+    border-radius: 50%; 
+    border: #007355 2px solid;
 }
 
-/* format the stars at the top to fill width of div */
-article img {
-    margin-top: 0%;
-    height: 50px;
-    width: auto;
-}
-
-/* have each name be in smaller font */
-.reviewer-name {
-    font-size: 14px;
-}
 
 
 /* -----footer----- */
@@ -392,6 +314,3 @@ ul {
         font-size: 12px;
     }
 } 
-
-
-

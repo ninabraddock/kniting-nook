@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- material icons by Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body aria-labelledby="body section">
+    <!-- header -->
+    <h2 class="hidden-heading">Header</h2>
+    <section id="header" title="banner" role="banner">
+        <a href="#"><img src="img/logo.png" loading="lazy" class="logo" alt="brand logo" width="332" height="284"></a>
+        <!-- alt page options -->
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="best-selling.html">Best Selling</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <!-- material icons -->
+                <li id="lg-bag"><a class="active" href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a></li> 
+                <a href="#" id="close"><span class="material-symbols-outlined">close</span></a>
+            </ul>
+        </div>
+
+        <!-- responsive side bar -->
+        <div id="mobile">
+            <a href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a>
+            <!-- material icons -->
+            <span id="bar" class="material-symbols-outlined">menu</span>
+        </div>
+    </section>
+
+
+
+    <!-- payment rows -->
+    <h2 class="hidden-heading">Payment</h2>
+    <div class="container">
+        <!-- left main container -->
+        <div class="billing-address">
+            <h2>Billing Address</h2><br>
+            <!-- test-transform: capital first letter -->
+            <!-- name -->
+            <label for="name">Full Name: </label>
+            <input type="text" placeholder="Madison Smith" name="name"><br>
+
+            <!-- email -->
+            <label for="email">Email: </label>
+            <input type="text" placeholder="madisonsmith@gmail.com" name="email"><br>
+            <!-- address -->
+            <label for="address">Address: </label>
+            <input type="text" placeholder="Parkview drive" name="address"><br>
+            <!-- city -->
+            <label for="city">City: </label>
+            <input type="text" placeholder="Malibu" name="city"><br>
+            <!-- left and right of left side -->
+            <div class="nested">
+                <div id="billing-left">
+                    <label for="state">State: </label>
+                    <input type="text" placeholder="California" name="state"><br>
+                </div>
+                <div id="billing-right">
+                    <label for="zip">Zip Code: </label>
+                    <input type="text" placeholder="90265" name="name"><br>
+                </div>
+            </div>
+        </div>    
+        <!-- right main container -->
+        <div class="payment">
+            <h2>Payment</h2><br>
+            <!-- accepted cards -->
+            <label for="card-name">Accepted cards: </label><br>
+            <!-- name on cards -->
+            <label for="card-name">Name on Card: </label>
+            <input type="text" placeholder="Madison Smith" name="card-name"><br>
+            <!-- credit card number -->
+            <label for="cc-number">Credit Card Number: </label>
+            <input type="text" placeholder="0123456789101112131415" name="cc-number"><br>
+            <!-- left and right of right side -->
+            <div class="nested">
+                <!-- exp month -->
+                <div id="payment-left">
+                    <label for="exp-yr">Exp Year: </label>
+                    <input type="text" placeholder="2028" name="exp-yr"><br>
+                </div>
+                <div id="payment-right">
+                    <label for="CVV">CVV: </label>
+                    <input type="text" placeholder="012" name="CVV"><br>
+                </div>
+            </div>
+        </div>
+        <!-- submit button for order -->
+        <div id="submit-container">
+            <a href="home.html">
+                <button id="pay">Submit</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <!-- about -->
+        <div class="footer-col">
+            <h2 class="title">About Us</h2>
+            <p>here is a paragraph about our company and our future goals</p>
+            <ul id="socials">
+                <!-- font awesome, not available w/ material icons -->
+                <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></i></a></li>
+                <li><a href="https://en-gb.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.tiktok.com/en/"><i class="fab fa-tiktok"></i></a></li> 
+            </ul>
+        </div>
+        <!-- quick links -->
+        <div class="footer-col">
+            <h2 class="title">Support</h2>
+            <ul class="featured">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <!-- quick links -->
+        <div class="footer-col">
+            <h2 class="title">Shop</h2>
+            <ul>
+                <li><a href="#best-selling">Sweaters</a></li>
+                <li><a href="#sweaters">Cardigans</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Tank tops</a></li>
+            </ul>
+        </div>
+        <!-- contact -->
+        <div class="footer-col">
+            <h2 class="title">Stay in Touch</h2>
+            <ul class="info">
+                <li>
+                    <span>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel: +12345678900" id="phone-number">+1 234 567 8900</a>
+                    </span>
+                    <!-- <p><a href="tel: +12345678900">+1 234 567 8900</a></p> -->
+                </li>
+                <li>
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:knitting.nook@gmail.com" id="email">k.nook@gmail.com</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="payment.js"></script>
+</body>
+</html>
