@@ -113,7 +113,7 @@ h2 {
     /* side as auto -> centered */
     margin: 3rem auto;
     border: palevioletred 3px solid;
-    background-color: #ebf0f8;
+    /* background-color: #ebf0f8; */
     width: 75%;
     padding-right: 0.8rem;
     border-radius: 10px;

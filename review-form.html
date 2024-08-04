@@ -47,18 +47,18 @@
             <form class="suite-booking-form"> 
                 <!-- type field for first and last name  -->
                 <div class= "form-group">
-                    <label for="guest-name">First Name: </label>
-                    <input type="text" placeholder="First Name" name="guest_name">
+                    <label class="first" for="guest-name">First Name: </label>
+                    <input class="second" type="text" placeholder="First Name" name="guest_name">
 
-                    <label for="guest-name">Surname: </label>
-                    <input type="text" placeholder="Surname" name="guest_name">
+                    <label class="first" for="guest-name">Surname: </label>
+                    <input class="second"type="text" placeholder="Surname" name="guest_name">
                 </div>
 
             
                 <!-- check gauge, option same as pattern -->
                 <div class="form-group">
                     <div class="gauge">
-                        <label>Gauge: </label>
+                        <label class="first">Gauge: </label>
                         <input type="radio" id="sameGauge" name="gauge">
                         <label for="sameGauge">same gauge as pattern</label>
 
@@ -80,9 +80,9 @@
 
                 <!--  -->
                 <div class="form-group">
-                    <p><b>Yarn</b></p>
+                    <p id="main-group"><b>Yarn</b></p>
                     <div class="subcategory">
-                        <label for="yarn-wieght">Yarn Weight: </label>
+                        <label class="first" for="yarn-wieght">Yarn Weight: </label>
                         <input type="text" id="yarn-wieght" placeholder="0" name="yarn-wieght">
                         <select name="yarn-wieght" id="yarn-wieght">
                             <option value="yards">yards</option>
@@ -99,18 +99,21 @@
                         </select>
                         <label for="yarn-wieght">grams (per skein of yarn)</label>
 
+
+
+
                         <!-- offical naming group -->
                         <div class="form-group">
-                            <label for="yarn-wieght">Classification: </label>
+                            <label class="first" for="yarn-wieght">Classification: </label>
                             <div class="row">
                                 <input type="radio" id="lace" name="yarn-wieght" value="lace">
                                 <label class="col-sm-2" for="lace">lace/1 ply</label>
                                 <input type="radio" id="sock" name="yarn-wieght" value="sock">
                                 <label class="col-sm-2" for="sock">sock/2 ply</label>
                                 <input type="radio" id="sport" name="yarn-wieght" value="sport">
-                                <label class="col-sm-3" for="sport">sport/4 ply</label>
+                                <label class="col-sm-2" for="sport">sport/4 ply</label>
                                 <input type="radio" id="double-knit" name="yarn-wieght" value="double-knit">
-                                <label class="col-sm-3" for="double-knit">double-knit(dk)</label>
+                                <label class="col-sm-2" for="double-knit">double-knit(dk)</label>
                             </div>
 
                             <div class="row">
@@ -119,11 +122,16 @@
                                 <input type="radio" id="bulky" name="yarn-wieght" value="bulky">
                                 <label class="col-sm-2" for="bulky">bulky/chunky</label>
                                 <input type="radio" id="super-chunky" name="yarn-wieght" value="super-chunky">
-                                <label class="col-sm-3" for="super-chunky">super chunky/super bulky</label>
+                                <label class="col-sm-2" for="super-chunky">super chunky/super bulky</label>
                                 <input type="radio" id="ultra" name="yarn-wieght" value="ultra">
-                                <label class="col-sm-4" for="ultra">ultra/jumbo</label>
+                                <label class="col-sm-2" for="ultra">ultra/jumbo</label>
                             </div> 
                         </div>
+
+                        
+
+
+
                     </div>
                     <div class="subcategory">
 
@@ -147,6 +155,11 @@
         </section>
 
 
+        <!-- visual break to final reviews -->
+        <h2 class="hidden-heading">Visual Break</h2>
+        <div class="visual-break">
+            <p>checkout more reviews!</p>
+        </div>
 
         <!-- reviews, separate div along a horizontal line -->
         <h2 class="hidden-heading">User Reviews</h2>
