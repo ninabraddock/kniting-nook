@@ -24,14 +24,14 @@
                     <li><a href="patterns.html">Patterns</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
                     <!-- material icons -->
-                    <li id="lg-bag"><a href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a></li> 
+                    <li id="lg-bag"><a href="checkout2.html"><span class="material-symbols-outlined">shopping_bag</span></a></li> 
                     <a href="#" id="close"><span class="material-symbols-outlined">close</span></a>
                 </ul>
             </div>
 
             <!-- responsive side bar -->
             <div id="mobile">
-                <a href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span></a>
+                <a href="checkout2.html"><span class="material-symbols-outlined">shopping_bag</span></a>
                 <!-- material icons -->
                 <span id="bar" class="material-symbols-outlined">menu</span>
             </div>
@@ -40,119 +40,237 @@
 
         <!-- start of form -->
         <h2 class="hidden-heading">Form</h2>
-        <section class="form-outline">
-            <h3>Leave a review</h3><br>
-            <!-- <p>first, surname</p> -->
-            <!-- create form for booking a room, elements include text, radio, and checkbox -->
-            <form class="suite-booking-form"> 
-                <!-- type field for first and last name  -->
-                <div class= "form-group">
-                    <label class="first" for="guest-name">First Name: </label>
-                    <input class="second" type="text" placeholder="First Name" name="guest_name">
-
-                    <label class="first" for="guest-name">Surname: </label>
-                    <input class="second"type="text" placeholder="Surname" name="guest_name">
-                </div>
-
-            
-                <!-- check gauge, option same as pattern -->
-                <div class="form-group">
-                    <div class="gauge">
-                        <label class="first">Gauge: </label>
-                        <input type="radio" id="sameGauge" name="gauge">
-                        <label for="sameGauge">same gauge as pattern</label>
-
-                        <input type="radio" id="diffGauge" name="gauge">
-                        <label for="diffGauge">different gauge than pattern</label>
+        <div id="form-container">
+            <section class="form-outline">
+                <legend>Leave a review</legend><br>
+                <!-- create form for booking a room, elements include text, radio, and checkbox -->
+                <form class="suite-booking-form"> 
+                    <!-- type field for first and last name  -->
+                    <div class= "form-group">
+                        <label class="first" for="guest-name">First Name: </label>
+                        <input class="second" type="text" placeholder="First Name" name="guest_name">
+    
+                        <label class="first" for="guest-name">Surname: </label>
+                        <input class="second"type="text" placeholder="Surname" name="guest_name">
                     </div>
-                </div>
-
-                <!-- only make appear if different gauge selected -->
-                <div class="form-group" id="no-items" style="display: none;">
-                    <div class="gauge">
-                        <!-- ask for area code and provide filtered down options as user enters input, or scroll through options, make box smaller width -->
-                        <input type="text" id="stitches" placeholder="0" name="stitches">
-                        <label for="stitches">stitches x </label>
-                        <input type="text" id="rows" placeholder="0" name="rows">
-                        <label for="rows">rows</label>
-                    </div>
-                </div>
-
-                <!--  -->
-                <div class="form-group">
-                    <p id="main-group"><b>Yarn</b></p>
-                    <div class="subcategory">
-                        <label class="first" for="yarn-wieght">Yarn Weight: </label>
-                        <input type="text" id="yarn-wieght" placeholder="0" name="yarn-wieght">
-                        <select name="yarn-wieght" id="yarn-wieght">
-                            <option value="yards">yards</option>
-                            <option value="meters">meters</option>
-                        </select>
-
-                        <label for="yarn-wieght">per</label>
-                        <!-- <input type="text" id="yarn-wieght" placeholder="0" name="yarn-wieght"> -->
-                        <select name="yarn-wieght" id="yarn-wieght">
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="75">75</option>
-                            <option value="100">100</option>
-                        </select>
-                        <label for="yarn-wieght">grams (per skein of yarn)</label>
-
-
-
-
-                        <!-- offical naming group -->
-                        <div class="form-group">
-                            <label class="first" for="yarn-wieght">Classification: </label>
-                            <div class="row">
-                                <input type="radio" id="lace" name="yarn-wieght" value="lace">
-                                <label class="col-sm-2" for="lace">lace/1 ply</label>
-                                <input type="radio" id="sock" name="yarn-wieght" value="sock">
-                                <label class="col-sm-2" for="sock">sock/2 ply</label>
-                                <input type="radio" id="sport" name="yarn-wieght" value="sport">
-                                <label class="col-sm-2" for="sport">sport/4 ply</label>
-                                <input type="radio" id="double-knit" name="yarn-wieght" value="double-knit">
-                                <label class="col-sm-2" for="double-knit">double-knit(dk)</label>
+    
+                
+                    <!-- check gauge, option same as pattern -->
+                    <div class="form-group">
+                        <div class="gauge">
+                            <legend class="first subLegend">Gauge: </legend>
+                            <div>
+                                <input type="radio" id="sameGauge" name="gauge">
+                                <label for="sameGauge">same gauge as pattern</label>
                             </div>
-
-                            <div class="row">
-                                <input type="radio" id="worsted" name="yarn-wieght" value="worsted">
-                                <label class="col-sm-2" for="worsted">worsted/aran</label>
-                                <input type="radio" id="bulky" name="yarn-wieght" value="bulky">
-                                <label class="col-sm-2" for="bulky">bulky/chunky</label>
-                                <input type="radio" id="super-chunky" name="yarn-wieght" value="super-chunky">
-                                <label class="col-sm-2" for="super-chunky">super chunky/super bulky</label>
-                                <input type="radio" id="ultra" name="yarn-wieght" value="ultra">
-                                <label class="col-sm-2" for="ultra">ultra/jumbo</label>
-                            </div> 
+                            <div>
+                                <input type="radio" id="diffGauge" name="gauge">
+                                <label for="diffGauge">different gauge than pattern</label>
+                            </div>
                         </div>
-
-                        
-
-
-
                     </div>
-                    <div class="subcategory">
-
+    
+                    <!-- only make appear if different gauge selected -->
+                    <div class="form-group" id="no-items" style="display: none;">
+                        <div class="gauge">
+                            <!-- ask for area code and provide filtered down options as user enters input, or scroll through options, make box smaller width -->
+                            <input class="numerical-input" type="text" id="stitches" placeholder="0" name="stitches">
+                            <label for="stitches" class="hidden-option">stitches x </label>
+                            <input class="numerical-input" type="text" id="rows" placeholder="0" name="rows">
+                            <label for="rows" class="hidden-option">rows</label>
+                        </div>
                     </div>
-                </div>
+    
+                    <!--  -->
+                    <div class="form-group">
+                        <legend id="main-group">Yarn</legend>
+                        <!-- specific length and width -->
+                        <div class="subcategory">
+                            <label class="first" for="len/width">Length per skein: </label>
+                            <input class="numerical-input" type="text" id="yarn-wieght" placeholder="0" name="yarn-wieght">
+                            <select name="metrics" id="metrics">
+                                <option value="yards">yards</option>
+                                <option value="meters">meters</option>
+                            </select>
+                            <label for="yarn-wieght">per</label>
+                            <select name="skein-length" id="skein-length">
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="75">75</option>
+                                <option value="100">100</option>
+                            </select>
+                            <label for="yarn-wieght">grams (per skein of yarn)</label>
+                        </div>
+    
+                        <!-- offical naming group -->
+                        <div class="subcategory">
+                            <fieldset id="container">
+                                <legend class="subLegend">Yarn Weight: </legend>
+                                <div>
+                                    <input type="radio" id="lace" name="yarn-wieght" value="lace">
+                                    <label for="lace">lace/1 ply</label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" id="sock" name="yarn-wieght" value="sock">
+                                    <label for="sock">sock/2 ply</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="sport" name="yarn-wieght" value="sport">
+                                    <label for="sport">sport/4 ply</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="double-knit" name="yarn-wieght" value="double-knit">
+                                    <label for="double-knit">double-knit(dk)</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="worsted" name="yarn-wieght" value="worsted">
+                                    <label for="worsted">worsted/aran</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="bulky" name="yarn-wieght" value="bulky">
+                                    <label for="bulky">bulky/chunky</label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" id="super-chunky" name="yarn-wieght" value="super-chunky">
+                                    <label for="super-chunky">super chunky/super bulky</label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" id="ultra" name="yarn-wieght" value="ultra">
+                                    <label for="ultra">ultra/jumbo</label>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                        <!-- colors -->
+                        <div class="subcategory">
+                            <fieldset id="select-multiple">
+                                <legend class="subLegend">Yarn Colour: </legend>
+                                <div>
+                                    <input type="checkbox" id="red" name="color" value="red">
+                                    <label for="red">Red</label><br>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" id="orange" name="color" value="orange">
+                                    <label for="orange">Orange</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="yellow" name="color" value="yellow">
+                                    <label for="yellow">Yellow</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="green" name="color" value="green">
+                                    <label for="green">Green</label><br>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" id="blue" name="color" value="blue">
+                                    <label for="blue">Blue</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="purple" name="color" value="purple">
+                                    <label for="purple">Purple</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="pink" name="color" value="pink">
+                                    <label for="pink">Pink</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="black" name="color" value="black">
+                                    <label for="black">Black</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="gray" name="color" value="gray">
+                                    <label for="gray">Gray</label><br>
+                                </div>
+    
+                                <div>
+                                    <input type="checkbox" id="white" name="color" value="white">
+                                    <label for="white">White</label><br>
+                                </div>
+                            </fieldset>
+                        </div>    
+    
+                        <!-- brand of yarn used -->
+                        <div class="subcategory either">
+                            <legend class="subLegend">Yarn Used: </legend>
+                            <div>
+                                <input type="radio" id="sameYarn" name="yarnUsed" class="inline-input">
+                                <label for="sameYarn" class="inline-label">same yarn as suggested in the pattern</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="diffYarn" name="yarnUsed" class="inline-input">
+                                <label for="diffYarn" class="inline-label">different yarn than suggested in the pattern</label>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- modifications made to pattern -->
+                    <div class="form-group" id="modify">
+                        <label for="review">Modifications: </label>
+                        <textarea class="first" name="review" id="review" placeholder="Ex: sleeve length, extra/fewer sts, reccomendations if made again"></textarea>
+                        <p class="result">
+                            <span id="word">0</span> words and
+                            <span id="char">0</span> characters
+                        </p>
+                    </div>
+            
+                    <!-- readability of pattern -->
+                    <div class="form-group" id="modify">
+                        <label for="review">Readability: </label>
+                        <textarea class="first" name="review" id="review1" placeholder="Ex: directions were easy to follow. Any pattern errors?"></textarea>
+                        <p class="result">
+                            <span id="word1">0</span> words and
+                            <span id="char1">0</span> characters
+                        </p>
+                    </div>
                     
-
-                <div class="form-group">
-                    <label for="review">Please leave review here: </label>
-                    <!-- <textarea name="review" id="review" cols="30" rows="10"></textarea> -->
-                    <input type="text" name="review">
-                </div>
-
-                <!-- add checkbox for terms and agreement -->
-
-                <!-- submit form -->
-                <div class="form-group">
-                    <input type="submit">
-                </div>
-            </form>
-        </section>
+                    <!-- fit -->
+                    <div class="form-group">
+                        <label for="review" class="star-label">Fit: </label>
+                        <div id="star-container-fit">
+                            <span class="material-symbols-outlined star-fit" data-value="1">star</span>
+                            <span class="material-symbols-outlined star-fit" data-value="2">star</span>
+                            <span class="material-symbols-outlined star-fit" data-value="3">star</span>
+                            <span class="material-symbols-outlined star-fit" data-value="4">star</span>
+                            <span class="material-symbols-outlined star-fit" data-value="5">star</span>
+                        </div>
+                    </div>
+    
+                    <!-- Overall Review -->
+                    <div class="form-group">
+                        <label for="review" class="star-label">Overall Review: </label>
+                        <div id="star-container-overall">
+                            <span class="material-symbols-outlined star-review" data-value="1">star</span>
+                            <span class="material-symbols-outlined star-review" data-value="2">star</span>
+                            <span class="material-symbols-outlined star-review" data-value="3">star</span>
+                            <span class="material-symbols-outlined star-review" data-value="4">star</span>
+                            <span class="material-symbols-outlined star-review" data-value="5">star</span>
+                        </div>
+                    </div>
+    
+    
+                    <!-- submit form -->
+                    <div class="form-group" id="submit">
+                        <input type="submit" id="final-submit">
+                    </div>
+                </form>
+            </section>
+        </div>
 
 
         <!-- visual break to final reviews -->

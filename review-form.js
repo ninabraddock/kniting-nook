@@ -1,4 +1,88 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // fit
+    const starsFit = document.querySelectorAll('#star-container-fit .material-symbols-outlined');
+    // keep track of selected
+    let selectedValue = 0; 
+
+    // find which star has meed selected
+    starsFit.forEach(star => {
+        star.addEventListener('click', function() {
+            selectedValue = this.getAttribute('data-value'); 
+            fillFitStars(selectedValue);
+        });
+
+        // only fill in when directly hovering over
+        star.addEventListener('mouseout', function() {
+            fillFitStars(selectedValue);
+        });
+
+        // highlight for hover
+        star.addEventListener('mouseover', function() {
+            fillFitStars(this.getAttribute('data-value')); 
+        });
+    });
+
+    // toggle filled or not
+    function fillFitStars(value) {
+        starsFit.forEach(star => {
+            // fill
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('filled'); 
+                star.style.fontVariationSettings = "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24"; 
+            } 
+            
+            // dont fill
+            else {
+                star.classList.remove('filled'); 
+                star.style.fontVariationSettings = "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24"; 
+            }
+        });
+    }
+
+
+
+    // overall stars
+    const starsOverall = document.querySelectorAll('#star-container-overall .material-symbols-outlined');
+    // keep track of selected
+    let selectedValues = 0; 
+
+    // find which star has meed selected
+    starsOverall.forEach(star => {
+        star.addEventListener('click', function() {
+            selectedValues = this.getAttribute('data-value'); 
+            fillOverallStars(selectedValues);
+        });
+
+        // only fill in when directly hovering over
+        star.addEventListener('mouseout', function() {
+            fillOverallStars(selectedValues);
+        });
+        
+        // highlight for hover
+        star.addEventListener('mouseover', function() {
+            fillOverallStars(this.getAttribute('data-value')); 
+        });
+    });
+
+    // toggle filled or not
+    function fillOverallStars(value) {
+        starsOverall.forEach(star => {
+            // fill
+            if (star.getAttribute('data-value') <= value) {
+                star.classList.add('filled'); 
+                star.style.fontVariationSettings = "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24"; 
+            } 
+            
+            // dont fill
+            else {
+                star.classList.remove('filled'); 
+                star.style.fontVariationSettings = "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24"; 
+            }
+        });
+    }
+
+
+
     // Main image and alternative images
     const mainImg = document.getElementById('main-img');
     const altImg = document.getElementsByClassName('smallImg');
@@ -104,4 +188,61 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// for modifications review
+let review = document.getElementById('review');
+let char = document.getElementById('char');
+let word = document.getElementById('word');
+
+review.addEventListener('input', function () {
+    // count chars 
+    let content = this.value;
+    char.textContent = content.length;
+
+    // remove extra spaces from start and end 
+    content.trim();
+    console.log(content);
+
+    // isolates indiv words -> array
+    let wordList = content.split(/\s/);
+
+    // remove spaces from btw words 
+    let words = wordList.filter(function (element) {
+        return element != "";
+    });
+
+    // count words 
+    word.textContent = words.length;
+});
+
+// for readability review
+let review1 = document.getElementById('review1');
+let char1 = document.getElementById('char1');
+let word1 = document.getElementById('word1');
+
+review1.addEventListener('input', function () {
+    // count chars 
+    let content = this.value;
+    char1.textContent = content.length;
+
+    // remove extra spaces from start and end 
+    content.trim();
+    console.log(content);
+
+    // isolates indiv words -> array
+    let wordList = content.split(/\s/);
+
+    // remove spaces from btw words 
+    let words = wordList.filter(function (element) {
+        return element != "";
+    });
+
+    // count words 
+    word1.textContent = words.length;
+});
+
+
+
+
 

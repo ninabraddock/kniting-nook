@@ -322,7 +322,9 @@ h6 {
 /* size to elements in row */
 #count {
     width: 40px;
-    height: 35px;
+    /* match add to card btn */
+    height: 2.7rem;
+    font-size: 20px;
     display: inline-block;
     margin-right: 10px;
     padding-left: 5px;

@@ -17,8 +17,15 @@ html {
 }
 
 /* color theme */
-h3 {
+legend {
     color:rgba(29, 126, 100, 0.8);
+}
+
+/* sub titles */
+.subLegend {
+    font-size: large;
+    color: black;
+    text-transform: capitalize;
 }
 
 /* color theme */
@@ -112,18 +119,28 @@ h4 {
 
 
 /* ----- start form -----*/
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .form-outline {
     margin: 3rem;
     padding: 2rem;
-    border: palevioletred 3px solid;
+    border: palevioletred 3.5px solid;
     border-radius: 5px;
     line-height: 1.6;
+    width: 70%;
+    justify-content: center;
 }
 
-#main-group {
+/* yarn */
+/* #main-group {
     font-size: 22px;
     text-decoration: underline;
-}
+} */
 
 /* tab over */
 .subcategory {
@@ -135,8 +152,21 @@ h4 {
     display: none;
 }
 
-.row {
-    margin-left: 2rem;
+/* format all user input */
+/* input {
+    color: #007355;
+    font-weight: 700;
+} */
+
+/* smaller box width */
+.numerical-input {
+    width: 40px;
+}
+
+/* align height w/ numerical input */
+#skein-length,
+#metrics{
+    height: 1.8rem;
 }
 
 /* form inputs */
@@ -145,6 +175,8 @@ h4 {
     font-weight: 200;
     line-height: 1.6;
     display: block;
+    letter-spacing: 0.1em;
+    /* color: #007355; */
 }
 
 /* placeholders */
@@ -156,26 +188,168 @@ h4 {
     padding: 0.6rem;
 }
 
-.col-sm-2,
-.col-sm-3,
-.col-sm-4 {
-    /* background-color: #007355; */
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px; */
+/* align under option */
+#no-items {
+    margin-left: 20.5rem;
 }
 
-.col {
-    background-color: springgreen;
-    font-size: 20px;
+.gauge > label {
+    font-size: 1.2rem;
+}
+
+/* space btw drop down and text */
+.hidden-option {
+    /* center with numerical-input */
+    margin: 0.25rem 0.5rem 0 0.5rem;
+}
+
+.numerical-input {
+    padding-left: 0.5rem;
+    /* height: 1.7rem; */
+}
+
+/* select options */
+#container,
+#select-multiple,
+.either,
+.gauge {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* first radio select */
+#container > div {
+    background-color: rgba(216, 112, 147, 0.7);
+    border-radius: 5px;
+    font-size: 16px;
     margin: 20px;
     padding: 20px;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    /* height: 75px; */
+    height: auto;
+}
+
+/* second select all */
+#select-multiple > div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 120px;
+    /* height: 65px; */
+    height: auto;
+}
+
+/* add space btw subs */
+.subcategory {
+    margin-bottom: 3rem;
+}
+
+/* gauge as pattern */
+.gauge div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 270px;
+    /* height: 65px; */
+    height: auto;
+}
+
+/* yarn used */
+.either div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 380px;
+    /* height: 65px; */
+    height: auto;
+}
+
+
+
+/* ----modifications & readability---- */
+
+/* take up full form */
+#review,
+#review1 {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* word/char count */
+.result {
+    text-align: right;
+}
+
+/* emphasize changing counts */
+#word,
+#word1,
+#char,
+#char1 {
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+
+
+/* ----star reviews---- */
+/* put next to each other */
+#star-container-fit,
+#star-container-overall {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* default */
+.star-review,
+.star-fit {
+    font-size: 2em;
+    color: grey;
+    cursor: pointer;
+    /* transition: color 0.2s;  */
+}
+
+.star-review.filled,
+.star-fit.filled {
+    color: gold; 
+}
+
+/* space out before submit btn */
+#star-container-overall {
+    margin-bottom: 3rem;
+}
+
+
+
+/* ----final submit form---- */
+/* container */
+#submit {
+    text-align: center;
+}
+/* btn */
+#final-submit {
+    padding: 0.8rem 1.3rem;
+    color: white;
+    border: none;
+    background-color: rgba(29, 126, 100, 0.8);
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    font-size: 22px;
+
+    
+    /* padding: 0.8rem 1.3rem;
+    color: palevioletred;
+    border: palevioletred 2px solid;
+    background-color: transparent;
+    border-radius: 5px; */
 }
 
 
@@ -214,7 +388,6 @@ h4 {
     background-color: rgba(226, 221, 141, 0.196);
     border: 2px solid rgba(95, 158, 160, 0.584);
     border-radius: 4px;
-    display: flex;
     /* centered in the middle of the page */
     margin: 0 auto;
     /* center content w/in */
