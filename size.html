@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- material icons by Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="size.css">
 </head>
 <body aria-labelledby="body section">
     <!-- header -->
@@ -37,21 +37,55 @@
     </section>
 
     <!-- intro -->
-    <p>meet the team!</p>
+    <div id="form-container">
+        <section id="custimize">
+            <!-- choose from two patterns, of two different gauges -->
+            <div class="form-group">
+                <label class="first" for="pattern">Please choose which pattern you are making: </label>
+                <select name="pattern" id="pattern">
+                    <option value="cloud-sweater">Cloud Sweater</option>
+                    <option value="williamsburg-sweater">Williamsburg Sweater</option>
+                </select>
+            </div>
 
-    <!-- profile pictures -->
-    <div id="container">
-        <div class="row">
-            <img id="profile-picture" class="col-sm-3" src="img/team-member.png" alt="team member headshot, red hair and blue shirt">
-            <img id="profile-picture" class="col-sm-3" src="img/team-member.png" alt="team member headshot, red hair and blue shirt">
-            <img id="profile-picture" class="col-sm-3" src="img/team-member.png" alt="team member headshot, red hair and blue shirt">
-        </div>
+            <!-- enter measurements -->
+            <div class="form-group">
+                <label class="first" for="guest-name">Bust Size: </label>
+                <input class="second"type="text" placeholder="Surname" name="guest_name"><br>
+
+                
+                <label class="first" for="guest-name">Neckband Size: </label>
+                <input class="second"type="text" placeholder="Surname" name="guest_name"><br>
+
+                <label class="first" for="guest-name">Wrist Size: </label>
+                <input class="second"type="text" placeholder="Surname" name="guest_name">
+            </div>
+        </section>
     </div>
 
 
-    <p>think you have what it takes to join the team?</p>
-    <p></p>
-    <p>fill out the </p>
+
+    <!-- customized instructions -->
+    <section id="step-by-step">
+        <!-- first step -->
+        <div class="row">
+            <ol class="col-sm-8">
+                <li>cast one ___ sts</li>
+                <li>K1 P1 until BOR</li>
+                <li>repeast step 2 for a total of 8 rounds</li>
+            </ol>
+            <div class="col-sm-4">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+    </section>
+    
+
+    <!-- include a key (BOR, K1) -->
+
+    <!-- include helpful video links with titles above -->
 
     <!-- footer -->
     <footer>
@@ -106,6 +140,6 @@
             </ul>
         </div>
     </footer>
-    <script src="team.js"></script>
+    <script src="size.js"></script>
 </body>
 </html>

@@ -237,6 +237,30 @@ button {
 
 
 
+/* ----Transition btn---- */
+/* keep at bottom */
+#transition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #007355;
+    border-radius: 4px;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+/* text of btn */
+#submit-container button {
+    font-size: 22px;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+
+
 /* -----footer----- */
 
 /* block */
