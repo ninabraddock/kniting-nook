@@ -150,10 +150,12 @@ h2 {
     /* take up both .container cols */
     grid-column: span 2; 
     border-radius: 5px;
-    border: rgba(29, 126, 100, 0.8) 3px solid;
+    border: none;
+    /* border: rgba(29, 126, 100, 0.8) 3px solid; */
     /* del double border */
     overflow: hidden;
     margin: 1rem;
+    background-color: rgba(29, 126, 100, 0.8);
 }
 
 /* connecting link */
@@ -175,7 +177,8 @@ h2 {
     /* add here instead of submit-container to click anywhere */
     padding: 0.8rem 0;
     background: transparent;
-    color:rgba(29, 126, 100, 0.8);
+    color:white;
+    /* color:rgba(29, 126, 100, 0.8); */
     font-weight: 800;
     cursor: pointer;
 }

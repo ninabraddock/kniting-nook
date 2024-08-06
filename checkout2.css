@@ -162,33 +162,52 @@ td:nth-child(4){
 
 
 /* ---- proceed to payment ---- */
+/* space from item */
 .payment {
     margin: 0 3rem 3rem 3rem;
-    padding: 2rem;
-    border: #007355 solid 1px;
+    display: block;
 }
 
+/* center everything to outside div */
+#next-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* center */
+.row {
+    margin-left: 5%;
+}
+
+/* highlight */
 .payment p {
     border: #007355 1px solid;
 }
 
-.payment p:nth-child(1){
+/* .payment p:nth-child(1){
     background-color: rgb(235, 235, 62);
 }
 .payment p:nth-child(2){
     background-color: blue;
-}
+} */
 
 /* shop now button */
-.payment button {
-    display: inline-block;
+.payment .btn {
+
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
     border-radius: 4px;
-    /* background-color: white; */
     color: white;
     background-color: rgba(29, 126, 100, 0.8);
     border: none;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 1.6rem;
     transition: all 0.5s;
     cursor: pointer;
@@ -196,7 +215,7 @@ td:nth-child(4){
 }
 
 /* indicate button */
-.payment button span {
+.payment btn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -204,7 +223,7 @@ td:nth-child(4){
 }
 
 /* add arrow */
-.payment button span:after {
+.payment btn span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -214,12 +233,12 @@ td:nth-child(4){
 }
 
 /* align w/ text */
-.payment button:hover span {
+.payment btn:hover span {
     padding-right: 25px;
 }
 
 /* color btn */
-.payment button:hover span:after {
+.payment btn:hover span:after {
     opacity: 1;
     right: 0;
 }

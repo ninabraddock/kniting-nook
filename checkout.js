@@ -13,121 +13,49 @@ trashBtns.forEach(button => {
         checkCartItems();
     });
 });
-// Init check
-checkCartItems();
 
-// No items in cart show message
-function checkCartItems() {
-    const rows = document.querySelectorAll('#first tbody tr');
-    const noItems = document.getElementById('no-items');
-    
-    if (rows.length === 0) {
-        noItems.style.display = 'table-cell';
-        table.style.display = 'none';
-    } 
-    else if (rows.length <= 2) { //keep footer in place
-        // Keep footer in place
-        footer.style.position = 'absolute';
+// no items in cart show message
+document.addEventListener("DOMContentLoaded", function() {
+    // is cart empty
+    function checkCartItems() {
+        // one tbody tr = 1 item
+        const cartItems = document.querySelectorAll("tbody tr");
+        const noItemsSection = document.getElementById("no-items");
+        const grandTotal = document.getElementById("grand-total");
+        // keep on the bottom
+        const footer = document.querySelector('footer');
+        
+        // init check 
+        if (cartItems.length === 0) {
+            noItemsSection.style.display = "block";
+            grandTotal.style.display = "none";
+            // footer.style.position = 'absolute';
+        } 
+
+        else {
+            noItemsSection.style.display = "none";
+            grandTotal.style.display = "block";
+        }
     }
-    else {
-        noItems.style.display = 'none';
-        table.style.display = 'table';
-    }
-}
 
+    // call fnc
+    checkCartItems();
 
+    // loop through trashbtns to add event listeners then remove item
+    document.querySelectorAll(".trashBtn").forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            this.closest("tr").remove();
+            checkCartItems();
 
-
-// Show all product imgs 
-const mainImg = document.getElementById('main-img');
-const altImg = document.getElementsByClassName('smallImg');
-
-// replace main img with alt by clicking directly
-for(let i = 0; i < altImg.length; ++i){
-    altImg[i].onclick = function(){
-        mainImg.src = altImg[i].src;
-    }
-}
-
-// Arrow icons
-const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
-
-// container to hold all product imgs
-const altImgArray = Array.from(altImg);
-
-// event listener click for next button
-nxtBtn.forEach(button => {
-    button.addEventListener('click', function() {
-        // Find the index of the current image
-        const currentIndex = altImgArray.findIndex(img => img.src === mainImg.src);
-        // Increment the index to move to the next image
-        const nextIndex = (currentIndex + 1) % altImgArray.length;
-        // Update the main image source
-        mainImg.src = altImgArray[nextIndex].src;
+            // const rowItem = this.closest("tr").remove();
+            // rowItem.display.removeChild(itemRow);
+            // checkCartItems();
+        });
     });
 });
 
-// event listener click for previous button
-preBtn.forEach(button => {
-    button.addEventListener('click', function() {
-        // Find the index of the current image
-        const currentIndex = altImgArray.findIndex(img => img.src === mainImg.src);
-        // Decrement the index to move to the previous image
-        const prevIndex = (currentIndex - 1 + altImgArray.length) % altImgArray.length;
-        // Update the main image source
-        mainImg.src = altImgArray[prevIndex].src;
-    });
-});
 
-// find what img to pass in 
-function setImg(imgId, newSrc) {
-    document.getElementById(imgId).src = newSrc;
-}
-
-// call this function to set the new image
-function setNewImg(imgId, newSrc) {
-    setImg(imgId, newSrc);
-}
-
-// call this function to set the old image
-function setOldImg(imgId, oldSrc) {
-    setImg(imgId, oldSrc);
-}
-
-
-
-// select heart icon on each product card
-document.querySelectorAll('.heart-btn').forEach((heartBtn) => {
-    heartBtn.addEventListener('click', function() {
-        const heartIcon = this.querySelector('.heart-icon');
-        toggleHeart(heartIcon);
-
-        // save state of icon in local storeage
-        // productID name of the data-
-        const productId = this.dataset.productId; 
-        const isLiked = heartIcon.classList.contains('fas'); //yes toggled
-        saveLikeState(productId, isLiked);
-    });
-});
-
-// toggle heart icon 
-function toggleHeart(heartIcon) {
-    if (heartIcon.classList.contains('far')) {
-        heartIcon.classList.remove('far');
-        heartIcon.classList.add('fas'); // class for solid heart
-        heartIcon.style.color = '#98002e'; // fill color to red
-        heartIcon.parentNode.setAttribute('aria-checked', 'true'); 
-    } 
-    else if (heartIcon.classList.contains('fas')) {
-        heartIcon.classList.remove('fas');
-        heartIcon.classList.add('far'); // class for outline heart
-        heartIcon.style.color = 'rgb(40, 40, 40)'; // change fill color to default
-        heartIcon.parentNode.setAttribute('aria-checked', 'false');
-    }
-}
-
+// ---- for all pages 
 // responsive side navbar
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
@@ -147,37 +75,4 @@ if(close){
     });
 }
 
-
-
-
-function updateTotal(element) {
-    // Get the parent row
-    const row = element.closest('tr');
-    
-    // Get the price and quantity
-    const price = parseFloat(row.querySelector('.price').innerText.replace('$', ''));
-    const quantity = parseInt(element.value);
-
-    // Calculate the total for this item
-    const itemTotal = price * quantity;
-
-    // Update the total in the DOM
-    row.querySelector('.item-total').innerText = `$${itemTotal.toFixed(2)}`;
-
-    // Update the subtotal
-    updateSubtotal();
-}
-
-function updateSubtotal() {
-    let subtotal = 0;
-
-    // Get all the item totals
-    const itemTotals = document.querySelectorAll('.item-total');
-    itemTotals.forEach(total => {
-        subtotal += parseFloat(total.innerText.replace('$', ''));
-    });
-
-    // Update the subtotal in the DOM
-    document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
-}
 
