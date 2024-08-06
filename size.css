@@ -111,8 +111,38 @@ h4 {
 
 
 
-/* ---- measurements  ---- */
+/* ----form---- */
+#form-container,
+#step-by-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border: #007355 2px solid;
+    border-radius: 4px;
+    margin: 3rem auto;
+    padding: 2rem 0;
+}
 
+/* space btw questions */
+.form-group {
+    line-height: 1.6rem;
+    font-size: 18px;
+}
+
+/* opt space input */
+.form-group input {
+    width: 55px;
+    padding-left: 0.5rem;
+}
+
+
+/* ---- measurements  ---- */
+/* keep same, responsive */
+.visual-highlights {
+    height: 18rem;
+    width: auto;
+}
 
 
 
