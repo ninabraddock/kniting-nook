@@ -173,6 +173,7 @@ td:nth-child(4){
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 
 /* center */
@@ -215,15 +216,16 @@ td:nth-child(4){
 }
 
 /* indicate button */
-.payment btn span {
+.payment .btn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
+
 }
 
 /* add arrow */
-.payment btn span:after {
+.payment .btn span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -233,12 +235,12 @@ td:nth-child(4){
 }
 
 /* align w/ text */
-.payment btn:hover span {
+.payment .btn:hover span {
     padding-right: 25px;
 }
 
 /* color btn */
-.payment btn:hover span:after {
+.payment .btn:hover span:after {
     opacity: 1;
     right: 0;
 }
