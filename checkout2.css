@@ -112,9 +112,16 @@ h4 {
 
 
 /* -----cart items------ */
+.table-responsive {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 /* space from borders */
 .table {
-    margin: 3rem;
+    margin: 3rem 0;
+    width: 80%;
 }
 
 /* enlarge heading */
@@ -168,6 +175,21 @@ td:nth-child(4){
     display: block;
 }
 
+/* center */
+#grand-total {
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    width: 60%;
+    margin: 1rem auto;
+}
+
+/* bootstrap */
+.col-sm-10,
+.col-sm-2 {
+    font-size: 1.2rem;
+}
+
 /* center everything to outside div */
 #next-payment {
     display: flex;
@@ -176,33 +198,21 @@ td:nth-child(4){
     text-decoration: none;
 }
 
-/* center */
-.row {
-    margin-left: 5%;
-}
-
 /* highlight */
 .payment p {
-    border: #007355 1px solid;
+    /* border: #007355 1px solid; */
+    border-bottom: #007355 1px solid;
+    /* color: white;
+    background-color: rgba(29, 126, 100, 0.8); */
 }
-
-/* .payment p:nth-child(1){
-    background-color: rgb(235, 235, 62);
-}
-.payment p:nth-child(2){
-    background-color: blue;
-} */
 
 /* shop now button */
 .payment .btn {
-
     vertical-align: middle;
     display: flex;
     align-items: center;
     justify-content: center;
 
-
-    
     border-radius: 4px;
     color: white;
     background-color: rgba(29, 126, 100, 0.8);
@@ -213,6 +223,7 @@ td:nth-child(4){
     transition: all 0.5s;
     cursor: pointer;
     border: gray 1px solid;
+    margin: 2rem 0;
 }
 
 /* indicate button */

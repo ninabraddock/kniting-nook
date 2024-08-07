@@ -257,6 +257,7 @@ button {
     font-size: 22px;
     color: white;
     letter-spacing: 0.1em;
+    text-transform: capitalize;
 }
 
 

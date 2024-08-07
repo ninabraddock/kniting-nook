@@ -18,7 +18,7 @@ html {
 
 /* color theme */
 h3 {
-    color:rgba(29, 126, 100, 0.8);
+    /* color:rgba(29, 126, 100, 0.8); */
 }
 
 /* color theme */
@@ -124,10 +124,23 @@ h4 {
     padding: 2rem;
 }
 
-/* directions */
-h3 {
+/* headers */
+legend {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color:rgba(29, 126, 100, 0.8);
 }
+
+/* legend:nth-of-type(odd) {
+    color:rgba(29, 126, 100, 0.8);
+}
+
+legend:nth-of-type(even) {
+    color:palevioletred;
+} */
+
+
 
 /* space btw questions */
 .form-group {
@@ -141,19 +154,78 @@ h3 {
     padding-left: 0.5rem;
 }
 
+/* container */
+#submit {
+    text-align: center;
+}
+
+/* keep in the same line */
+.same-line {
+    align-items: center;
+}
+
+/* 2nd part */
+.inline-p {
+    display: inline;
+    margin: 0;
+    /* make it stand out */
+    text-decoration: underline;
+    font-weight: 800;
+    color: palevioletred;
+}
+
+/* btn */
+#final-submit {
+    padding: 0.8rem 1.3rem;
+    color: white;
+    border: none;
+    background-color: rgba(29, 126, 100, 0.8);
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+
+/* ----key and help---- */
+.key-help {
+    display: flex;
+    align-items: center;
+}
+
+/* within container */
+.item {
+    flex: 1;
+    margin: 3rem;
+}
+
+/* help videos */
+#videos {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1rem 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(29, 126, 100, 0.8);
+    color: white;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
+
+
 
 /* ---- measurements  ---- */
 /* keep same, responsive */
 .visual-highlights {
-    height: 18rem;
+    height: 16rem;
     width: auto;
 }
 
 /* form */
-#step-by-step {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+#step-by-step,
+.key-help {
     width: 80%;
     border: #007355 2px solid;
     border-radius: 4px;
@@ -166,7 +238,7 @@ h3 {
 }
 
 /* header */
-#step-by-step h3 {
+#step-by-step legend {
     padding-left: 2rem;
     margin-bottom: 2rem;
 }
@@ -186,8 +258,6 @@ h3 {
 #step-by-step img {
     flex: 0;
 }
-
-
 
 
 

@@ -18,9 +18,9 @@
         <!-- alt page options -->
         <div>
             <ul id="navbar">
-                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="best-selling.html">Best Selling</a></li>
-                <li><a href="patterns.html">Patterns</a></li>
+                <li><a class="active" href="patterns.html">Patterns</a></li>
                 <li><a href="wishlist.html">Wishlist</a></li>
                 <!-- material icons -->
                 <li id="lg-bag"><a href="checkout2.html"><span class="material-symbols-outlined">shopping_bag</span></a></li> 
@@ -41,8 +41,8 @@
         <div id="form-container">
             <section id="custimize">
                 <!-- choose from two patterns, of two different gauges -->
+                <legend>Enter Measurements: </legend>
                 <div class="form-group">
-                    <h3>Enter Measurements: </h3>
                     <label class="first" for="pattern">Choose which pattern you are making: </label>
                     <select name="pattern" id="pattern">
                         <option value="cloud-sweater">Cloud Sweater</option>
@@ -52,38 +52,83 @@
     
                 <!-- enter measurements -->
                 <div class="form-group">
-                    <label class="first" for="bust-size">Bust Size: </label>
-                    <input type="text" placeholder="86 cm" name="guest_name"><br>
-    
+                    <label id="second" for="neckband-size">Neckband Size: </label>
+                    <input type="text" id="neckband-size" placeholder="43 cm" name="neckband_size"><br>
                     
-                    <label class="first" for="neckband-size">Neckband Size: </label>
-                    <input type="text" placeholder="43 cm" name="guest_name"><br>
-    
-                    <label class="first" for="wrist-size">Wrist Size: </label>
-                    <input type="text" placeholder="8 cm" name="guest_name">
+                    <label id="first" for="bust-size">Bust Size: </label>
+                    <input type="text" id="bust-size" placeholder="86 cm" name="bust_size"><br>
+                    
+                    <label id="third" for="wrist-size">Wrist Size: </label>
+                    <input type="text" id="wrist-size" placeholder="8 cm" name="wrist_size">
+                </div>
+
+                <div class="form-group" id="submit">
+                    <input type="button" value="Submit" id="final-submit">
                 </div>
             </section>
         </div>
+
+        <!-- include helpful video links with titles above -->
+        <!-- include a key (BOR, K1) -->
+        <section class="key-help">
+            <ul class="item">       
+                <legend>Key: </legend>
+                <li>(BOR) Beginning of round</li>
+                <li>(K1) knit one</li>
+                <li>(P1) purl one</li>
+            </ul>
+            <div class="item" id="videos">
+                <p>technique videos</p>
+            </div>
+        </section>
     
-        <!-- customized instructions -->
+        <!-- 1) neckline -->
         <section id="step-by-step">
             <!-- first step -->
-            <div>
-                <h3>Instructions: </h3>
+            <div class="instruction-container">
+                <legend>Beginning a top-down sweater: </legend>
                 <ol>
-                    <li>cast one ___ sts</li>
+                    <li class="same-line">Cast on <p id="log" class="inline-p">___</p> sts</li>
                     <li>K1 P1 until BOR</li>
-                    <li>repeast step 2 for a total of 8 rounds</li>
+                    <li>Repeast step 2 for a total of 8 rounds</li>
                 </ol>
             </div>
-            
             <img class="visual-highlights" src="img/customize/neck.png" alt="sweater drawing, neck red outline">
+            <p>Need help with increases?</p>
         </section>
         
-    
-        <!-- include a key (BOR, K1) -->
-    
-        <!-- include helpful video links with titles above -->
+        <!-- 2) body -->
+        <section id="step-by-step">
+            <!-- first step -->
+            <div class="instruction-container">
+                <legend>Body: </legend>
+                <ol start="4">
+                    <li>Once done with the ribbing change to larger needle size</li>
+                    <li class="same-line">Make increses until you have <p id="log2" class="inline-p">___</p> sts for the body</li>
+                    <li>Continue kniting until your sweater measures 56 cm in length</li>
+                    <li>Cast-off the body</li>
+                </ol>
+            </div>
+            <img class="visual-highlights" src="img/customize/body.png" alt="sweater drawing, neck red outline">
+        </section>
+        
+        <!-- 3) sleeves -->
+        <section id="step-by-step">
+            <!-- first step -->
+            <div class="instruction-container">
+                <legend>Sleeves: </legend>
+                <ol start="7">
+                    <li class="same-line">Pick-up <p id="log3" class="inline-p">___</p> sts around the armhole</li>
+                    <li>Continue to knit until the sleeve reaches </li>
+                    <li>Switch back to the smaller needles</li>
+                    <li>K1 P1 until BOR</li>
+                    <li>Work an italian bind-off</li>
+                    <li>Repeat with other sleeve</li>
+                    <li>Sew in ends</li>
+                </ol>
+            </div>
+            <img class="visual-highlights" src="img/customize/sleeves.png" alt="sweater drawing, neck red outline">
+        </section>
     </div>
 
     <!-- footer -->
