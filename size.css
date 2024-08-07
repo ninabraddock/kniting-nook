@@ -17,11 +17,6 @@ html {
 }
 
 /* color theme */
-h3 {
-    /* color:rgba(29, 126, 100, 0.8); */
-}
-
-/* color theme */
 h4 {
     font-weight: bold;
     color:#007355
@@ -125,11 +120,17 @@ h4 {
 }
 
 /* headers */
-legend {
+legend,
+h3 {
     margin-bottom: 2rem;
     font-size: 1.5rem;
     text-transform: capitalize;
     color:rgba(29, 126, 100, 0.8);
+}
+
+/* remove normal bold */
+h3 {
+    font-weight: 500;
 }
 
 /* legend:nth-of-type(odd) {
@@ -207,8 +208,12 @@ legend:nth-of-type(even) {
     margin: 3rem;
 }
 
+.key {
+    list-style-type: disc;
+}
+
 /* help videos */
-#videos {
+/* #videos {
     text-align: center;
     text-transform: capitalize;
     padding: 1rem 0.5rem;
@@ -218,6 +223,40 @@ legend:nth-of-type(even) {
     color: white;
     letter-spacing: 0.1em;
     margin-bottom: 2rem;
+} */
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab.active {
+    background-color: #ccc;
+}
+
+.tab:hover {
+    background-color: #aaa;
+}
+
+.tab-content {
+    margin: 0 20px;
 }
 
 

@@ -48,3 +48,20 @@ btn1.addEventListener('click', function() {
     }
 });
 
+
+
+const tabs = document.querySelectorAll(['data-tab-target']);
+const tabContents = document.querySelectorAll(['data-tab-contnent']);
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget);
+        tabContents.forEach(tabContents => {
+            tabContents.classList.remove('active');
+        })
+        tabContents.forEach(tab => {
+            tab.classList.remove('active');
+        })
+        target.classList.add('active');
+    })
+})
