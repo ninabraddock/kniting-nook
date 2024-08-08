@@ -198,8 +198,14 @@ legend:nth-of-type(even) {
 
 /* ----key and help---- */
 .key-help {
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.tab-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 /* within container */
@@ -211,19 +217,6 @@ legend:nth-of-type(even) {
 .key {
     list-style-type: disc;
 }
-
-/* help videos */
-/* #videos {
-    text-align: center;
-    text-transform: capitalize;
-    padding: 1rem 0.5rem;
-    border-radius: 4px;
-    border: none;
-    background-color: rgba(29, 126, 100, 0.8);
-    color: white;
-    letter-spacing: 0.1em;
-    margin-bottom: 2rem;
-} */
 
 [data-tab-content] {
     display: none;
@@ -239,20 +232,25 @@ legend:nth-of-type(even) {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid #007355;
 }
 
 .tab {
     cursor: pointer;
     padding: 10px;
+    border-radius: 5px 5px 0 5px;
+    background-color: #007355;
+    color: white;
+    border-bottom: none;
 }
 
 .tab.active {
-    background-color: #ccc;
+    background-color: #007355;
 }
 
 .tab:hover {
-    background-color: #aaa;
+    background-color: #016147;
+    /* transform: scale(0.90); */
 }
 
 .tab-content {
@@ -277,7 +275,7 @@ legend:nth-of-type(even) {
     margin: 3rem;
     padding: 2rem 0;
 
-    display: flex;
+    /* display: flex; */
     align-items: flex-start;
     line-height: 1.6rem;
 }
