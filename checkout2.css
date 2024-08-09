@@ -226,6 +226,12 @@ td:nth-child(4){
     margin: 2rem 0;
 }
 
+/* no underline a href link */
+.payment a {
+    text-decoration: none;
+}
+
+
 /* indicate button */
 .payment .btn span {
     cursor: pointer;
