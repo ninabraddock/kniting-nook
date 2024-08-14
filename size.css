@@ -197,10 +197,6 @@ legend:nth-of-type(even) {
 
 
 /* ----key and help---- */
-.key-help {
-    /* display: flex; */
-    /* align-items: center; */
-}
 
 .tab-content {
     display: flex;
