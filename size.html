@@ -89,30 +89,32 @@
                 </ul>
             </div>
 
-            <!-- tab headers -->
-            <ul class="tabs">
-                <li data-tab-target="#cast-on" class="tab active">Cast-On</li>
-                <li data-tab-target="#increases" class="tab">Making Increases</li>
-                <li data-tab-target="#pickUp" class="tab">Picking Up Sts</li>
-            </ul>
+            <p>Need help casting-on, making increases, and/or picking up sts?</p>
+            <p>Consider watching these videos to help!</p>
 
-            <!-- tab content -->
-            <div class="tab-content">
-                <div id="cast-on" data-tab-content>
-                    <h1>Cast-On</h1>
-                    <iframe src="https://www.youtube.com/embed/g3QWpxkTOBQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div id="increases" data-tab-content>
-                    <h1>Making Increases</h1>
-                    <iframe src="https://www.youtube.com/embed/RgSVoTGzxdM" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div id="pickUp" data-tab-content>
-                    <h1>Picking Up Sts</h1>
-                    <iframe src="https://www.youtube.com/embed/hP_VbAhX7xc" frameborder="0" allowfullscreen></iframe>
-                </div>
+            <!-- Tab Links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openTutorial(event, 'CastOn')">Cast-On</button>
+                <button class="tablinks" onclick="openTutorial(event, 'Increases')">Increases</button>
+                <button class="tablinks" onclick="openTutorial(event, 'PickUpSts')">Pick Up Stitches</button>
             </div>
-            <!-- <p>Need help casting-on, making increases, and/or picking up sts?</p>
-            <p>Consider watching these videos to help!</p> -->
+
+            <!-- Tab Content -->
+            <div id="CastOn" class="tabContent">
+                <h3>Cast-On</h3>
+                <iframe src="https://www.youtube.com/embed/g3QWpxkTOBQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div id="Increases" class="tabContent">
+                <h3>Increases</h3>
+                <iframe src="https://www.youtube.com/embed/RgSVoTGzxdM" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+
+            <div id="PickUpSts" class="tabContent">
+                <h3>Pick Up Stitches</h3>
+                <iframe src="https://www.youtube.com/embed/hP_VbAhX7xc" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
         
 
@@ -121,7 +123,7 @@
         <section id="step-by-step">
             <!-- first step -->
             <div class="instruction-container">
-                <legend>Beginning a top-down sweater: </legend>
+                <legend>Beginning of a top-down sweater: </legend>
                 <ol>
                     <li class="same-line">Cast on <p id="log" class="inline-p">___</p> sts</li>
                     <li>K1 P1 until BOR</li>
