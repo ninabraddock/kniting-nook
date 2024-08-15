@@ -288,8 +288,8 @@ p {
     transition: transform 0.3s ease-in-out; 
 }
 
-/* final results don't have hover */
-.product-card:not(:nth-last-child(-n+3)):hover {
+/* only apply hover to cards not final results */
+.hover:hover {
     border: palevioletred 3px solid;
 }
 
