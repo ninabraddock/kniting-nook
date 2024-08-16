@@ -222,45 +222,16 @@ legend:nth-of-type(even) {
     display: block;
 }
 
-/* .tabs {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 4px solid #007355;
-}
-
-.tab {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px 5px 0 5px;
-    background-color: #007355;
-    color: white;
-    border-bottom: none;
-}
-
-.tab.active {
-    background-color: #007355;
-}
-
-.tab:hover {
-    background-color: #016147;
-}
-
-.tab-content {
-    margin: 0 20px;
-} */
-
-/* Style the tab */
+/* style the tab */
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+    width: 28rem;
+}
+
+/* style btn inside the tab */
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -269,40 +240,41 @@ legend:nth-of-type(even) {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
+}
+
+/* change background color of buttons on hover */
+.tab button:hover {
     background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
+}
+
+/* create an active/current tablink class */
+.tab button.active {
     background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabContent {
+}
+
+/* style the tab content */
+.tabContent {
     display: none;
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
-  }
+}
 
-
-/* Fade in tabs */
+/* fade in tabs */
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-/* Go from zero to full opacity */
+/* go from zero to full opacity */
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
   
-
+.videoContainer {
+    margin-left: 2.5rem;
+}
 
 
 
