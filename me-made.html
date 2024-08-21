@@ -56,11 +56,19 @@
 
                 <!-- pattern name -->
                 <div class="form-group">
-                    <h3>What pattern did you knit?</h3>
-                    <input type="text" name="pattern-options" list="gauge-options">
+                    <label for="pattern-options">What pattern did you knit?: </label>
+                    <!-- disable the OOB datalist with list="gauge-options" name of the id in the datalist -->
+                    <input type="text" name="pattern-options" id="pattern-options" list="gauge-options" placeholder="Select your pattern">
+
+                    <!-- options -->
                     <datalist id="gauge-options">
-                        <option value="summer">summer</option>
-                        <option value="suntan">suntan</option>
+                        <option value="Breeze Bag"></option>
+                        <option value="Esther Sweater"></option>
+                        <option value="Speed Drive Cardigan"></option>
+                        <option value="Williamsburg Cardigan Lite"></option>
+                        <option value="October Sweater"></option>
+                        <option value="Lyon Sweater"></option>
+                        <option value="Hazel Sweater"></option>
                     </datalist>
                 </div>
             

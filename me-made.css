@@ -177,6 +177,30 @@ h4 {
     padding: 0.6rem;
 }
 
+
+
+/* selecting a pattern */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* space inside for placeholder */
+#pattern-options {
+    padding-left: 0.5rem;
+}
+
+/* make the dropdown arrow always visible */
+input::-webkit-calendar-picker-indicator {
+    opacity: 100;
+    padding-bottom: 0.75rem;
+}
+
+
+
+
+
+/* ---other forms--- */
 /* align under option */
 #no-items {
     /* margin-left: 20.5rem; */

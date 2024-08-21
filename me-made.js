@@ -246,3 +246,28 @@ review1.addEventListener('input', function () {
 
 
 
+
+
+// const input = document.getElementById('pattern-options');
+// const datalistId = 'gauge-options';
+
+// input.addEventListener('input', () => {
+//     if (input.value.length > 0) {
+//         input.setAttribute('list', datalistId);
+//     } else {
+//         input.setAttribute('list', '');
+//     }
+// });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const datalist = document.getElementById('gauge-options');
+    const options = Array.from(datalist.children);
+
+    options.sort((a, b) => {
+        return a.value.localeCompare(b.value);
+    });
+
+    options.forEach(option => datalist.appendChild(option));
+});
