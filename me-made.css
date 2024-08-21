@@ -1,0 +1,621 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/* Global style */
+.hidden-heading {
+    display: none;
+}
+
+/* ensure smooth transition */
+html {
+    scroll-behavior: smooth;
+}
+
+/* color theme */
+legend {
+    color:rgba(29, 126, 100, 0.8);
+}
+
+/* sub titles */
+.subLegend {
+    font-size: large;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* color theme */
+h4 {
+    font-weight: bold;
+    color:#007355
+}
+
+
+
+/* -----header----- */
+
+/* nav links */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5%;
+    /* padding: 20px 80px; */
+    background-color: whitesmoke;
+    /* transition */ 
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.09); 
+    /* insure it's always in front, higher number for other elements */
+    z-index: 10; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* fill to left side */
+.logo {
+    width: 50%;
+    height: auto;
+}
+
+/* alt pages on same row */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove bullets and space each nav link */
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    /* not have best selling wrap */
+    flex: 0 0 auto;
+}
+
+/* remove underline, change text color */
+#navbar li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    transition: 0.3 ease; 
+}
+
+/* color text */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #007355;
+}
+
+/* add underline on nav link */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #007355;
+    position: absolute;
+    /* correct underline position */
+    bottom: -4px;
+    left: 20px;
+}
+
+/* hide nav when below a width */
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+/* don't display in computer layout */
+#close {
+    display: none;
+}
+
+
+
+/* ----- start form -----*/
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-outline {
+    margin: 3rem;
+    padding: 2rem;
+    border: palevioletred 3.5px solid;
+    border-radius: 5px;
+    line-height: 1.6;
+    width: 70%;
+    justify-content: center;
+}
+
+/* yarn */
+/* #main-group {
+    font-size: 22px;
+    text-decoration: underline;
+} */
+
+/* tab over */
+.subcategory {
+    margin-left: 1.25rem;
+}
+
+/* smaller box width */
+.numerical-input {
+    width: 40px;
+}
+
+/* align height w/ numerical input */
+#skein-length,
+#metrics{
+    height: 1.8rem;
+}
+
+/* form inputs */
+.first {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.6;
+    display: block;
+    letter-spacing: 0.1em;
+    /* color: #007355; */
+}
+
+/* placeholders */
+.second {
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding: 0.6rem;
+}
+
+/* align under option */
+#no-items {
+    /* margin-left: 20.5rem; */
+    display: none;
+}
+
+.gauge > label {
+    font-size: 1.2rem;
+}
+
+/* space btw drop down and text */
+.hidden-option {
+    /* center with numerical-input */
+    margin: 0.25rem 0.5rem 0 0.5rem;
+}
+
+.numerical-input {
+    padding-left: 0.5rem;
+    /* height: 1.7rem; */
+}
+
+/* select options */
+#container,
+#select-multiple,
+.either,
+.gauge {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* only allow two boxes per line */
+.gauge {
+    width: 76%;
+}
+
+/* first radio select */
+#container > div {
+    background-color: rgba(216, 112, 147, 0.7);
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    /* height: 75px; */
+    height: auto;
+}
+
+/* second select all */
+#select-multiple > div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 120px;
+    /* height: 65px; */
+    height: auto;
+}
+
+/* add space btw subs */
+.subcategory {
+    margin-bottom: 3rem;
+}
+
+/* gauge as pattern */
+.gauge div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 270px;
+    /* height: 65px; */
+    height: auto;
+}
+
+/* yarn used */
+.either div {
+    background-color: #ebf0f8;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+    padding: 20px;
+    width: 380px;
+    /* height: 65px; */
+    height: auto;
+}
+
+
+
+/* ----modifications & readability---- */
+
+/* take up full form */
+#review,
+#review1 {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* word/char count */
+.result {
+    text-align: right;
+}
+
+/* emphasize changing counts */
+#word,
+#word1,
+#char,
+#char1 {
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+
+
+/* ----star reviews---- */
+/* put next to each other */
+#star-container-fit,
+#star-container-overall {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* default */
+.star-review,
+.star-fit {
+    font-size: 2em;
+    color: grey;
+    cursor: pointer;
+    /* transition: color 0.2s;  */
+}
+
+.star-review.filled,
+.star-fit.filled {
+    color: gold; 
+}
+
+/* space out before submit btn */
+#star-container-overall {
+    margin-bottom: 3rem;
+}
+
+
+
+/* ----final submit form---- */
+/* container */
+#submit {
+    text-align: center;
+}
+/* btn */
+#final-submit {
+    padding: 0.8rem 1.3rem;
+    color: white;
+    border: none;
+    background-color: rgba(29, 126, 100, 0.8);
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    font-size: 22px;
+
+    
+    /* padding: 0.8rem 1.3rem;
+    color: palevioletred;
+    border: palevioletred 2px solid;
+    background-color: transparent;
+    border-radius: 5px; */
+}
+
+
+
+/* ---- published reviews ---- */
+.new-review {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 30%;
+    margin: 3em auto;
+
+    color: cadetblue;
+    text-decoration: none;
+    background-color: rgba(226, 221, 141, 0.196);
+    border: 2px solid rgba(95, 158, 160, 0.584);
+    padding: 1rem;
+}
+
+.new-review:hover {
+    border: 3px solid rgba(95, 158, 160, 0.584);
+}
+
+.title {
+    font-size: 1.7em;
+}
+
+/* ----flexbox reviews---- */
+.visual-break p {
+    margin-left: 10%;
+    text-transform: capitalize;
+}
+.user-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4ems;
+    background-color: rgba(226, 221, 141, 0.196);
+    border: 2px solid rgba(95, 158, 160, 0.584);
+    border-radius: 4px;
+    /* centered in the middle of the page */
+    margin: 0 auto;
+    /* center content w/in */
+    justify-content: center;
+    width: 90%;
+}
+
+.description {
+    font-size: 1em;
+}
+
+/* format individual review box */
+article > div {
+    font-size: 16px;
+    color: rgba(0, 139, 139, 0.9);
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    /* add features for scrollability */
+    height: 125px;
+    overflow: auto; /* only if the content is overflowing will the scroll bar be shown */
+    border: 3px solid rgba(0, 139, 139, 0.612);
+    background-color: white;
+}
+
+/* format the stars at the top to fill width of div */
+article img {
+    margin-top: 0%;
+    height: 50px;
+    width: auto;
+}
+
+/* have each name be in smaller font */
+.reviewer-name {
+    font-size: 14px;
+}
+
+
+
+/* -----footer----- */
+
+/* block */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: auto; */
+    line-height: 1.8; /* spacing btw lines */
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    /* background-color: #ebf0f8; */
+    margin-top: 10vw;
+}
+
+/* space cols */
+.footer-col {
+    width: 25%;
+    color: palevioletred;
+    padding: 3rem;
+}
+
+/* titles */
+.title {
+    /* text-align: left; */
+    color: #007355;
+    font-size: 24px;
+}
+
+/* keep text color theme */
+.footer-col  > p {
+    color: #007355;
+}
+
+/* align to column */
+#socials {
+    /* color: #98002e; */
+    display: flex;
+    justify-content: left;
+}
+
+/* organize like header */
+#socials li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* list */
+ul {
+    list-style: none; 
+}
+
+/* change case */
+#email{
+    text-transform: lowercase;
+}
+
+/* header and footer */
+@media (max-width: 799px){
+    /* promo-text */
+    h2 {
+        font-size: 27px;
+        line-height: 32px;
+        color: #007355;
+    }
+
+    /* position right */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #ebf0f8;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.2s;
+    }
+
+    /* activate */
+    #navbar.active {
+        right: 0;
+    }
+
+    /* equal spacing as before */
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    /* keep hamburger icon */
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    /* space between icons */
+    #mobile i {
+        color: black;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    /* position side bar */
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: black;
+        font-size: 24px;
+    }
+
+    /* account for spaccing below */
+    #sales-text > h4 {
+        padding-bottom: 10px;
+    }
+
+    /* side promo */
+    #promo-text {
+        color: #007355;
+        -webkit-text-stroke-width: 0.5px;
+        background-color: #ffffffc4;
+        padding: 5px;
+        border-radius: 7px;
+        font-size: 13px;
+
+        /* position separate form other text */
+        position: absolute;
+        margin-bottom: 27rem;
+        margin-right: 3rem;
+        right: 0;
+        bottom: 0;
+        
+        /* wrap text */
+        max-width: 170px;
+    }
+
+    /* shop now button */
+    #hero button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: white;
+        border: none;
+        color: #007355;
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    /* don't include in side bar */
+    #lg-bag {
+        display: none;
+    }
+
+    /* hero section */
+    #hero {
+        height: 50vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    /* entire div */
+    #sales-text {
+        width: 40%;
+    }
+
+    /* dynamic */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* dynamic */
+    .footer-col h4::before {
+        all: unset;
+    }
+
+    /* legable footer text */
+    .footer-col .title {
+        font-size: 20px;
+    }
+
+    /* text for last col */
+    .footer-col .info li a {
+        font-size: 12px;
+    }
+} 
+
+
+
