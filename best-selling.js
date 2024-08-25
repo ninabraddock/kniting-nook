@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mainImg.src = img.src;
         });
     });
+    
 
     // Arrow navigation buttons
     const nxtBtn = document.querySelector('.nxt-btn');
