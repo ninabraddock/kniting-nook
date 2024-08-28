@@ -172,19 +172,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // only let custom gauge appear if radio btn selected
 document.addEventListener('DOMContentLoaded', function() {
-    const sameGauge = document.getElementById('sameGauge');
+    const sameGauge = document.getElementById('same-gauge');
     const diffGauge = document.getElementById('diffGauge');
     const noItems = document.getElementById('no-items');
+    const hidden = document.getElementsByClassName('hidden');
 
-    sameGauge.addEventListener('change', function(){
-        if (sameGauge.checked) {
-            noItems.style.display = 'none';
+    diffGauge.addEventListener('change', function(){
+        if(diffGauge.checked) {
+            sameGauge.style.display = 'block';
+            sameGauge.style.backgroundColor = 'transparent';
+            noItems.style.display = 'flex';
         }
     });
 
-    diffGauge.addEventListener('change', function(){
-        if (diffGauge.checked) {
-            noItems.style.display = 'block';
+    sameGauge.addEventListener('change', function(){
+        if(sameGauge.checked) {
+            sameGauge.style.display = 'none';
+            noItems.style.display = 'none';
         }
     });
 });
@@ -243,24 +247,7 @@ review1.addEventListener('input', function () {
 });
 
 
-
-
-
-
-
-// const input = document.getElementById('pattern-options');
-// const datalistId = 'gauge-options';
-
-// input.addEventListener('input', () => {
-//     if (input.value.length > 0) {
-//         input.setAttribute('list', datalistId);
-//     } else {
-//         input.setAttribute('list', '');
-//     }
-// });
-
-
-
+// alphabetize the pattern options
 document.addEventListener('DOMContentLoaded', () => {
     const datalist = document.getElementById('gauge-options');
     const options = Array.from(datalist.children);
