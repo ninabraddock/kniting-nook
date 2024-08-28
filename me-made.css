@@ -198,20 +198,15 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/* ---other forms--- */
-/* align under option */
-.hidden {
-    /* change to none when diff selected */
-    display: none;
-}
+/* ---align under option--- */
 
 /* left side */
-#same-gauge {
+#belowSameGauge {
     display: none;
     background-color: #ebf0f8;
 }
 
-#no-items {
+#belowDiffGauge {
     /* have displayed same line */
     display: none;
 }

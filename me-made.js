@@ -172,26 +172,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // only let custom gauge appear if radio btn selected
 document.addEventListener('DOMContentLoaded', function() {
-    const sameGauge = document.getElementById('same-gauge');
+    const sameGauge = document.getElementById('sameGauge');
     const diffGauge = document.getElementById('diffGauge');
-    const noItems = document.getElementById('no-items');
-    const hidden = document.getElementsByClassName('hidden');
+    const belowSameGauge = document.getElementById('belowSameGauge');
+    const belowDiffGauge = document.getElementById('belowDiffGauge');
 
-    diffGauge.addEventListener('change', function(){
+    function gaugeBtn() {
         if(diffGauge.checked) {
-            sameGauge.style.display = 'block';
-            sameGauge.style.backgroundColor = 'transparent';
-            noItems.style.display = 'flex';
+            belowSameGauge.style.display = 'block';
+            belowSameGauge.style.backgroundColor = 'transparent';
+            belowDiffGauge.style.display = 'flex';
         }
-    });
+        else if(sameGauge.checked) {
+            belowSameGauge.style.display = 'none';
+            belowDiffGauge.style.display = 'none';
+        }
+    }
+        
+    diffGauge.addEventListener('change', gaugeBtn);
+    sameGauge.addEventListener('change', gaugeBtn);
 
-    sameGauge.addEventListener('change', function(){
-        if(sameGauge.checked) {
-            sameGauge.style.display = 'none';
-            noItems.style.display = 'none';
-        }
-    });
+    gaugeBtn();
 });
+
 
 
 // for modifications review
