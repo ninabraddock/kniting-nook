@@ -211,6 +211,11 @@ input::-webkit-calendar-picker-indicator {
     display: none;
 }
 
+/* yarn skein itself yards per grams */
+#measurements label {
+    display: inline;
+}
+
 .gauge > label {
     font-size: 1.2rem;
 }
