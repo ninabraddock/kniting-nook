@@ -112,147 +112,156 @@ h4 {
 
 
 /* -----cart items------ */
-
-/* full scren */
-table {
-    width: 100%;
-}
-
-/* title */
-#blog-home {
-    padding: 5% 0 3% 5%;
-    /* border: #007355 1px solid; */
-}
-
-/* position underline correctly */
-#blog-home h2 {
-    position: relative; 
-    display: inline-block; 
-    color: #007355; 
-}
-
-/* underline title */
-#blog-home h2::after {
-    content: "";
-    width: 80%; 
-    height: 3px;
-    background: #007355; 
-    position: absolute;
-    bottom: -9px; 
-    left: 0;
-}
-
-/* entire container adjustment */
-#cart-container {
-    margin-left: 5%;
-    height: 70%;
-}
-
-/* put side by side */
-#together {
+.table-responsive {
+    justify-content: center;
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    width: 40%;
 }
 
-/* borders */
-#cart-container table {
-    border-collapse: collapse;
-    width: 60%;
-    table-layout: fixed;
-    margin-bottom: 5%;
+/* space from borders */
+.table {
+    margin: 3rem 0;
+    width: 80%;
 }
 
-/* header title */
-#cart-container table thead {
-    font-weight: 700;
+/* enlarge heading */
+thead th {
+    font-size: 20px;
 }
 
-/* header background */
-#cart-container table thead td {
-    background-color: #007355;
-    color: whitesmoke;
+/* resize columns */
+thead th:nth-child(1) {
+    width: 20%;
+}
+thead th:nth-child(2) {
+    width: 50%;
+}
+thead th:nth-child(3) {
+    width: 20%;
+}
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+/* center text inside cell */
+td:nth-child(3),
+td:nth-child(4){
+    align-items: center;
+    padding-top: 3.25rem;
+}
+
+.remove-border {
     border: none;
-    padding: 0.5vw 0;
+    background: transparent;
+    color: #8d8c89;
 }
 
-/* add border to td */
-#cart-container table th,
-#cart-container table td {
-    border: 1px solid #b6b3b3;
-    text-align: center;
-    word-wrap: break-word;
-    padding: 1rem;
-}
-
-/* center text in cell */
-#cart-container table td p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: rgba(255, 255, 255, 0.684);
-    visibility: hidden;
-    padding: 7px;
+.close-out {
+    padding-left: 2rem;
+    /* padding-top: 4rem; */
 }
 
 /* change default */
 .w-25 {
-    width: 2.5rem;
+    min-width: 2.5rem;
 }
 
-/* fix btn */
-#cart-container table td button {
-    display: inline-block;
+
+
+/* ---- proceed to payment ---- */
+
+/* space from item */
+.payment {
+    margin: 0 3rem 3rem 3rem;
+    display: block;
+}
+
+/* center */
+#grand-total {
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    width: 60%;
+    margin: 1rem auto;
+}
+
+/* bootstrap */
+.col-sm-10,
+.col-sm-2 {
+    font-size: 1.2rem;
+}
+
+/* center everything to outside div */
+#next-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* highlight */
+.payment p {
+    /* border: #007355 1px solid; */
+    border-bottom: #007355 1px solid;
+    /* color: white;
+    background-color: rgba(29, 126, 100, 0.8); */
+}
+
+/* shop now button */
+.payment .btn {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 4px;
-    background-color: white;
+    color: white;
+    background-color: rgba(29, 126, 100, 0.8);
     border: none;
     text-align: center;
+    font-size: 1.4rem;
+    padding: 1.6rem;
     transition: all 0.5s;
     cursor: pointer;
+    border: gray 1px solid;
+    margin: 2rem 0;
 }
 
-/* trash icon */
-#cart-container table td:nth-child(1){
-    width: 4rem;
+/* no underline a href link */
+.payment a {
+    text-decoration: none;
 }
 
-/* img & product*/
-#cart-container table td:nth-child(2),
-#cart-container table td:nth-child(3){
-    width: 6rem;
-}
 
-/* show initially, larger screen */
-#cart-container table td:nth-child(3) {
-    display: table-cell;
-}
-
-/* price, quantity, & total */
-#cart-container table td:nth-child(4),
-#cart-container table td:nth-child(5),
-#cart-container table td:nth-child(6){
-    width: 6rem;
-}
-
-/* reposition */
-#cart-container table tbody td  {
+/* indicate button */
+.payment .btn span {
+    cursor: pointer;
+    display: inline-block;
     position: relative;
-    display: table-cell;
+    transition: 0.5s;
+
 }
 
-/* product img */
-#cart-container table tbody td img {
-    width: 6.25rem;
-    height: 5rem;
-    object-fit: cover;
+/* add arrow */
+.payment .btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
-/* icon */
-#cart-container table tbody span {
-    color: #8d8c89;
+/* align w/ text */
+.payment .btn:hover span {
+    padding-right: 25px;
 }
 
+/* color btn */
+.payment .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
 
 
 /* ----- no items in cart ----- */
