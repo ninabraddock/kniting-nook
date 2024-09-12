@@ -1,4 +1,7 @@
-// step 1
+// for each quesiton insure that a product card from THOSE options has been selected
+// must do for each question because all of the product cards are the same div/class/id
+
+// question 1
 // allow card/option to be selected
 function toggleSelected(element, question) {
     // bool if selected
@@ -17,8 +20,7 @@ function toggleSelected(element, question) {
     mustSelect(question);
 }
 
-// step 2
-// allow option to be selected
+// question 2
 function toggleDesign(element, question) {
     // bool if selected
     const isSelected = element.classList.contains('selected');
@@ -36,8 +38,7 @@ function toggleDesign(element, question) {
     mustSelect(question);
 }
 
-// step 3
-// allow option to be selected
+// question 3
 function toggleNeckline(element, question) {
     // bool if selected
     const isSelected = element.classList.contains('selected');
@@ -59,8 +60,6 @@ function toggleNeckline(element, question) {
 function mustSelect(question){
     //btn
     const nextBtn = document.getElementsByClassName('nextBtn')[question];
-    // const notSelected = document.getElementsByClassName('.not-selected');
-    
     const notSelected = document.querySelector('.not-selected');
 
     // make sure to check that option was selected 
@@ -69,12 +68,23 @@ function mustSelect(question){
     if(anySelected) {
         nextBtn.removeAttribute('disabled');
         notSelected.style.visibility = 'hidden'; 
-        // notSelected.style.visibility = 'visible'; 
     } else{ //keep disabled
         nextBtn.setAttribute('disabled', 'true');
         notSelected.style.visibility = 'visible';
-        // notSelected.style.visibility = 'hidden';
     }
+
+    // if(nextBtn && !anySelected){
+    //     notSelected.style.visibility = 'visible';
+    // }
+    // Add event listener to the next button to validate selection when clicked
+    nextBtn.addEventListener('click', function(event) {
+        if (!anySelected) {
+            // Prevent the default action of the button
+            // event.preventDefault(); 
+            nextBtn.setAttribute('disabled', 'true');
+            notSelected.style.visibility = 'visible'; // Show the warning message
+        }
+    });
 }
 
 //call fnc
@@ -82,16 +92,16 @@ mustSelect();
 
 // select img choice
 document.addEventListener('DOMContentLoaded', () => {
-    // Get all product cards
+    // get all product cards
     const productCards = document.querySelectorAll('.product-card');
 
-    // Add click event listener to each product card
+    // add click event listener to each product card
     productCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Remove the highlighted class from all product cards
+            // remove the highlighted class from all product cards
             productCards.forEach(card => card.classList.remove('highlighted'));
             
-            // Add the highlighted class to the clicked product card
+            // add the highlighted class to the clicked product card
             card.classList.add('highlighted');
         });
     });

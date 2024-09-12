@@ -28,6 +28,10 @@ legend {
     text-transform: capitalize;
 }
 
+.yarnBrand p {
+    margin-right: 0.5rem;
+}
+
 /* color theme */
 h4 {
     font-weight: bold;
@@ -148,8 +152,17 @@ h4 {
 }
 
 /* display when present */
+/* align under option */
 #no-items {
     display: none;
+    margin-left: 20.5rem;
+}
+
+/* display when present */
+/* align under option */
+#no-item {
+    display: none;
+    margin-left: 29rem;
 }
 
 /* format all user input */
@@ -186,11 +199,6 @@ h4 {
     margin-bottom: 0.5rem;
     width: 100%;
     padding: 0.6rem;
-}
-
-/* align under option */
-#no-items {
-    margin-left: 20.5rem;
 }
 
 .gauge > label {

@@ -190,6 +190,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// only let custom gauge appear if radio btn selected
+document.addEventListener('DOMContentLoaded', function() {
+    const sameYarn = document.getElementById('sameYarn');
+    const diffYarn = document.getElementById('diffYarn');
+    const noItem = document.getElementById('no-item');
+
+    sameYarn.addEventListener('change', function(){
+        if (sameYarn.checked) {
+            noItem.style.display = 'none';
+        }
+    });
+
+    diffYarn.addEventListener('change', function(){
+        if (diffYarn.checked) {
+            noItem.style.display = 'block';
+        }
+    });
+});
+
+
+
+
+
 // for modifications review
 let review = document.getElementById('review');
 let char = document.getElementById('char');

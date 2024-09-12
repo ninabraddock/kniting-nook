@@ -217,12 +217,27 @@
                                 <label for="diffYarn" class="inline-label">different yarn than suggested in the pattern</label>
                             </div>
                         </div>
+
+                        <!-- only make appear if different gauge selected -->
+                        <div class="form-group" id="no-item">
+                            <div class="gauge yarnBrand">
+                                <p>Yarn brand: </p>
+                                <select name="metrics" id="metrics">
+                                    <!-- <option value=""></option> -->
+                                    <option value="lionsBrand">Lions Brand</option>
+                                    <option value="kfo">Knitting For olive</option>
+                                    <option value="watg">Wool and the Gang</option>
+                                    <option value="sandnesGarn">Sandnes Garn</option>
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
             
                     <!-- modifications made to pattern -->
                     <div class="form-group" id="modify">
                         <label for="review">Modifications: </label>
-                        <textarea class="first" name="review" id="review" placeholder="Ex: sleeve length, extra/fewer sts, reccomendations if made again"></textarea>
+                        <textarea class="first" name="review" id="review" placeholder="Ex: sleeve length, extra/fewer sts, reccomendations if made again" maxlength="500"></textarea>
                         <p class="result">
                             <span id="word">0</span> words and
                             <span id="char">0</span> characters
@@ -232,7 +247,7 @@
                     <!-- readability of pattern -->
                     <div class="form-group" id="modify">
                         <label for="review">Readability: </label>
-                        <textarea class="first" name="review" id="review1" placeholder="Ex: directions were easy to follow. Any pattern errors?"></textarea>
+                        <textarea class="first" name="review" id="review1" placeholder="Ex: directions were easy to follow. Any pattern errors?" maxlength="500"></textarea>
                         <p class="result">
                             <span id="word1">0</span> words and
                             <span id="char1">0</span> characters
