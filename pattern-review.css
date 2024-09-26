@@ -107,9 +107,13 @@ p {
 /* don't display in computer layout */
 #close {
     display: none;
-}  
+} 
 
 
+/*  */
+.img-description-join {
+    margin-bottom: 20%;
+}
 
 /* -----toggle heart icon, material icons----- */
 
@@ -171,14 +175,15 @@ button {
 /* product text */
 #product-description {
     width: 55%;
-    padding: 2em;
-    /* border: pink 2px solid; */
+    padding: 3em;
+    /* border: orange 2px solid; */
 }
 
 /* link to other page */
 #right {
     /* text-align: right; */
-    border-left: pink 3px solid;
+    border: pink 3px solid;
+    /* margin-right: 5px */
     /* border-left: #007355 3px solid; */
 }
 
@@ -197,7 +202,8 @@ button {
 
 /* justify to page */
 .polaroid {
-    width: 80%;
+    width: 60%;
+    /* height: 90%; */
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 40px 45px;
@@ -241,7 +247,7 @@ button {
 /* change orientation */
 .pre-btn,
 #scroll-pre-btn {
-    left: 4rem;
+    left: 5%;
     transform: rotate(180deg);
     transform: scaleX(-1);
 }
@@ -249,7 +255,7 @@ button {
 /* keep right side */
 .nxt-btn,
 #scroll-nxt-btn {
-    right: 4rem;
+    right: 5%;
 }
 
 /* screen reader */ 
@@ -282,9 +288,9 @@ button {
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 63%;
     /* border: #98002e 8px solid; */
-    margin-left: 45px;
+    margin-left: 30px;
     position: absolute;
 }
 
@@ -498,15 +504,7 @@ button {
     text-decoration: line-through;
 }
 
-/* navigate next, slider */
-.toggle-img button{
-    height: 40px;
-    width: 40px;
-    position: absolute; 
-    display: flex; 
-    justify-content: center; 
-    top: 50%;  /* center to img */
-}
+
 
 
 
