@@ -174,7 +174,7 @@ button {
 
 /* product text */
 #product-description {
-    width: 55%;
+    width: 65%;
     padding: 3em;
     /* border: orange 2px solid; */
 }
@@ -200,13 +200,32 @@ button {
     border-radius: 4px;
 }
 
+legend {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.proj-notes {
+    border-bottom: 1px solid #ddd;
+    line-height: 1rem;
+}
+
+
+/* change-color */
+.change-color {
+    /* display: inline; */
+    color: rgb(129, 129, 129);
+    /* font-weight: bold; */
+}
+
 /* justify to page */
 .polaroid {
     width: 60%;
     /* height: 90%; */
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 40px 45px;
+    /* margin: 40px 45px; */
+    margin: 4rem 7rem;
     /* for slider */
     position: relative; 
     display: flex; 
@@ -288,9 +307,9 @@ button {
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 63%;
+    width: 66%;
     /* border: #98002e 8px solid; */
-    margin-left: 30px;
+    margin-left: 6rem;
     position: absolute;
 }
 
