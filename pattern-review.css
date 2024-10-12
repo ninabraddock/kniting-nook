@@ -200,6 +200,10 @@ button {
     border-radius: 4px;
 }
 
+fieldset {
+    padding-bottom: 3rem;
+}
+
 legend {
     font-weight: bold;
     font-size: 1rem;
@@ -215,6 +219,7 @@ legend {
 .change-color {
     /* display: inline; */
     color: rgb(129, 129, 129);
+    text-transform: capitalize;
     /* font-weight: bold; */
 }
 
